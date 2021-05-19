@@ -6,7 +6,7 @@ script_dialogue = aya_dialogue;
 
 sprite_expression = sprBlank; //sprAriaExpressions_0;
 
-has_number = true;
+//has_number = true;
 
 first_text = false;
 

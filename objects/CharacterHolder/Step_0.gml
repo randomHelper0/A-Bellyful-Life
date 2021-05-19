@@ -24,3 +24,6 @@ if (instance_exists(ItemCard) && !place_meeting(x,y,ItemCard)){
 		image_alpha = 0.5;
 }else
 	image_alpha = 1;
+	
+if (!enabled && !in_dialogue())
+	enabled = true;

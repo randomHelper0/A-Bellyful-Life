@@ -8,9 +8,11 @@ if (persistent){
 			if ((char.interest_stuffing < 30 && char.stomach_content/char.stomach_capacity >= 0.5) ||
 				(char.interest_stuffing < 70 && char.stomach_content/char.stomach_capacity >= 0.9)	||
 				(char.stomach_content/char.stomach_capacity >= 1.2)){
-				ctb_list(noone, noone, 
+				ctb_list(noone, noone,  choose(
 					"Thank you, but I'm not hungry right now.",
 					"Sorry but I'm full."
+					),
+					"(You might get her to eat more if you increase her interest in stuffing)"
 					);		
 					
 				exit;

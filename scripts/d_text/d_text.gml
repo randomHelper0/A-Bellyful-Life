@@ -37,7 +37,10 @@ function d_text_hangout() {
 	
 	var char = global.dialogue_char;
 	if (char.visited){
-		ctb_list(noone, noone, "Didn't we already hang out today?");
+		  if (char.visit_minutes > 0){
+				ctb_list(noone, noone, "You're so silly! I'm already at your place right now.");
+			}else
+				ctb_list(noone, noone, "Didn't we already hang out today?");
 		return;
 	}
 	
@@ -55,14 +58,14 @@ function d_text_hangout() {
 	ControlEnv.hours = hour;
 	//show_message(ControlEnv.hours);
 	if (!busy){
-			if (char.visiting){
-				ctb_list(noone, noone, "You're so silly! I'm already at your place right now.");
+			if (char.visit_arrival > 0){
+				ctb_list(noone, noone, "I'm coming!");
 			}else if (!char.visited){
 			    ctb_list(noone, noone, "Sure! I'll be over in around half hour.");
 				char.visit_arrival = 30;
-			}else{
-				ctb_list(noone, noone, "Didn't we already hung out today?");
-			}
+			}/*else{
+				ctb_list(noone, noone, "Didn't we already hang out today?");
+			}*/
 	}else{
 		ctb_list(noone, noone, "Sorry, I'm busy right now.");	
 	}

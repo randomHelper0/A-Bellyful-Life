@@ -17,6 +17,7 @@ image_index = char.belly_index;
 skew_step();
 
 //show self if dialogue is player
+if (is_location())
 if ( (room != rmScene && (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue))) || room == rmBackpack ||
 	(global.show_follower &&  room == rmScene  && (char != Player || !scene_check_actor(Player)))){
 		//if (keyboard_check(vk_delete))

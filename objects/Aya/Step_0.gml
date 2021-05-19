@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (ControlEnv.hours > 10 && !first_text && is_location() 
+if (ControlEnv.hours > 6 && !first_text && is_location() 
 	&& !instance_exists(obj_textbox) && !instance_exists(dropdown_dialogue)){
 	first_text = true;
 	//var char = global.dialogue_char;
