@@ -1,0 +1,59 @@
+function background_set(bg){
+	 //__background_set( e__BG.Index, 0, bg );	
+	 var lid =  layer_background_get_id("Background");
+	  layer_background_sprite(lid, bg);
+}
+
+function background_get(){
+	 var lid =  layer_background_get_id("Background");
+	 return layer_background_get_sprite(lid);
+	// return __background_get( e__BG.Index,0);
+}
+
+
+function get_random_asset(name, idx_min, idx_max){
+	asset_name = name + string(round(random_range(idx_min, idx_max)));
+	idx = asset_get_index(asset_name);	
+	//show_message(asset_name + ", " + string(idx));
+	return idx;
+}
+
+function draw_cached(){
+	prev_font = draw_get_font();
+	prev_halign = draw_get_halign();
+	prev_color = draw_get_color();	
+}
+
+function draw_load_cache(){
+	draw_set_font(prev_font);
+	draw_set_halign(prev_halign);
+	draw_set_color(prev_color);
+}
+
+function set_all_map_entries_to_value(map, value){
+	var key = ds_map_find_first(map);
+	for (var i=0; i < ds_map_size(map); i++){
+		map[? key] = value;
+		key = ds_map_find_next(map, key);
+	}
+}
+
+function sound_get_volume(snd){
+	switch(snd){
+		case sndFlowWater:
+			return 0.4;
+	}
+
+	return 1;
+}
+
+function audio_is_playing_all(){
+	for (var i=0; i<argument_count; i++)
+		if (audio_is_playing(argument[i]))
+			return true;
+	return false;
+}
+
+function in_dialogue(){
+	return (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue));	
+}

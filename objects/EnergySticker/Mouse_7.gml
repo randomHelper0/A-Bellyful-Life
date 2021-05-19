@@ -1,0 +1,1 @@
+tooltip_start(x,y, "Energy", "Needed for some tasks (jogging, part time job, ...). You can recharge it by sleeping, showering, or watching TV. Increase your max energy by jogging.");

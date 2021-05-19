@@ -1,0 +1,70 @@
+function d_text() {
+	dialogue_init()
+
+
+	dialogue_create(
+	        "1",
+	        "Where are you at?",
+	        true,
+	        d_text_location
+	)
+	
+	dialogue_create(
+	        "2",
+	        "Want to come over to my place?",
+	        true,
+	        d_text_hangout
+	)
+
+	dialogue_start(true);
+
+}
+
+function d_text_location() {
+	var char = global.dialogue_char;
+	location = script_execute(char.script_location);
+	if (location != noone)
+	    ctb_list(noone, noone, "I'm at " + room_get_name(location));
+	else
+	   ctb_list(noone, noone, "I'm not really anywhere at the moment.")//"Sorry, I'm busy right now.");
+}
+
+function d_text_hangout() {
+	if (ControlEnv.hours > 19){
+		ctb_list(noone, noone, "Sorry but its a bit too late for me.");
+		return;
+	}
+	
+	var char = global.dialogue_char;
+	if (char.visited){
+		ctb_list(noone, noone, "Didn't we already hang out today?");
+		return;
+	}
+	
+	var busy = false;
+	var hour = ControlEnv.hours;
+	for (var i=0; i <= 2; i++){
+		ControlEnv.hours ++;
+		//show_message(ControlEnv.hours);
+		var location = script_execute(char.script_location);;
+		if (location != noone){
+			busy = true;
+			break;
+		}
+	}
+	ControlEnv.hours = hour;
+	//show_message(ControlEnv.hours);
+	if (!busy){
+			if (char.visiting){
+				ctb_list(noone, noone, "You're so silly! I'm already at your place right now.");
+			}else if (!char.visited){
+			    ctb_list(noone, noone, "Sure! I'll be over in around half hour.");
+				char.visit_arrival = 30;
+			}else{
+				ctb_list(noone, noone, "Didn't we already hung out today?");
+			}
+	}else{
+		ctb_list(noone, noone, "Sorry, I'm busy right now.");	
+	}
+	    
+}

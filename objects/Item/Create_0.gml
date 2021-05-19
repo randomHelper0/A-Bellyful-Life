@@ -1,0 +1,40 @@
+price = 0;
+
+name = object_get_name(object_index);
+name = string_copy(name, 2, string_length(name)-1);
+image_speed = 0;
+consumable = true;
+uses = -1;
+bites = 1;
+
+visible = false;
+persistent = true;
+
+in_stomach = false;
+in_bowels = false;
+zone = noone;
+character = noone;
+
+is_pill = false;
+is_tool = false;
+volume = 0;
+calories = 0;
+energy = 0;
+alcohol = 0;
+script_use = d_item_consume;
+
+is_template = true;
+desc = "";
+sellable = true;
+
+show_name = false;
+show_volume = false;
+hours_left = 0;
+
+sfx = noone;
+
+alarm[0] = 1;
+
+do_expire = true;
+in_fridge = false;
+expire_in = 60*15;
