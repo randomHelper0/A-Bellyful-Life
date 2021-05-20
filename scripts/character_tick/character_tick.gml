@@ -6,7 +6,7 @@ function character_tick(minutes){
 			visit_arrival -= minutes;
 			if (visit_arrival <= 0){
 					visiting = true;
-					visit_minutes = 120;
+					visit_minutes = 180;
 					visited = true;
 					arrived_notice = true;
 			}

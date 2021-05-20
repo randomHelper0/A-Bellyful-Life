@@ -12,6 +12,4 @@ function create_character_holder(argument0) {
 
 	return holder;
 
-
-
 }
