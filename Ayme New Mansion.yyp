@@ -95,6 +95,7 @@
     {"id":{"name":"sprYumi_Tub_0","path":"sprites/sprYumi_Tub_0/sprYumi_Tub_0.yy",},"order":0,},
     {"id":{"name":"sprFoods","path":"sprites/sprFoods/sprFoods.yy",},"order":1,},
     {"id":{"name":"nurse_scripts","path":"scripts/nurse_scripts/nurse_scripts.yy",},"order":5,},
+    {"id":{"name":"Yumi_dialogues","path":"scripts/Yumi_dialogues/Yumi_dialogues.yy",},"order":1,},
     {"id":{"name":"VNF_CTB_Commands","path":"scripts/VNF_CTB_Commands/VNF_CTB_Commands.yy",},"order":9,},
     {"id":{"name":"sprCookie","path":"sprites/sprCookie/sprCookie.yy",},"order":3,},
     {"id":{"name":"sprMelon","path":"sprites/sprMelon/sprMelon.yy",},"order":5,},
@@ -575,6 +576,7 @@
     {"id":{"name":"__background_set","path":"scripts/__background_set/__background_set.yy",},"order":7,},
     {"id":{"name":"chewsoft3","path":"sounds/chewsoft3/chewsoft3.yy",},"order":11,},
     {"id":{"name":"__background_set_element","path":"scripts/__background_set_element/__background_set_element.yy",},"order":9,},
+    {"id":{"name":"Yumi_location","path":"scripts/Yumi_location/Yumi_location.yy",},"order":0,},
     {"id":{"name":"__background_set_internal","path":"scripts/__background_set_internal/__background_set_internal.yy",},"order":11,},
     {"id":{"name":"__init_background","path":"scripts/__init_background/__init_background.yy",},"order":13,},
     {"id":{"name":"draw_set_blend_mode","path":"scripts/draw_set_blend_mode/draw_set_blend_mode.yy",},"order":1,},
@@ -890,6 +892,7 @@
     {"folderPath":"folders/Sprites/Characters/Yumi.yy","order":8,"resourceVersion":"1.0","name":"Yumi","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Characters/Yumi/Scenes.yy","order":1,"resourceVersion":"1.0","name":"Scenes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Characters/Yumi/Scenes/Tub.yy","order":1,"resourceVersion":"1.0","name":"Tub","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/characters/Yumi.yy","order":24,"resourceVersion":"1.0","name":"Yumi","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
