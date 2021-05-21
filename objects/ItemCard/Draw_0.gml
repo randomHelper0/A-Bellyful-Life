@@ -4,10 +4,13 @@ if (!instance_exists(item)){
 }
 
 draw_set_color(make_colour_rgb(201,70,38));
-draw_set_alpha(0.5);
+draw_set_alpha(0.5*image_alpha);
 draw_rectangle(x,y,x+width, y + height, false);
-draw_set_alpha(1);
-draw_set_color(c_orange);
+draw_set_alpha(1*image_alpha);
+if (item.use_items == noone)
+	draw_set_color(c_orange);
+else
+	draw_set_color(c_red);
 draw_line_width(x, y, x + width, y, 2);
 draw_line_width(x, y+height, x+width, y+height, 2);
 draw_line_width(x+width, y, x + width, y+height, 2);
@@ -19,7 +22,7 @@ if (item.do_expire && item.expire_in < 0){
 }
 
 draw_sprite_ext(item.sprite_index, item.image_index, 
-    x + 5 + item.sprite_width/2, y + 5 + item.sprite_height/2, 1, 1, 0, color, 1);
+    x + 5 + item.sprite_width/2, y + 5 + item.sprite_height/2, 1, 1, 0, color, image_alpha);
 
 draw_set_color(c_black);
 if (item.show_name){

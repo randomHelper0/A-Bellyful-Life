@@ -56,7 +56,8 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
 		IBike);
 //create_item(instance_find(IPump,0));
-//create_item(instance_find(IBottleDiet,0));
+create_item(instance_find(IPillDiet,0));
+create_item(instance_find(IBottleDiet,0));
 for (i = 0; i <8; i ++){
     create_item(instance_find(ICakeSlice,0));
 }

@@ -5,7 +5,7 @@ if (room == rmScene &&  global.show_follower){
 		if (object_index != Player && following && in_house() && !scene_check_actor(id)){
 			other.char = id;
 			//if (keyboard_check(vk_backspace))
-			//	show_message(name);
+			//	show_message(name + string(other.x))
 		}
 	}
 }
@@ -16,12 +16,14 @@ image_index = char.belly_index;
 
 skew_step();
 
+//if (keyboard_check(vk_delete))
+	//show_message(global.show_follower &&  room == rmScene  && (char != Player || !scene_check_actor(Player)))
+
 //show self if dialogue is player
-if (is_location())
-if ( (room != rmScene && (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue))) || room == rmBackpack ||
+if ( (room != rmScene && is_location() && (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue))) || room == rmBackpack ||
 	(global.show_follower &&  room == rmScene  && (char != Player || !scene_check_actor(Player)))){
-		//if (keyboard_check(vk_delete))
-	//		show_debug_message(string(char) + ", " + string(Player));
+		if (keyboard_check(vk_delete))
+			show_message(sprite_get_name(sprite_index));
 	x = xstart;
 }
 

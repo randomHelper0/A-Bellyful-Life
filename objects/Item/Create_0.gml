@@ -22,6 +22,8 @@ calories = 0;
 energy = 0;
 alcohol = 0;
 script_use = d_item_consume;
+script_use_on_item = noone;
+script_use_on_char = item_give_consume;
 
 is_template = true;
 desc = "";
@@ -38,3 +40,5 @@ alarm[0] = 1;
 do_expire = true;
 in_fridge = false;
 expire_in = 60*15;
+
+use_items = noone;

@@ -9,16 +9,26 @@ if (!global.abilities[? "check"] &&
 }
 
 if (dragging){
+	drag_counter ++;
+	if (drag_counter > 20){
+		with(ItemCard) image_alpha = 0.5;
+		var closest = instance_place(x,y,ItemCard);
+		if (instance_exists(closest))
+			closest.image_alpha = 1;
+		image_alpha = 1;
+	}
+	
     x = mouse_x - width/2;
     y = mouse_y - height/2;
     
 	//move out if in inventory
-	if (room == rmBackpack && point_distance(x,y,xstart, ystart) > 100){
+	if (item.script_use_on_item == noone && room == rmBackpack && point_distance(x,y,xstart, ystart) > 100){
 		persistent = true;
 		room_goto(global.last_room);
 	}
     
 }else{
+		drag_counter = 0;
     if (!item.in_stomach && !item.in_bowels){
 		if (persistent &&  point_distance(x,y,xstart, ystart) <= 100){
 			persistent = false;

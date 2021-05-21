@@ -319,6 +319,7 @@
     {"id":{"name":"rmFatbucks","path":"rooms/rmFatbucks/rmFatbucks.yy",},"order":7,},
     {"id":{"name":"BtPlay","path":"objects/BtPlay/BtPlay.yy",},"order":0,},
     {"id":{"name":"IBottleDigest","path":"objects/IBottleDigest/IBottleDigest.yy",},"order":6,},
+    {"id":{"name":"sprYumi_Back_0","path":"sprites/sprYumi_Back_0/sprYumi_Back_0.yy",},"order":2,},
     {"id":{"name":"scale_canvas","path":"scripts/scale_canvas/scale_canvas.yy",},"order":75,},
     {"id":{"name":"node_get","path":"scripts/node_get/node_get.yy",},"order":77,},
     {"id":{"name":"sprPlayer_Sleep_0","path":"sprites/sprPlayer_Sleep_0/sprPlayer_Sleep_0.yy",},"order":1,},

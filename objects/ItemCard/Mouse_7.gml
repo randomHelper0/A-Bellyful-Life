@@ -1,38 +1,18 @@
+with(ItemCard) image_alpha = 1;
 if (persistent){
 	var holder = instance_place(x,y,CharacterHolder);
-	if (instance_exists(holder)){
+	if (item.script_use_on_char != noone && instance_exists(holder)){
 		var char =  holder.character;
 		global.dialogue_char = char;
-		//item is food
-		if (item.script_use == d_item_consume){
-			if ((char.interest_stuffing < 30 && char.stomach_content/char.stomach_capacity >= 0.5) ||
-				(char.interest_stuffing < 70 && char.stomach_content/char.stomach_capacity >= 0.9)	||
-				(char.stomach_content/char.stomach_capacity >= 1.2)){
-				ctb_list(noone, noone,  choose(
-					"Thank you, but I'm not hungry right now.",
-					"Sorry but I'm full."
-					),
-					"(You might get her to eat more if you increase her interest in stuffing)"
-					);		
-					
-				exit;
-			}
+		
+		script_execute(item.script_use_on_char, char);
 			
-			char.interest_stuffing *= 1.05;
-			
-			ctb_list(noone, noone, choose(
-				"thanks!",
-				"yum!",
-				"thank you"
-			));
-			item_consume(item, char);
-			
-			if (item.consumable && item.bites <= 0){
-				if (item.uses <= 0)
-					with (item) instance_destroy();
-			}
-			instance_destroy();
+		if (item.consumable && item.bites <= 0){
+			if (item.uses <= 0)
+				with (item) instance_destroy();
 		}
+		instance_destroy();
+		
 	}
 }
 
@@ -55,6 +35,21 @@ if (!ControlEnv.screen_lock){
 			with (ControlBackpack) refresh_backpack();
 			with (ControlFridge) refresh_fridge();
 		}
+	//check item on item in backpack
+	}else if (drag_counter > 20){
+		drag_counter = 0;
+		var otherItemCard = instance_place(x,y,ItemCard);
+			if (item.script_use_on_item != noone && instance_exists(otherItemCard)){
+				script_execute(item.script_use_on_item, otherItemCard);
+			
+				if (item.consumable && item.bites <= 0){
+					if (item.uses <= 0){
+						with (item) instance_destroy();
+						//refresh_backpack();
+					}
+				}
+		
+			}
 	}
 }
 
