@@ -1,5 +1,8 @@
 function item_consume(item, target){
-	
+	if (item.do_expire && item.expire_in < 0){
+		ctb_list(noone, noone, "Item expired");
+		return;	
+	}
 	item.bites = 0;
 	target.stomach_food += item.volume;
 	target.undigested_calories += item.calories;

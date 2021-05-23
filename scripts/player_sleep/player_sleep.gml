@@ -101,9 +101,9 @@ function sleep_finish(){
 		msg_weight, msg_capacity	
 	)
 	
-	with (FatbucksCashier){
-		last_cancelled --;	
-	}
+	FatbucksCashier.last_cancelled --;	
+	
+	Yumi.gave_exam_today = false;
 	
 	//room_goto(rmBedroom);
 }

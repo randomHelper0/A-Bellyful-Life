@@ -1,4 +1,9 @@
 function ctb_cmd_set_speaker(speaker){
+	if (speaker == "noone" || speaker == "system"){
+		global.dialogue_char = noone;
+		return;	
+	}
+	
 	//show_message(asset_get_index(speaker));
 	global.temp = asset_get_index(speaker);
 	with (CharacterHolder){

@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Dialogues.yy",
   },
   "resourceVersion": "1.0",
-  "name": "say",
+  "name": "say2",
   "tags": [],
   "resourceType": "GMScript",
 }

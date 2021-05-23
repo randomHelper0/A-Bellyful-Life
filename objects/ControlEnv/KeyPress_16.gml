@@ -1,2 +1,2 @@
-time_forward_hour(5);
-
+Player.stomach_water = Player.stomach_capacity;
+Player.bowels_water = Player.bowels_capacity;

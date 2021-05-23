@@ -419,7 +419,7 @@
     {"id":{"name":"say_bubble","path":"scripts/say_bubble/say_bubble.yy",},"order":1,},
     {"id":{"name":"chewcrunch1","path":"sounds/chewcrunch1/chewcrunch1.yy",},"order":14,},
     {"id":{"name":"dialogue_create","path":"scripts/dialogue_create/dialogue_create.yy",},"order":3,},
-    {"id":{"name":"say","path":"scripts/say/say.yy",},"order":5,},
+    {"id":{"name":"say2","path":"scripts/say2/say2.yy",},"order":5,},
     {"id":{"name":"d_standard","path":"scripts/d_standard/d_standard.yy",},"order":1,},
     {"id":{"name":"sprPillDigest","path":"sprites/sprPillDigest/sprPillDigest.yy",},"order":49,},
     {"id":{"name":"d_text","path":"scripts/d_text/d_text.yy",},"order":3,},

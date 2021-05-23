@@ -2,7 +2,7 @@
 /// @param msg
 /// @param  blush = false
 /// @param  duration
-function say() {
+function say2() {
 
 	var msg = argument[0];
 	var duration  = 3*string_length(msg);

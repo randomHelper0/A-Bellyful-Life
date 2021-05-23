@@ -5,5 +5,6 @@ script_dialogue = Yumi_dialogues;
 //script_observe = alice_observe;
 
 sprite_expression = sprBlank; //sprAriaExpressions_0;
-
+interested = false;
+gave_exam_today = false;
 //has_number = true;
