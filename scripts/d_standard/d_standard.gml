@@ -64,13 +64,13 @@ function d_standard() {
 function d_follow(){
 	with (Character) following = false;
 	
-	ctb_list(noone, noone, "Ok");
+	ctb_list(noone, noone, make_expression_cmd(ex_talk) +"Ok", make_expression_cmd(ex_idle) + "...");
 	global.dialogue_char.following = true;
 }
 
 function d_unfollow(){
 	var char = global.dialogue_char;
-	ctb_list(noone, noone, "Ok");
+	ctb_list(noone, noone,make_expression_cmd(ex_talk) + "Ok", make_expression_cmd(ex_idle) + "...");
 	global.dialogue_char.following = false;
 	refresh_location();
 	global.dialogue_char = char;

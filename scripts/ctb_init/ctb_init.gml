@@ -35,6 +35,7 @@ function ctb_init() {
 	CTB_Commands[? "set_speaker"] = ctb_cmd_set_speaker;
 	CTB_Commands[? "animate_speaker"] = ctb_cmd_animate_speaker;
 	CTB_Commands[? "set_expression"] = ctb_cmd_set_expression;
+	CTB_Commands[? "set_ex"] = ctb_cmd_set_expression;
 	CTB_Commands[? "set_background"] = ctb_cmd_set_background;
 	CTB_Commands[? "next_background"] = ctb_cmd_next_background;
 	

@@ -30,7 +30,7 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 		entrance = actors[| i+1],
 		entrance_name =  (entrance == ORAL) ? "stomach" : "bowels",
 		type = actors[| i+2];
-		if (type != noone && actor_id.id == Player.id){
+		if (type != noone && actor_id.id == Player.id && PlayerHolder.char != Player){
 			watched_inflate = true;	
 		}
 		spr_id  = asset_get_index("spr"+actor_id.name + "_" + global.scene_name + "_" + string(actor_id.fat_level));

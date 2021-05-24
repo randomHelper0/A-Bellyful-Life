@@ -1,3 +1,5 @@
+expression = ex_idle;
+
 if (global.watched_inflate && following){
 	global.dialogue_char = id;
 	var msg = "";

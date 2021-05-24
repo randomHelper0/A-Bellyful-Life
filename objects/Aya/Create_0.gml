@@ -4,7 +4,7 @@ script_dialogue = aya_dialogue;
 //script_idle = alice_idle;
 //script_observe = alice_observe;
 
-sprite_expression = sprBlank; //sprAriaExpressions_0;
+sprite_expression = sprAyaExpressions_0;
 
 has_number = true;
 

@@ -1,3 +1,5 @@
+#macro str string
+
 function background_set(bg){
 	 //__background_set( e__BG.Index, 0, bg );	
 	 var lid =  layer_background_get_id("Background");

@@ -511,6 +511,7 @@
     {"id":{"name":"msg_dynamic","path":"scripts/msg_dynamic/msg_dynamic.yy",},"order":3,},
     {"id":{"name":"d_status","path":"scripts/d_status/d_status.yy",},"order":16,},
     {"id":{"name":"msg_dynamic_multi","path":"scripts/msg_dynamic_multi/msg_dynamic_multi.yy",},"order":5,},
+    {"id":{"name":"sprYumiExpressions_0","path":"sprites/sprYumiExpressions_0/sprYumiExpressions_0.yy",},"order":3,},
     {"id":{"name":"msg_static","path":"scripts/msg_static/msg_static.yy",},"order":7,},
     {"id":{"name":"msg_reset","path":"scripts/msg_reset/msg_reset.yy",},"order":9,},
     {"id":{"name":"add_dropdown_option","path":"scripts/add_dropdown_option/add_dropdown_option.yy",},"order":1,},
@@ -914,7 +915,7 @@
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"weather","resourceType":"GMTextureGroup",},
     {"isScaled":true,"autocrop":false,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Aria_0","resourceType":"GMTextureGroup",},
     {"isScaled":true,"autocrop":false,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Aya_0","resourceType":"GMTextureGroup",},
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Yumi_0","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":false,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Yumi_0","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"save.dat","resourceType":"GMIncludedFile",},

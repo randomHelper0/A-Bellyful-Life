@@ -35,20 +35,20 @@ function Yumi_exam(){
 	}
 	Yumi.gave_exam_today = true;
 	if (Player.total_content/Player.total_capacity >= 0.7){
-		ctb_list(noone, noone, "[set_speaker:Yumi]Hmm.. She immediately placed her focus on your bloated belly. Are you currently pregnant?",
+		ctb_list(noone, noone, make_expression_cmd(ex_surprise)+"[set_speaker:Yumi]Hmm.. She immediately placed her focus on your bloated belly. Are you currently pregnant?",
 			"[set_speaker:Player]No. (You then begrudgingly explains to her what you did to make your belly so big).",
-			"[set_speaker:Yumi]I see, as a medical professional I will have to warn you that going over your own limit will have deadly consequences.",
+			 make_expression_cmd(ex_talk, Yumi)+"I see, as a medical professional I will have to warn you that going over your own limit will have deadly consequences.",
 			"Though it doesn't look like you're willing to stop just because I said so.",
 			"[set_speaker:Player] (You shook your head)",
-			"[set_speaker:Yumi]Fine, just know that you could end up in the hospital if you don't know your own limits.",
-			"(She seriously contemplated for a while before making a determined look)",
-			"I shouldn't be saying this, but I'm very interested in how you would progress. How about this,",
+			 make_expression_cmd(ex_sad, Yumi)+"Fine, just know that you could end up in the hospital if you don't know your own limits.",
+			 make_expression_cmd(ex_idle)+"(She seriously contemplated for a while before making a determined look)",
+			make_expression_cmd(ex_talk)+"I shouldn't be saying this, but I'm very interested in how you would progress. How about this,",
 			"Come back here often when you inflate, I want to observe your body's changes and also warn you if something seems wrong.",
 			"I'll even pay you $25 for each interesting visit (once per day).",
 			"[set_speaker:Player] Alright",
 			"[set_speaker:Yumi]Actually, here's my number. I'm off my shift at 4pm everyday. Give me a text any time after and I will drop by your place to make observations.",
 			"Also, I've refunded your money and here is your first $25 for today. Come back often.",
-			"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit."
+			make_expression_cmd(ex_idle)+"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit."
 			);
 		Yumi.interested = true;
 		Yumi.has_number = true;
