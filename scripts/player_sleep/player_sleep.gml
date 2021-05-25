@@ -104,7 +104,7 @@ function sleep_finish(){
 	FatbucksCashier.last_cancelled --;	
 	
 	Yumi.gave_exam_today = false;
-	
+	Amber.jogged_today = false;
 	//room_goto(rmBedroom);
 }
 

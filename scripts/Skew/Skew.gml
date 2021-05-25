@@ -37,6 +37,8 @@ function skew_step(){
 }
 
 function skew_draw(sprite, subimg, xx,yy, xscale, yscale){
+	//xscale *=1.5;
+	//yscale *= 1.5;
 	var x1,x2,y1,y2,x3,y3, x4, y4;
 	xx -= sprite_get_xoffset(sprite);
 	yy -= sprite_get_yoffset(sprite);
@@ -52,10 +54,12 @@ function skew_draw(sprite, subimg, xx,yy, xscale, yscale){
 	
 	x3 = xx + sprite_get_width(sprite)*xscale;
 	y3 = yy + sprite_get_height(sprite)*yscale;
-	draw_sprite_pos(sprite, subimg, x1, y1, x2, y2, x3, y3, x4, y4, image_alpha);
+	draw_sprite_pos_fixed2(sprite, subimg, x1, y1, x2, y2, x3, y3, x4, y4, image_alpha);
 }
 
 function skew_draw_other(other_id, sprite, subimg, xx,yy){
+	xscale =1;
+	yscale = 1;
 	var x1,x2,y1,y2, x4, y4,
 	skew_x = other_id.skew_x,
 	skew_y = other_id.skew_y;
@@ -63,18 +67,18 @@ function skew_draw_other(other_id, sprite, subimg, xx,yy){
 	xx -= sprite_get_xoffset(sprite);
 	yy -= sprite_get_yoffset(sprite);
 	
-	x1 =xx + skew_x;
+	x1 = xx + skew_x;
 	y1 = yy + skew_y;
 	
-	x2 = xx + sprite_get_width(sprite) + skew_x;
+	x2 = xx + sprite_get_width(sprite)*xscale + skew_x;
 	y2 = yy;
 	
 	x4= xx;
-	y4 = yy + sprite_get_height(sprite) + skew_y;
+	y4 = yy + sprite_get_height(sprite)*yscale + skew_y;
 	
-	x3 =xx + sprite_get_width(sprite);
-	y3 = yy + sprite_get_height(sprite);
-	draw_sprite_pos(sprite, subimg, x1, y1, x2, y2, x3, y3, x4, y4, image_alpha);
+	x3 = xx + sprite_get_width(sprite)*xscale;
+	y3 = yy + sprite_get_height(sprite)*yscale;
+	draw_sprite_pos_fixed2(sprite, subimg, x1, y1, x2, y2, x3, y3, x4, y4, image_alpha);
 }
 
 function skew_common(){

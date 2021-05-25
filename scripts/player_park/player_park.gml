@@ -4,7 +4,18 @@ function player_park(){
 	global.scene_interface = false;
 	scene_add_actors(Player, noone, noone);
 	background_set(sprPark);
-	ctb_list(player_jog_finish, noone , "You began jogging through the park. You can feel the refreshing air lifting your mood.");
+	
+	if (script_execute(Amber.script_location) != rmPark)
+		ctb_list(player_jog_finish, noone , "You began jogging through the park. You can feel the refreshing air lifting your mood.");
+	else{
+		global.scene_script = amber_jog;
+		if (!Amber.met_player)
+			ctb_list(room_restart, noone , "You began jogging through the park. You can feel the refreshing air lifting your mood.", 
+				"During your jog, you noticed another girl up ahead. You both matched each other's pace.");
+		else{
+			room_restart();	
+		}
+	}
 //	with (Player) skew_common();
 }
 
