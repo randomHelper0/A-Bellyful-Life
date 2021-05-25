@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Intro",
-    "path": "folders/Sprites/Characters/Aria/Scenes/Intro.yy",
+    "path": "folders/Characters/Aria/Sprites/Scenes/Intro.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAriaIntro1",

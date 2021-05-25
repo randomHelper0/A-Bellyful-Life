@@ -94,7 +94,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Pump",
-    "path": "folders/Sprites/Characters/Aria/Scenes/Pump.yy",
+    "path": "folders/Characters/Aria/Sprites/Scenes/Pump.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAria_Pump_0",

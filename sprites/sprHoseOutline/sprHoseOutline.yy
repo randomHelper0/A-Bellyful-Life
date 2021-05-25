@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Greenhouse",
-    "path": "folders/Sprites/Characters/Player/Scenes/Greenhouse.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Greenhouse.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprHoseOutline",

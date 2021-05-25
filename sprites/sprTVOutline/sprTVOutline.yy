@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Livingroom",
-    "path": "folders/Sprites/Characters/Player/Scenes/Livingroom.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Livingroom.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprTVOutline",

@@ -17,8 +17,8 @@
   "width": 1280,
   "height": 720,
   "textureGroupId": {
-    "name": "Player0",
-    "path": "texturegroups/Player0",
+    "name": "Player_0",
+    "path": "texturegroups/Player_0",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Swim",
-    "path": "folders/Sprites/Characters/Player/Scenes/Swim.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Swim.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayer_Swim_0",

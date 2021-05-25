@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NPCs",
-    "path": "folders/Objects/Characters/NPCs.yy",
+    "name": "Objects",
+    "path": "folders/Characters/NPCs/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "Librarian",

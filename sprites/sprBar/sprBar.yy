@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Bar",
-    "path": "folders/Sprites/Characters/Player/Scenes/Bar.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Bar.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBar",

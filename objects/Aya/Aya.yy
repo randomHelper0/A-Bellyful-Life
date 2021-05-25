@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Aya",
+    "path": "folders/Characters/Aya.yy",
   },
   "resourceVersion": "1.0",
   "name": "Aya",

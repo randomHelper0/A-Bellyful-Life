@@ -94,7 +94,7 @@
   "nineSlice": null,
   "parent": {
     "name": "DrinkSink",
-    "path": "folders/Sprites/Characters/Aya/Scenes/DrinkSink.yy",
+    "path": "folders/Characters/Aya/Sprites/Scenes/DrinkSink.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAya_Drink_0",

@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Aria",
-    "path": "folders/Sprites/Characters/Aria.yy",
+    "name": "Sprites",
+    "path": "folders/Characters/Aria/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAriaExpressions_0",

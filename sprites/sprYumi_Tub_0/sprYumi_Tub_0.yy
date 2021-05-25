@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Tub",
-    "path": "folders/Sprites/Characters/Yumi/Scenes/Tub.yy",
+    "path": "folders/Characters/Yumi/Sprites/Scenes/Tub.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprYumi_Tub_0",

@@ -17,8 +17,8 @@
   "width": 187,
   "height": 600,
   "textureGroupId": {
-    "name": "Player0",
-    "path": "texturegroups/Player0",
+    "name": "Player_0",
+    "path": "texturegroups/Player_0",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sprites/Characters/Player.yy",
+    "name": "Sprites",
+    "path": "folders/Characters/Player/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayer_Back_0",

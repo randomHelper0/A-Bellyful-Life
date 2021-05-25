@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "_General",
+    "path": "folders/Characters/_General.yy",
   },
   "resourceVersion": "1.0",
   "name": "CharacterHolder",

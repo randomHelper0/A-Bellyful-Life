@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Player",
+    "path": "folders/Characters/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "PlayerHolder",

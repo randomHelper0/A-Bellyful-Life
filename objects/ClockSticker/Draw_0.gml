@@ -19,5 +19,5 @@ if (hours < 10)
 min_str = string(minutes);
 if (minutes < 10)
     min_str = "0" + min_str;
-draw_text(x + 32,  y - sprite_yoffset + 12,  +  hr + ": " + min_str );
+draw_text(x + 32,  y - sprite_yoffset + 12,  +  hr + ":" + min_str );
 draw_text(x - sprite_xoffset + 10, y - sprite_yoffset + 12, get_day_str());

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "NPCs",
-    "path": "folders/Scripts/characters/NPCs.yy",
+    "name": "Scripts",
+    "path": "folders/Characters/NPCs/Scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "FatbucksCashier_gml",

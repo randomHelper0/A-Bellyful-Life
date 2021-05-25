@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Swim",
-    "path": "folders/Sprites/Characters/Player/Scenes/Swim.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Swim.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayerSwimBG",

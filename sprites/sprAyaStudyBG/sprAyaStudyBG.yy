@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Study",
-    "path": "folders/Sprites/Characters/Aya/Scenes/Study.yy",
+    "path": "folders/Characters/Aya/Sprites/Scenes/Study.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAyaStudyBG",

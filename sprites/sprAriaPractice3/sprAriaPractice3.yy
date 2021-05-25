@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Practice",
-    "path": "folders/Sprites/Characters/Aria/Scenes/Practice.yy",
+    "path": "folders/Characters/Aria/Sprites/Scenes/Practice.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAriaPractice3",

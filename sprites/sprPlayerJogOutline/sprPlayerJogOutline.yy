@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Park",
-    "path": "folders/Sprites/Characters/Player/Scenes/Park.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Park.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayerJogOutline",

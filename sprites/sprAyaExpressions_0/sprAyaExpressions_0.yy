@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Aya",
-    "path": "folders/Sprites/Characters/Aya.yy",
+    "name": "Sprites",
+    "path": "folders/Characters/Aya/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprAyaExpressions_0",

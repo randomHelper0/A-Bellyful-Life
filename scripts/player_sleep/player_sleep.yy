@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Scenes",
-    "path": "folders/Scripts/characters/Player/Scenes.yy",
+    "path": "folders/Characters/Player/Scripts/Scenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "player_sleep",

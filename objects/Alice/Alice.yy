@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Characters(legacy)",
+    "path": "folders/Objects/Characters(legacy).yy",
   },
   "resourceVersion": "1.0",
   "name": "Alice",

@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Bathroom",
-    "path": "folders/Sprites/Characters/Player/Scenes/Bathroom.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Bathroom.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBathtub",

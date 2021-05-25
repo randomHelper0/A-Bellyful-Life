@@ -17,8 +17,8 @@
   "width": 1280,
   "height": 720,
   "textureGroupId": {
-    "name": "Player0",
-    "path": "texturegroups/Player0",
+    "name": "Player_0",
+    "path": "texturegroups/Player_0",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Pump",
-    "path": "folders/Sprites/Characters/Player/Scenes/Pump.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/Pump.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayerPumpBack",

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Aria",
-    "path": "folders/Scripts/characters/Aria.yy",
+    "name": "Scripts",
+    "path": "folders/Characters/Aria/Scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "Aria_dialogues",

@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Yumi",
+    "path": "folders/Characters/Yumi.yy",
   },
   "resourceVersion": "1.0",
   "name": "Yumi",

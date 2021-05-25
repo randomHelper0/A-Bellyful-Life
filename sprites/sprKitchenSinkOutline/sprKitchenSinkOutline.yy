@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "KitchenSink",
-    "path": "folders/Sprites/Characters/Player/Scenes/KitchenSink.yy",
+    "path": "folders/Characters/Player/Sprites/Scenes/KitchenSink.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprKitchenSinkOutline",

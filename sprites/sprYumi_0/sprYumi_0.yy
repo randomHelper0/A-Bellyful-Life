@@ -89,8 +89,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Yumi",
-    "path": "folders/Sprites/Characters/Yumi.yy",
+    "name": "Sprites",
+    "path": "folders/Characters/Yumi/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprYumi_0",

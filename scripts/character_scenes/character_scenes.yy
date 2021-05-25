@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "characters",
-    "path": "folders/Scripts/characters.yy",
+    "name": "Scripts",
+    "path": "folders/Characters/_General/Scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "character_scenes",
