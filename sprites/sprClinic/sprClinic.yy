@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Locations",
-    "path": "folders/Sprites/Locations.yy",
+    "name": "Sprites",
+    "path": "folders/Rooms/Locations/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprClinic",

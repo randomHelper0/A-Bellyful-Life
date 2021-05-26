@@ -36,3 +36,12 @@ function amber_jog(){
 	}
 
 }
+
+function Amber_drink_kitchensink(){
+	global.scene_name = "Drink";
+	global.scene_inflate_rate = 2;
+	scene_add_actors(Amber, ORAL, WATER);
+	background_set(sprKitchenZoomed);
+	scene_auto_sound(ORAL, WATER);
+	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
+}

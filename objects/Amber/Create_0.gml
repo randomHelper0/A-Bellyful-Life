@@ -7,3 +7,5 @@ met_player = false;
 
 //signal second time jogging
 jogged_today = false;
+
+has_number = true;
