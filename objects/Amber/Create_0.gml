@@ -9,3 +9,5 @@ met_player = false;
 jogged_today = false;
 
 has_number = true;
+
+eating_out_init(rmFataurant, list_create(IBeer, IHotdog, ICakeSlice));

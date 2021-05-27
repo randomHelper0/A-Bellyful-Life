@@ -33,6 +33,7 @@ function ctb_init() {
 	CTB_Commands[? "pause"] = ctb_cmd_pause;
 	
 	CTB_Commands[? "set_speaker"] = ctb_cmd_set_speaker;
+	CTB_Commands[? "speaker"] = ctb_cmd_set_speaker;
 	CTB_Commands[? "animate_speaker"] = ctb_cmd_animate_speaker;
 	CTB_Commands[? "set_expression"] = ctb_cmd_set_expression;
 	CTB_Commands[? "set_ex"] = ctb_cmd_set_expression;

@@ -1,15 +1,29 @@
 function Amber_dialogues(){
-	/*dialogue_init()
-	dialogue_create(
-	        "1Talk",
-	        "Talk",
-	        true,
-	        d_talk
-	)
+	dialogue_init()
+	if (Amber.met_player)
+		dialogue_create(
+		        "1",
+		        "Let's go jogging!",
+		        true,
+				amber_more_jog
+		)
 	
-	dialogue_start(true);*/
+	eating_out_ask(Amber);
+	
+	dialogue_start(true);
 	
 	ctb_list(noone, noone, "...");
+}
+
+function Amber_eating_out(){
+	ctb_list(noone, noone, "thanks!");
+}
+
+function amber_more_jog(){
+	character_finish_visit(Amber);
+	global.scene_script = amber_jog;
+	time_forward_minutes(15);
+	scene_start_from(rmPark);
 }
 
 function amber_jog(){

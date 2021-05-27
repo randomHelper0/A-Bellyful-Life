@@ -1,15 +1,30 @@
 function aya_dialogue(){
-	/*dialogue_init()
+	dialogue_init()
 	dialogue_create(
-	        "1Talk",
-	        "Talk",
+	        "1",
+	        "Let's study some more!",
 	        true,
-	        d_talk
+			aya_more_study
 	)
 	
-	dialogue_start(true);*/
+	eating_out_ask(Aya);
+	
+	dialogue_start(true);
 	
 	ctb_list(noone, noone, "...");
+}
+
+function Aya_eating_out(){
+	ctb_list(noone, noone, "thanks!");
+}
+
+function aya_more_study(){
+	if (Player.mood <= 10){
+		ctb_list(noone, noone, "You're too bored to suggest that!");
+	}else{
+		global.scene_script = aya_study;
+		scene_start_from(rmLivingroom);
+	}
 }
 
 /*function checkAyaEvent(){

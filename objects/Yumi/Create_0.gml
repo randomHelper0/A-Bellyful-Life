@@ -8,3 +8,5 @@ sprite_expression = sprYumiExpressions_0;
 interested = false;
 gave_exam_today = false;
 //has_number = true;
+
+eating_out_init(rmBar, list_create(ICocktail1, ICocktail2));

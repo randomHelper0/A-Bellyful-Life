@@ -15,3 +15,7 @@ if (global.watched_inflate && following){
 	global.watched_inflate = false;
 }
 
+if (eating_out && room == eating_out_location){
+	script_execute(eating_out_script);
+	eating_out = false;	
+}

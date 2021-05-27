@@ -18,6 +18,12 @@ function make_set_speaker_cmd(speaker){
 	return ("[set_speaker:"+object_get_name(speaker)+"]");
 }
 
+function cmd_speaker(speaker){
+	if (speaker == noone)
+		return "[speaker:noone]";
+	return ("[set_speaker:"+object_get_name(speaker)+"]");
+}
+
 function make_expression_cmd(expression){
 	var cmd = "[set_ex:"+str(expression)+"]";
 	if (argument_count > 1)	

@@ -11,3 +11,5 @@ has_number = true;
 first_text = true;
 
 studied_today = false;
+
+eating_out_init(rmFatbucks, list_create(IFrappuccino, ICakeSlice, IApple))

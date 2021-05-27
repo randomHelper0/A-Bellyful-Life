@@ -7,7 +7,7 @@ if (just_rescued && room == rmPool){
 		"[set_speaker:Player] Please don't worry about it. (Dev note: add more dialogue lol)",
 		"[set_speaker:Aria] Do you come here often?",
 		"[set_speaker:Player] Uhh yes!",
-		"[set_speaker:Aria] Then please, would you mind giving me swim lessons? My previous swim teacher had to leave. I'll pay you $50 per session!",
+		"[set_speaker:Aria] Then please, would you mind giving me swim lessons? My previous swim teacher had to leave. I'll pay you $30 per session!",
 		"[set_speaker:Player](You shook your head saying you don't need payment for this.)",
 		"[set_speaker:Aria] Please! I can't ask you to do this for free.",
 		"[set_speaker:Player](Realizing the distress behind her plea, you nod your head for now, hoping to find out the reason behind her desperation in the future.)",

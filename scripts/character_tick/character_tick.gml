@@ -15,7 +15,7 @@ function character_tick(minutes){
 		if (visit_minutes > 0){
 			visit_minutes -= minutes;
 			if (visit_minutes <= 0){
-				visiting = false;
+				//visiting = false;
 				if (!instance_exists(obj_textbox)){
 					global.dialogue_char = id;
 					var msgText = "";
@@ -29,7 +29,16 @@ function character_tick(minutes){
 						"Ah, time flies so quickly, I have to return now. It was fun!"
 					));
 				}
-				following = false;
+				//following = false;
+				character_finish_visit(id);
 			}
 		}
+}
+
+function character_finish_visit(char){
+	with (char){
+		visit_minutes = 0;
+		visiting = false;
+		following = false;
+	}
 }

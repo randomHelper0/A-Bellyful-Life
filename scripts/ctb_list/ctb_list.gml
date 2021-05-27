@@ -22,3 +22,15 @@ function ctb_list() {
 
 
 }
+
+function ctb_msg(){
+		var d = instance_create(5,room_height-125,obj_textbox);
+	d.finish_script = noone;
+	d.finish_room = noone;
+	d.char_sprite = sprBlank;
+
+	for (var i = 0; i < argument_count; i ++){
+	    d.temp = argument[i];
+	   with (d) ctb_add_text( temp );
+	}
+}

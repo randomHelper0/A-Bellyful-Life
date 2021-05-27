@@ -81,3 +81,8 @@ function scene_check_actor(char){
 	}
 	return false;
 }
+
+function scene_start_from(rm){
+	global.scene_from = rm;
+	room_goto(rm);
+}

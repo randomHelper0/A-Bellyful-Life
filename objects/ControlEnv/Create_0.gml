@@ -6,6 +6,7 @@ global.scene_sound_action =  noone;
 global.scene_sound_sporadic =  ds_map_create();
 global.scene_sound_sporadic_rate = -1;
 global.watched_inflate = false;
+global.scene_from = noone;
 
 global.last_bg = noone;
 global.shop_bg = sprBlank;

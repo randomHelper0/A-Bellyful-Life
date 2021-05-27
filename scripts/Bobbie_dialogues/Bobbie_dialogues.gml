@@ -1,15 +1,19 @@
 function Bobbie_dialogues(){
-	/*dialogue_init()
+	dialogue_init()
 	dialogue_create(
-	        "1Talk",
-	        "Talk",
-	        true,
-	        d_talk
+	        "1",
+	        "Let's smoke more weed!",
+	        false,
+	        ""
 	)
-	
-	dialogue_start(true);*/
+	eating_out_ask(Bobbie);
+	dialogue_start(true);
 	
 	ctb_list(noone, noone, "...");
+}
+
+function Bobbie_eating_out(){
+	ctb_list(noone, noone, "thanks!");
 }
 
 function Bobbie_drink_kitchensink(){

@@ -316,6 +316,7 @@
     {"id":{"name":"sprMansion","path":"sprites/sprMansion/sprMansion.yy",},"order":4,},
     {"id":{"name":"sprAria_Pump_intro","path":"sprites/sprAria_Pump_intro/sprAria_Pump_intro.yy",},"order":1,},
     {"id":{"name":"skip_intro","path":"scripts/skip_intro/skip_intro.yy",},"order":67,},
+    {"id":{"name":"eating_out_scripts","path":"scripts/eating_out_scripts/eating_out_scripts.yy",},"order":5,},
     {"id":{"name":"action_listen","path":"scripts/action_listen/action_listen.yy",},"order":69,},
     {"id":{"name":"_5","path":"sounds/_5/_5.yy",},"order":38,},
     {"id":{"name":"fart4","path":"sounds/fart4/fart4.yy",},"order":102,},

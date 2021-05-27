@@ -1,18 +1,35 @@
 function aria_dialogue(){
-	/*dialogue_init()
+	dialogue_init()
+	
+	if (Aria.practice > 2)
 	dialogue_create(
-	        "1Talk",
-	        "Talk",
+	        "1",
+	        "Let's do more swim practice!",
 	        true,
-	        d_talk
+			aria_more_practice
 	)
 	
-	dialogue_start(true);*/
+	eating_out_ask(Aria);
+	
+	dialogue_start(true);
 	
 	ctb_list(noone, noone, "...");
 }
 
+function Aria_eating_out(){
+	ctb_list(noone, noone, "thanks!");
+}
 
+function aria_more_practice(){
+	character_finish_visit(Aria);
+	global.scene_script = aria_practice_scene;
+	time_forward_minutes(15);
+	scene_start_from(rmPool);
+}
+
+function aria_eat_out(){
+	
+}
 
 function aria_intro_scene(){
 	global.scene_name = "Aria Intro";
@@ -46,8 +63,11 @@ function aria_practice_scene(){
 		scene_add_actors(Aria, noone, noone);
 	}
 	time_forward_minutes(60);
-	ControlEnv.hours = 9;
-	ControlEnv.minutes = 0;
+	
+	if (ControlEnv.hours < 9){
+		ControlEnv.hours = 9;
+		ControlEnv.minutes = 0;
+	}
 	
 	var msg = "", msg2 = "", msg3 = "";
 	if (Aria.practice == 1){
@@ -80,7 +100,7 @@ function aria_practice_scene(){
 		ctb_list(noone, rmPool , msg, msg2, msg3);
 		
 	Aria.stomach_capacity += Aria.stomach_pressure * 50;
-	ControlEnv.money += 50;
+	ControlEnv.money += 30;
 }
 
 function aria_intro_pump(){

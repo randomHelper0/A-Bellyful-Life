@@ -11,6 +11,9 @@ function schedule_get_location() {
 	var char = global.dialogue_char;
 	if (!instance_exists(char))
 		return noone;
+		
+	if (char.eating_out)
+		return char.eating_out_location;
 	
 	if (char.following && in_house() && is_location()){
 		return room;	

@@ -23,9 +23,15 @@ function Yumi_dialogues(){
 		)
 	}
 	
+	eating_out_ask(Yumi);
+	
 	dialogue_start(true);
 	
 	ctb_list(noone, noone, "Welcome to my clinic, are you here for a check up?");
+}
+
+function Yumi_eating_out(){
+	ctb_list(noone, noone, "thanks!");
 }
 
 function Yumi_exam(){
