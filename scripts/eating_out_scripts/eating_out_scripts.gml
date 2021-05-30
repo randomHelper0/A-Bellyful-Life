@@ -12,6 +12,9 @@ eating_out_location = noone;
 eating_out_script
 */
 function eating_out_ask(char){
+	if (!char.visiting || !in_house())
+		return;
+	
 	global.eating_out_char = char;
 	var cost = 15;
 	if (char.eating_out_items != noone){

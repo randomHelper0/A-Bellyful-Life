@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-if (room == rmMapShopping || room == rmMapUni){
+if (is_map()){
 	x = -1000;
 }

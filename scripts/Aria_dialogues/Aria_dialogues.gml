@@ -1,7 +1,7 @@
 function aria_dialogue(){
 	dialogue_init()
 	
-	if (Aria.practice > 2)
+	if (Aria.practice > 2 && in_house())
 	dialogue_create(
 	        "1",
 	        "Let's do more swim practice!",
@@ -17,7 +17,16 @@ function aria_dialogue(){
 }
 
 function Aria_eating_out(){
-	ctb_list(noone, noone, "thanks!");
+	ctb_msg(
+		cmd_speaker(Aria)+
+		cmd_ex(ex_talk)+cmd_sound(get_random_asset("chewsoft", 1,4))+"...",
+		cmd_ex(ex_smile2)+cmd_sound(get_random_asset("drink", 1,4))+"...",
+		cmd_ex(ex_smile)+cmd_sound(get_random_asset("chewsoft", 1,4))+
+		"So delicious!" + cmd_ex(ex_idle),
+		cmd_speaker(Player) + "",
+		""
+		//cmd_speaker(
+	)
 }
 
 function aria_more_practice(){

@@ -19,8 +19,10 @@ function refresh_location() {
 		global.dialogue_char = c;
 	    if (script_execute(c.script_location, c) == room){
 	        create_character_holder(c);
-			if (keyboard_check(vk_delete))
-					show_message(room_get_name(room));
+			//if (keyboard_check(vk_delete))
+				//	show_message(room_get_name(room));
+		}else if (c.name == "Amber"){
+			//(room_get_name(script_execute(c.script_location, c)));
 		}
 	}
 	global.dialogue_char = noone;

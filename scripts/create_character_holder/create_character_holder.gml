@@ -7,6 +7,7 @@ function create_character_holder(argument0) {
 	        xx = holder.x + holder.character.sprite_width + 10;
 	}
 	var holder = instance_create(xx, room_height - 600, CharacterHolder);
+	//show_message(str(xx) + ", " + char.name)
 	holder.character = char;
 	char.holder = holder;
 

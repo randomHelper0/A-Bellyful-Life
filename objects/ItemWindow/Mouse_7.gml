@@ -2,6 +2,10 @@ is_template = item.is_template;
 if (is_template)
 	exit;
 
+//if no one in dialogue, it means player is using item
+if (global.dialogue_char == noone)
+	global.dialogue_char = Player;
+
 if (mouse_x > x + sprite_width/2){
 	with (item) instance_destroy();
 	with (card) instance_destroy();

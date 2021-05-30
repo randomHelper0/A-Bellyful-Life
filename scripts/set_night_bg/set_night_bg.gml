@@ -14,7 +14,10 @@ if (background_get() == sprCityMap)
 	if (background_get() ==sprShoppingDistrict)
 	    background_set(sprShoppingDistrictNight );
 		
-		if (background_get() ==sprFatdonalds )
+	if (background_get() ==sprFatdonalds )
 	    background_set(sprFatdonaldsNight );
+		
+	if (background_get() ==sprCountryside )
+	    background_set(sprCountrysideNight );
 
 }

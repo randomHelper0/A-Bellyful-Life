@@ -49,7 +49,7 @@ item_init(Player, Aria, Aya, Yumi,  Amber, Bobbie, FatbucksCashier, FatdonaldsCa
 //instance_create(-200,-200, );
 //show_debug_message("affter init")
     //Librarian);
-item_init(ICocktail1, ICocktail2, ICocktail3, ICocktail4,
+item_init(ICocktail1, ICocktail2, ICocktail3, ICocktail4, IBeer,
 IPump, IApple,IOrange, ICakeSlice, INextLine,
 IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 	IHamburger, IHotdog, IHugeburger, IFries,

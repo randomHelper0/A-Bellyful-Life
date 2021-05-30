@@ -1,11 +1,21 @@
 function is_location() {
 	if (room == rmJournal || room == rmBackpack || room == rmInteract || room == rmKitchenFridge
 		|| room == rmStatus || room == rmScene || room == rmShop
-	    //|| room == rmMapUni// || room == rmMapCity// || room == rmGeneralStore 
+	    //|| room == rmMapUni || room == rmMapShopping// || room == rmGeneralStore 
 	    || room == rmStat || room == rmAbilities)
 	    return false;
 	else
 	    return true;
+}
+
+function is_map(){
+	return is_map_room(room);
+}
+
+function is_map_room(rm){
+	if (rm == rmMapCountryside || rm == rmMapUni || rm == rmMapShopping)
+		return true;
+	return false;
 }
 
 

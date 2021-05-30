@@ -1,3 +1,5 @@
+exit;
+
 sprite_index = character.sprite_index;
    // draw_sprite_ext(character.sprite_index, character.fat_level*2+character.belly_size, x,y, 1,1,0, c_white, 1);
    var spr_name = "spr" + character.name + "_" + string(character.fat_level),

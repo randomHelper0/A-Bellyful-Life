@@ -1,5 +1,7 @@
 function Bobbie_dialogues(){
 	dialogue_init()
+	
+	if (in_house())
 	dialogue_create(
 	        "1",
 	        "Let's smoke more weed!",

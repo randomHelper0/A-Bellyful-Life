@@ -25,7 +25,14 @@ function cmd_speaker(speaker){
 }
 
 function make_expression_cmd(expression){
-	var cmd = "[set_ex:"+str(expression)+"]";
+	var cmd = "[ex:"+str(expression)+"]";
+	if (argument_count > 1)	
+		cmd = make_set_speaker_cmd(argument[1]) + cmd;
+	return (cmd);
+}
+
+function cmd_ex(expression){
+	var cmd = "[ex:"+str(expression)+"]";
 	if (argument_count > 1)	
 		cmd = make_set_speaker_cmd(argument[1]) + cmd;
 	return (cmd);
@@ -40,6 +47,11 @@ function ctb_cmd_set_expression(expression){
 	char.expression = real(expression);
 }
 
+function ctb_cmd_set_sound(snd){
+	snd = asset_get_index(snd);
+	audio_play_sound(snd, 0, 0);
+}
+
 function ctb_cmd_animate_speaker(speaker,animation){
 	var char = asset_get_index(speaker);
 }
@@ -50,4 +62,8 @@ function ctb_cmd_set_background(bg){
 
 function ctb_cmd_next_background(speaker,animation){
 	var char = asset_get_index(speaker);
+}
+
+function cmd_sound(snd){
+	return 	"[sound:" + audio_get_name(snd) + "]";
 }

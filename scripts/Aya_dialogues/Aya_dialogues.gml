@@ -1,5 +1,7 @@
 function aya_dialogue(){
 	dialogue_init()
+	
+	if (in_house())
 	dialogue_create(
 	        "1",
 	        "Let's study some more!",

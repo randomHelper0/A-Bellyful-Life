@@ -20,12 +20,14 @@ skew_step();
 	//show_message(global.show_follower &&  room == rmScene  && (char != Player || !scene_check_actor(Player)))
 
 //show self if dialogue is player
-if ( (room != rmScene && is_location() && (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue))) || room == rmBackpack ||
+if ( (room != rmScene && is_location() && !is_map() && (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue))) || room == rmBackpack ||
 	(global.show_follower &&  room == rmScene  && (char != Player || !scene_check_actor(Player)))){
 		if (keyboard_check(vk_delete))
 			show_message(sprite_get_name(sprite_index));
 	x = xstart;
-}
+}/*else if (is_map()){ //UI elements should show in map, but not PlayerHolder!
+	x = -1000;
+}*/
 
 if (instance_exists(ItemCard) && !place_meeting(x,y,ItemCard)){
 		image_alpha = 0.5;

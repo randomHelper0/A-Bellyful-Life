@@ -14,6 +14,9 @@ function set_day_bg() {
 	if (background_get( ) == sprShoppingDistrictNight)
 	    background_set(sprShoppingDistrict );
 		
-		if (background_get( ) == sprFatdonaldsNight)
+	if (background_get( ) == sprFatdonaldsNight)
 	    background_set(sprFatdonalds );
+		
+	if (background_get( ) == sprCountrysideNight)
+	    background_set(sprCountryside );
 }

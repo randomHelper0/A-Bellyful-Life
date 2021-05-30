@@ -3,10 +3,14 @@ function d_route(dest){
 		(dest == rmShop && global.clicked_shop_bt!= noone&& global.shop_bg == global.clicked_shop_bt.shop_bg){
 			//show_message(sprite_get_name( global.shop_bg))
 			
-		if (dest == rmMapUni)
+		/*f (dest == rmMapUni)
 			global.last_dest = rmMapShopping;
 		else if (dest = rmMapShopping)
-			global.last_dest = rmMapUni;
+			global.last_dest = rmMapUni;*/
+			
+		if(is_map_room(dest))
+			global.last_dest = room;
+			
 		room_goto(dest);
 		return;
 	}
@@ -124,10 +128,12 @@ function d_taxi(){
 function route_go(){
 	var dest =  global.dest;
 	global.last_dest =dest;
-	if (dest == rmMapUni)
+	/*if (dest == rmMapUni)
 		global.last_dest = rmMapShopping;
 	else if (dest = rmMapShopping)
-		global.last_dest = rmMapUni;
+		global.last_dest = rmMapUni;*/
+	if (is_map_room(dest))
+		global.last_dest = room;
 
 	if (dest == rmShop){
 		var bt = global.clicked_shop_bt;

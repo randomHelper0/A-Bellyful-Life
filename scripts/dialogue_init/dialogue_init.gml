@@ -12,6 +12,9 @@ function dialogue_init(){
 
 
 function dialogue_start(can_dismiss){
+	if (ds_map_size(global.dialogues) == 0)
+		return noone;
+	
 	can_dismiss = is_undefined(can_dismiss) ? false : can_dismiss;
 	var d =  instance_create(0,100, dropdown_dialogue);
 	d.can_dismiss = can_dismiss;

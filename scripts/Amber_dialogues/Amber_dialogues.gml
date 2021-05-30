@@ -1,6 +1,6 @@
 function Amber_dialogues(){
 	dialogue_init()
-	if (Amber.met_player)
+	if (Amber.met_player && in_house())
 		dialogue_create(
 		        "1",
 		        "Let's go jogging!",
@@ -16,7 +16,13 @@ function Amber_dialogues(){
 }
 
 function Amber_eating_out(){
-	ctb_list(noone, noone, "thanks!");
+	ctb_msg(cmd_ex(ex_talk) +
+		cmd_sound(get_random_asset("chewsoft", 1,4)) + "...",
+		cmd_sound(get_random_asset("chewsoft", 1,4)) + "...", cmd_sound(get_random_asset("chewsoft", 1,4))+
+		"[speaker:Amber]"+cmd_ex(ex_smile)+"(You could only marvel at Amber as she chow down one hamburger after another.)",
+		cmd_ex(ex_idle)+"[speaker:Player]Where does it all go, really?",
+		"[speaker:Amber]"+cmd_ex(ex_smile2)+"Hehe, obviously I don't usually eat that much, but I definitely won't hold back if someone else is paying :P",
+		cmd_ex(ex_idle) + cmd_speaker(noone) + "You both enjoyed the meal while having small talks");
 }
 
 function amber_more_jog(){
