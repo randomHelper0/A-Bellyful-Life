@@ -95,6 +95,12 @@ function digest_step(minutes){
 		pdiet = statuses_count[? "pill_diet"];
 		
 	modifier += power(1.5, pdigest) + power(0.5, pdiet);
+	if (modifier < 0)
+		show_message(modifier);
+		
+	if (minutes < 0)
+		show_message(minutes);
+		
 	minutes *= modifier;
 	
 	daily_minutes += minutes;

@@ -4,7 +4,7 @@
 */
 //html5 compatibility
 alarm[0] = 1;
-
+destroyed = false; //WTF
 
 // Initialize the CTB engine
 ctb_init();

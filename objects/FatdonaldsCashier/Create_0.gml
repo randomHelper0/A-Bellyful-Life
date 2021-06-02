@@ -1,5 +1,5 @@
 event_inherited();
-name = "Fatdonalds Cashier";
+name = "Cashier";// "Fatdonalds Cashier";
 script_location = fatdonalds_location;
 script_dialogue = fatdonalds_dialogue;
 

@@ -111,7 +111,7 @@ hate_msg = "(she seems repulsed by what you did)";
 stuffing_interest_msg =  "(she seems very interested in what you were doing)";
 
 eating_out = false;
-eating_out_threshold = 20;
+eating_out_threshold = 5;
 eating_out_location = noone;
 eating_out_items = noone;
 eating_out_script = asset_get_index(name+"_eating_out"); //-1 if not

@@ -26,6 +26,7 @@ function Amber_eating_out(){
 }
 
 function amber_more_jog(){
+	Amber.likability += 5;
 	character_finish_visit(Amber);
 	global.scene_script = amber_jog;
 	time_forward_minutes(15);
@@ -36,7 +37,7 @@ function amber_jog(){
 	//time_forward_minutes(60);
 	//ControlEnv.hours = 7;
 	//ControlEnv.minutes = 50;
-	
+	Amber.likability += 5;
 	global.scene_name = "Park";
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;

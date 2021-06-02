@@ -49,12 +49,16 @@ function d_player_bed(){
 
 function sleep_finish(){
 //var temp = Player.hours_without_eating;
-	if (ControlEnv.hours > 21){
+	/*if (ControlEnv.hours > 21){
     //show_message(string(24 - ControlEnv.hours + 6));
 	    time_forward_hour(24 - ControlEnv.hours + 6);
 	}
 	else
-	    time_forward_hour(6 - ControlEnv.hours);
+	    time_forward_hour(6 - ControlEnv.hours);*/
+	
+	time_forward_minutes(6*60);
+	ControlEnv.hours = 6;
+	ControlEnv.minutes = 10;
 	
 	with (Character){
 	var mult = 250;
@@ -65,8 +69,10 @@ function sleep_finish(){
 	inc_stomach = (daily_stomach_content/daily_minutes)*mult;
 	inc_bowels = (daily_bowels_content/daily_minutes)*mult;
 	
-	inc_stomach = 0;
-	inc_bowels = 0;
+	//show_message(str(inc_stomach) + " =( " + str(daily_stomach_content) + "/" + str(daily_minutes)+")*" + str(mult));
+	//show_message(str(inc_bowels) + " =( " + str(daily_bowels_content) + "/" + str(daily_minutes)+")*" + str(mult));
+	//inc_stomach = 0;
+	//inc_bowels = 0;
 	
 		//ctb_list(noone, noone, string(inc_stomach) + ", " + string(inc_bowels));
 	stomach_capacity += inc_stomach;

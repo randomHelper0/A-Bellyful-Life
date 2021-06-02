@@ -51,7 +51,7 @@ function Yumi_exam(){
 		return;
 	}
 	Yumi.gave_exam_today = true;
-	if (Player.total_content/Player.total_capacity >= 0.7){
+	if (Player.total_content/Player.total_capacity >= 0.5){
 		ctb_list(noone, noone, make_expression_cmd(ex_surprise)+"[set_speaker:Yumi]Hmm.. She immediately placed her focus on your bloated belly. Are you currently pregnant?",
 			"[set_speaker:Player]No. (You then begrudgingly explains to her what you did to make your belly so big).",
 			 make_expression_cmd(ex_talk, Yumi)+"I see, as a medical professional I will have to warn you that going over your own limit will have deadly consequences.",
@@ -82,11 +82,11 @@ function Yumi_exam(){
 function Yumi_exam2(){
 	Yumi.gave_exam_today = true;
 	ControlEnv.money += 25;
-	if (Player.total_content/Player.total_capacity >= 0.9){
+	if (Player.total_content/Player.total_capacity >= 0.8){
 		Yumi.likability += 9;
 		ControlEnv.money += 10;
-		Yumi.interest_inflate += 15;
-		Yumi.interest_stuffing += 15;
+		Yumi.interest_inflate += 9;
+		Yumi.interest_stuffing += 9;
 		ctb_list(noone, noone, "[set_speaker:Yumi]"+cmd_ex(ex_surprise)+"(She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
 				cmd_ex(ex_idle) + "[set_speaker:Player](You tried your best not to blush)",
 				"[set_speaker:Yumi]"+cmd_ex(ex_smile2)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
@@ -95,7 +95,7 @@ function Yumi_exam2(){
 				"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a large margin."
 				)
-	}else if (Player.total_content/Player.total_capacity >= 0.6){
+	}else if (Player.total_content/Player.total_capacity >= 0.5){
 		Yumi.likability += 5;
 		Yumi.interest_inflate += 5;
 		Yumi.interest_stuffing += 5;

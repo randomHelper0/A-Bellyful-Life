@@ -32,6 +32,7 @@ function Aria_eating_out(){
 
 function aria_more_practice(){
 	character_finish_visit(Aria);
+	Aria.likability += 5;
 	global.scene_script = aria_practice_scene;
 	time_forward_minutes(15);
 	scene_start_from(rmPool);
@@ -63,6 +64,7 @@ function aria_practice_scene(){
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
 	global.scene_exit = false;
+	Aria.likability += 5;
 	//scene_add_actors(Player, noone, noone);
 	
 	if (Aria.stomach_pressure <= 0)

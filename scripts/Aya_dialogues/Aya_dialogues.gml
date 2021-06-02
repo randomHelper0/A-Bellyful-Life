@@ -33,6 +33,7 @@ function aya_more_study(){
 	if (Player.mood <= 10){
 		ctb_list(noone, noone, "You're too bored to suggest that!");
 	}else{
+		Aya.likability += 5;
 		global.scene_script = aya_study;
 		scene_start_from(rmLivingroom);
 	}
@@ -55,9 +56,9 @@ function aya_study(){
 	if (Player.total_content/Player.total_capacity >= 0.7){
 		ctb_list(aya_choice, noone , 
 		msgStudy,
-		"[set_speaker:Aya](She noticed your inflated belly.)",
+		"[speaker:Aya](She noticed your inflated belly.)",
 		"Why is your stomach so huge? Did you have three buffets this morning?",
-		"[set_speaker:Player](You contemplated on what to say.)");
+		"[speaker:Player](You contemplated on what to say.)");
 	}else{
 		ctb_list(noone, noone , msgStudy);
 	}

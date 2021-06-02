@@ -16,6 +16,7 @@ if (just_rescued && room == rmPool){
 		cmd_ex(ex_idle)+"[set_speaker:noone] (You updated your journal schedule and added her number to your phone)");
 		just_rescued = false;
 		has_number = true;
+		likability = 5;
 }
 
 if (!finished_intro && Player.pool_pass > 0){
