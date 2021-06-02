@@ -5,6 +5,7 @@ if (global.watched_inflate && following){
 	var msg = "";
 	if (desire_inflate > 0){
 			msg = inflate_interest_msg;
+			desire_inflate += 3;
 	}else if (desire_inflate == 0){
 		msg = disinterest_msg;	
 	}else{

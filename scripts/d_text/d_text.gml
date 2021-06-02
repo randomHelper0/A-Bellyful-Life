@@ -24,7 +24,7 @@ function d_text_location() {
 	var char = global.dialogue_char;
 	location = script_execute(char.script_location);
 	if (location != noone)
-	    ctb_list(noone, noone, "I'm at " + room_get_name(location));
+	    ctb_list(noone, noone, "I'm at the " + string_replace(room_get_name(location), "rm", ""));
 	else
 	   ctb_list(noone, noone, "I'm not really anywhere at the moment.")//"Sorry, I'm busy right now.");
 }

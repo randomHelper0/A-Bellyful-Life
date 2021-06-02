@@ -16,6 +16,9 @@ function skew_init(type, xx, yy, spd, bothways){
 }
 
 function skew_step(){
+	if (! global.settings[? "Skew Animation"])
+		return;
+		
 	if (skew_xx != 0)
 	skew_x = cos(current_time/500  +skew_xoffset)*10;
 	/*skew_dx = skew_spd;

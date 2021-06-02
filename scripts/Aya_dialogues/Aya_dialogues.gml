@@ -17,7 +17,16 @@ function aya_dialogue(){
 }
 
 function Aya_eating_out(){
-	ctb_list(noone, noone, "thanks!");
+	ctb_msg(
+		cmd_speaker(Aya) + cmd_ex(ex_talk) +cmd_sound(get_random_asset("chewsoft", 1,4))
+			+ "...",
+		+ cmd_ex(ex_smile)+cmd_sound(get_random_asset("chewsoft", 1,4)) + "...",
+		cmd_speaker(noone) + "You noticed that  Aya is reading her book even while eating but didnt bother to say anything",
+		"It seems that Aya was so absorbed in her reading that she didnt notice how much food she was taking in",
+		cmd_sound(get_random_asset("chewsoft", 1,4)) + "Curiously, you wondered how many hamburgers can she fit insider her small figure and took care to replace any of the food that was eaten.",
+		cmd_sound(get_random_asset("drink", 1,4)) + "Alas, Aya finally snapped out of her eating daze. But by then there was a noticeable bulge on her tummy.",
+		cmd_speaker(Aya) + cmd_ex(ex_idle)+ "..."
+		);
 }
 
 function aya_more_study(){
@@ -38,6 +47,7 @@ function aya_study(){
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
 	global.show_follower = false;
+	Aya.likability += 5;
 	change_mood(Player, -45, true);
 	scene_add_actors(Aya, noone, noone);
 	background_set(sprAyaStudyBG);
@@ -60,7 +70,7 @@ function Aya_drink_kitchensink(){
 	background_set(sprKitchenZoomed);
 	scene_auto_sound(ORAL, WATER);
 	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
-	ctb_list(noone, noone , "stufffff");
+	//ctb_list(noone, noone , "stufffff");
 }
 
 function aya_choice(){
@@ -82,11 +92,11 @@ function aya_choice(){
 }
 
 function aya_choice_inflate(){
-	Aya.interest_inflate += 20;
+	Aya.desire_inflate += 10;
 	ctb_list(noone, noone, "[set_speaker:Aya]I see. (She seems much more interested in inflation)")
 }
 
 function aya_choice_stuffing(){
-	Aya.interest_stuffing += 20;
+	Aya.desire_stuffing += 10;
 	ctb_list(noone, noone, "[set_speaker:Aya]I see. (She seems much more interested in stuffing)")
 }

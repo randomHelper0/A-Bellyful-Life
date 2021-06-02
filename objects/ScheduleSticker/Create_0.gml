@@ -9,5 +9,5 @@ event_location = "Test Location";
 event_start_hour = 10;
 event_start_minute = 30;
 event_day = ControlEnv.day;
-
+firstPass = true;
 alarm[0] = 1;

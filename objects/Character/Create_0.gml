@@ -1,10 +1,11 @@
 //sprites
 sprite_expression = noone;
 expression = ex_idle;
+high = 0;
 
 //common stats, attributes
 affection = 0;
-likability = 50;
+likability = 0;
 mental_stability = 100;
 academic_readiness = 80;
 energy = 60;
@@ -24,6 +25,7 @@ base_weight = 40;
 weight = base_weight;
 jittery = 0;
 alcohol = 0;
+high = 0;
 daily_stomach_content = 0;
 daily_bowels_content = 0
 daily_minutes = 0;
@@ -103,7 +105,7 @@ interest_inflate = 0;
 interest_stuffing = 0;
 desire_inflate = 0;
 desire_stuffing = 0;
-inflate_interest_msg = "(she seems very interested in what you were doing)";
+inflate_interest_msg = "(she seems interested in what you were doing)";
 disinterest_msg = "(she doesn't seem very interested in what you were doing)"
 hate_msg = "(she seems repulsed by what you did)";
 stuffing_interest_msg =  "(she seems very interested in what you were doing)";

@@ -9,6 +9,7 @@ function scene_start(){
 	if (room != rmBackpack)
 		global.last_room = room;
 	global.scene_exit = true;
+	global.scene_bgm = false;
 	global.scene_playing = true;
 	global.scene_sound_action =  noone;
 	global.scene_sound_sporadic =  ds_map_create();
@@ -66,7 +67,7 @@ function repulsed_message(){
 	if (follow_char != noone){
 		global.dialogue_char = follow_char;	
 		follow_char.following = false;
-		ctb_list(noone, noone, "Ehhhh what are you doing?? I'll pretend Inever saw that! (She covered her eyes and ran outside)");
+		ctb_list(noone, noone, "Ehhhh what are you doing?? I'll pretend I never saw that! (She covered her eyes and ran outside)");
 		//global.dialogue_char = noone;
 	}
 }

@@ -15,7 +15,7 @@ global.clicked_shop_bt = noone;
 global.dialogies = noone;
 global.dialogies_icons = noone;
 
-global.settings = ds_map_create();
+
 global.settings[? "burp sound"] = false;
 global.settings[? "fart sound"] = false;
 
@@ -55,12 +55,14 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 	IHamburger, IHotdog, IHugeburger, IFries,
 	 IPillDiet, IPillDigest, IPillGas, IPillNoise, IPillLaxative,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
-		IBike);
+		IBike,
+IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack);
 //create_item(instance_find(IPump,0));
-create_item(instance_find(IPillDiet,0));
-create_item(instance_find(IBottleDiet,0));
+//create_item(instance_find(IPillDiet,0));
+//create_item(instance_find(IBottleDiet,0));
 for (i = 0; i <8; i ++){
-    create_item(instance_find(ICakeSlice,0));
+    var cake = create_item(instance_find(ICakeSlice,0));
+	cake.in_fridge = true;
 }
 
 location = noone;

@@ -12,7 +12,7 @@ if (ControlEnv.hours >= 23 && !warn_sleep2){
 	instance_create_depth(0,0,-1000, Eyelid);
 }
 
-if (ControlEnv.hours > 23 &&ControlEnv.minutes > 30 || ControlEnv.hours < 6){
+if (is_location() && (ControlEnv.hours > 23 &&ControlEnv.minutes > 30 || ControlEnv.hours < 6)){
 		ctb_list(d_player_sleep, noone, "Begrudgingly, you returned to your bed because you're too tired to stay awake any longer.");
 }
 

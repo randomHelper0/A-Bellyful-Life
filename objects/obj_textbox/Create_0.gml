@@ -17,7 +17,8 @@ icon_typing = spr_ico_typing_small;
 icon_finished = spr_ico_continue_small;
 
 // Add some colors
-ctb_add_color( "default", c_white );
+//ctb_add_color( "default", c_white );
+ctb_add_color( "default", c_black );
 ctb_add_color( "white", c_white );
 ctb_add_color( "blue", c_blue );
 ctb_add_color( "yellow", c_yellow );
@@ -42,8 +43,9 @@ ctb_add_command( "bg", command_bg )
 
 ////ctb_set_padding( 116,10,10,10 );
 
-// Set the textbox's background
-sprite_index = ctb_load_subimage( spr_textbox_slice9_subimages, room_width-128, 108 );
+// Set the textbox's background//////////////////////
+//sprite_index = ctb_load_subimage( spr_textbox_slice9_subimages, room_width-128, 108 );
+sprite_index = ctb_load_subimage( sprBlank, room_width-128, 108 );
 
 finish_script = noone;
 finish_room = noone;

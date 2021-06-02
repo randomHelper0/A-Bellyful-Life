@@ -1,3 +1,6 @@
+if (ControlEnv.room_counter< 20)
+	exit;
+
 if (is_shop){
 		global.clicked_shop_bt = id;
 		//show_message(sprite_get_name(shop_bg))

@@ -1,14 +1,17 @@
 event_inherited();
 
+if (is_location())
+	global.last_room = room;
+
 if (instance_exists(dropdown_dialogue) || instance_exists(obj_textbox) || instance_exists(Window)){
     screen_lock = true;
 }else{
     screen_lock = false;
 }
-
+room_counter++;
 counter++;
 
-if (room == rmMapShopping || room == rmMapUni){
+if (room == rmMapShopping || room == rmMapUni || room == rmPark || room == rmMapCountryside){
 	audio_sound_gain(sndWind, 0.5, 0);
 	if (raining <= 0)
 		audio_sound_gain(sndRain, 0, 0);

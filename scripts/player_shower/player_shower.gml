@@ -5,7 +5,7 @@ function player_shower(){
 	global.show_follower = false;
 	scene_add_actors(Player, noone, noone);
 	background_set(sprBathtubShower);
-	
+	global.scene_sound_action = list_create(sndShower);
 	var msg 
 	if (Player.shower_times == 0)
 		msg = "You can feel the refreshing water run through your body, restoring your energy and mood!";
@@ -24,7 +24,7 @@ function player_shower(){
 	Player.shower_times++;
 	
 	ctb_list(player_shower_finish,noone , msg);
-	//with(Player)skew_init(SKEW_ABSOLUTE, 0,0,0,0);
+	with(Player)skew_init(SKEW_ABSOLUTE, 0,0,0,0);
 	//with (Player) skew_common();
 }
 

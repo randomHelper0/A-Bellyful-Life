@@ -3,3 +3,7 @@ with (object_index){
 		if (id > other.id)
 			other.y += sprite_height;
 }
+if (firstPass){
+	firstPass = false;
+	alarm[0] = 1;
+}

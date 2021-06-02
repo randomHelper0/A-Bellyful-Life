@@ -47,6 +47,7 @@ function amber_jog(){
 	//global.player_jog_minutes = 60;
 	if (!Amber.met_player){
 		Amber.met_player = true;
+		Amber.has_number = true;
 		ctb_list(player_jog_finish, noone, "After a round of jogging, both of you stopped to take a small break",
 			make_set_speaker_cmd(Amber)+ "Good morning! I'm Amber. It's nice to have someone to jog with.",
 			make_set_speaker_cmd(Player)+"Yup! I'm <Player name>, nice to meet you. Do you jog here often?",

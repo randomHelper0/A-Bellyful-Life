@@ -32,8 +32,10 @@ function player_pump_butt(){
 }
 
 function d_player_pump(){
-	if (!is_location_room(global.last_room))
+	if (!is_location_room(global.last_room) || room == rmShop){
+		ctb_msg("You can't use this here!");
 		return;
+	}
 	
 	global.pump_bg = global.last_bg;
 	

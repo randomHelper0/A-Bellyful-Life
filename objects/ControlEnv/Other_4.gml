@@ -5,3 +5,5 @@ if (global.scene_from != noone && room == global.scene_from){
 	global.scene_from = noone;	
 	scene_start();
 }
+
+room_counter = 0;

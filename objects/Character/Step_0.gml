@@ -56,3 +56,14 @@ if (arrived_notice && !instance_exists(obj_textbox)){
 	ctb_list(noone, noone, name + " has arrived at your place.");	
 	arrived_notice = false;
 }
+
+if (!in_dialogue() && stomach_content > stomach_capacity*1.1 && is_location()){
+	sndVomit = get_random_asset("sndVomit", 1, 5);
+	audio_play_sound(sndVomit, 0, 0);
+	
+	//Player.stomach_content -= min(Player.stomach_capacity/5,Player.stomach_content);
+	stomach_air *= 0.5;
+	stomach_water *= 0.5;
+	stomach_food *= 0.5;
+	stomach_pressure *=0.5;
+}

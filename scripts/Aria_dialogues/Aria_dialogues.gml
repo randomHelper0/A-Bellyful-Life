@@ -23,8 +23,9 @@ function Aria_eating_out(){
 		cmd_ex(ex_smile2)+cmd_sound(get_random_asset("drink", 1,4))+"...",
 		cmd_ex(ex_smile)+cmd_sound(get_random_asset("chewsoft", 1,4))+
 		"So delicious!" + cmd_ex(ex_idle),
-		cmd_speaker(Player) + "",
-		""
+		cmd_speaker(Player) + "(You could only gawk as Aria rapidly chomp down her food. You had to remind her multiple times to slow down to avoid choking)",
+		cmd_speaker(Aria)+cmd_ex(ex_blush) + "Sorry! It's just that ever since you helped me, my swimming sessions have gone so well and somehow I'd feel an insatiable hunger for the rest of the day.",
+		cmd_ex(ex_idle) + cmd_speaker(Player) + "(You concluded that perhaps her metabolism had changed after many intensive swim sessions)."
 		//cmd_speaker(
 	)
 }
@@ -50,7 +51,8 @@ function aria_intro_scene(){
 	time_forward_minutes(30);
 	if (ControlEnv.hours < 9)
 		ControlEnv.hours = 9;
-	ctb_list(noone, rmPool , "Immediately after entering, you noticed a small girl strugglling underneath the waters",
+	ctb_list(noone, rmPool ,
+		"Immediately after entering, you noticed a small girl strugglling underneath the waters",
 		"the life guard was too occupied looking at his phone to notice. It would be faster to jump into the pool yourself.",
 		"[set_background:sprAriaIntro2]Without wasting a hearbeat, you jumped in and gently pulled her out.");
 	Aria.just_rescued = true;

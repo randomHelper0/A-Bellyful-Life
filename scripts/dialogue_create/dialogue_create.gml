@@ -12,7 +12,7 @@ function dialogue_create() {
 	d[1] = argument[2];
 	d[2] = argument[3];
 	
-	var icon = sprBubble;
+	var icon = sprBlank;//sprArrowDialogue;//sprBubble;
 	if (argument_count == 5)
 		icon = argument[4];
 

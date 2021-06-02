@@ -8,8 +8,10 @@ sprite_expression = sprAyaExpressions_0;
 
 has_number = true;
 
-first_text = true;
+first_text = false;
 
 studied_today = false;
+
+likability = 20;
 
 eating_out_init(rmFatbucks, list_create(IFrappuccino, ICakeSlice, IApple))

@@ -12,17 +12,21 @@ function notify_time(hour, minutes,  minutes_before, event_name, event_room, eve
 	
 	sticker = NotificationSticker;
 	
-	if (room == rmJournal)
-		sticker = ScheduleSticker;
+	if (room == rmJournal){
+		if (ControlEnv.room_counter < 1)
+			sticker = ScheduleSticker;//instance_create(0,0, ScheduleSticker);
+		else return false;
+	}
 	//else
 		//show_message("YES!");
 		
 	//LOL
 	global.temp = event_name;
 	with (sticker) {
-		if (event_name == global.temp)
+		if (event_name == global.temp && room != rmJournal)
 			global.temp = true;
 	}
+	
 	if (global.temp == true)
 		return true;
 	

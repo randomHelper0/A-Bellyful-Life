@@ -31,7 +31,18 @@ function Yumi_dialogues(){
 }
 
 function Yumi_eating_out(){
-	ctb_list(noone, noone, "thanks!");
+	
+	ctb_msg(
+		cmd_speaker(Yumi) + cmd_ex(ex_smile) +cmd_sound(get_random_asset("chewsoft", 1,4))  + "...",
+		cmd_ex(ex_talk) + cmd_speaker(noone) + cmd_sound(get_random_asset("chewsoft", 1,4))  +
+		"Yumi's eating posture was very refined and graceful, as if she is an aristocratic lady from one of the visual novels you recently played.",
+		cmd_sound(get_random_asset("chewsoft", 1,4)) + "Still, despite such graceful gestures and calm demeanor, Yumi never stiopped taking in more food",
+		cmd_sound(get_random_asset("chewsoft", 1,4)) +"You wonder if her stomach would billow out at any moment.",
+		cmd_speaker(Yumi) +  cmd_ex(ex_smile2) + "Are you wondering why I'm eating so much?",
+		cmd_ex(ex_idle) + cmd_speaker(noone) + "You nodded",
+		cmd_speaker(Yumi) +  cmd_ex(ex_smile) + "Me too. I'm actually trying to put myself in your shoes. How would it feel to have your stomach stretched out like that. (She pats her slightly bulging belly). I don't think its so bad at all. This feeling is quite strange yet comfortable. I'm going to have to eat with you more often it seems.",
+		cmd_ex(ex_idle) + "..."
+	);
 }
 
 function Yumi_exam(){
@@ -61,6 +72,7 @@ function Yumi_exam(){
 		ControlEnv.money += 25;
 		Yumi.interest_inflate += 10;
 		Yumi.interest_stuffing += 10;
+		Yumi.likability += 5;
 	}else{
 		ctb_list(noone, noone, "You're as healthy as you can be, no health problems whatsoever.");
 		ControlEnv.money -= 50;
@@ -71,23 +83,28 @@ function Yumi_exam2(){
 	Yumi.gave_exam_today = true;
 	ControlEnv.money += 25;
 	if (Player.total_content/Player.total_capacity >= 0.9){
+		Yumi.likability += 9;
 		ControlEnv.money += 10;
 		Yumi.interest_inflate += 15;
 		Yumi.interest_stuffing += 15;
-		ctb_list(noone, noone, "[set_speaker:Yumi](She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
-				"[set_speaker:Player](You tried your best not to blush)",
-				"[set_speaker:Yumi](She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
-				"Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
+		ctb_list(noone, noone, "[set_speaker:Yumi]"+cmd_ex(ex_surprise)+"(She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
+				cmd_ex(ex_idle) + "[set_speaker:Player](You tried your best not to blush)",
+				"[set_speaker:Yumi]"+cmd_ex(ex_smile2)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
+				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",
+				cmd_speaker(Yumi) + "Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
 				"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a large margin."
 				)
 	}else if (Player.total_content/Player.total_capacity >= 0.6){
+		Yumi.likability += 5;
 		Yumi.interest_inflate += 5;
 		Yumi.interest_stuffing += 5;
 		ctb_list(noone, noone, 
-				"[set_speaker:Yumi](She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
-				"Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
-				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit."
+				"[set_speaker:Yumi]"+cmd_ex(ex_smile)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
+				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",
+				cmd_speaker(Yumi) + cmd_ex(ex_talk)+ "Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
+				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit.",
+				cmd_speaker(Yumi) + cmd_ex(ex_idle) + "..."
 				)
 	}else{
 		ctb_list(noone, noone, 

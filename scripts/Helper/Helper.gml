@@ -59,3 +59,7 @@ function audio_is_playing_all(){
 function in_dialogue(){
 	return (instance_exists(obj_textbox) || instance_exists(dropdown_dialogue));	
 }
+
+function audio_stop_sound_later(){
+	audio_stop_sound(global.stop_sound);	
+}

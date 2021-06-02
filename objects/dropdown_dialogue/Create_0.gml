@@ -30,14 +30,15 @@ highlight_padding = 3;   //extra padding for highlight indicator
 highlight_rad = 5;       //Radius for round rect highlight
 
 //colors
-bak_color = c_black;
-border_color = c_black;
-highlight_color = c_teal;
-icon_color = c_ltgray;
-separator_color = c_ltgray;
-text_color = c_ltgray;
+bak_color = make_color_rgb(203, 173, 139); //c_black;
+border_color = make_color_rgb(75, 62, 55);//c_black;
+highlight_color = make_color_rgb(75, 62, 55);//c_teal;
+c_select = make_color_rgb(255, 230, 213);
+icon_color = c_select;//c_ltgray;
+separator_color = c_select;//c_ltgray;
+text_color =  make_color_rgb(75, 62, 55);//c_select;//c_ltgray;
 
-bak_alpha = .85;
+bak_alpha = .90;//.85;
 
 ///Built in variables, do not change
 READY = false;

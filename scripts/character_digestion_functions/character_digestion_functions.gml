@@ -57,6 +57,8 @@ function digest_step(minutes){
 		jittery -= min(minutes/12, jittery);
 	if (alcohol > 0)
 		alcohol -= min(minutes/12, alcohol);
+	if (high > 0)
+		high -= min(minutes/12, high);
 		
 	var gas = statuses_count[? "pill_gas"];
 	if (gas > 0){

@@ -19,7 +19,7 @@ function player_TV(){
 	}
 	
 	Player.TV_times++;
-	audio_play_sound(sndTV, 0, 0);
+	global.scene_sound_action = list_create(sndTV);
 	ctb_list(player_TV_finish, noone , msg);
 	with (Player) skew_common();
 }

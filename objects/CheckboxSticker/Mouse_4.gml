@@ -1,0 +1,1 @@
+global.settings[? name] = !global.settings[? name];

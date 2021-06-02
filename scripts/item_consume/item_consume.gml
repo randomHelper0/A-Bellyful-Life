@@ -3,6 +3,7 @@ function item_consume(item, target){
 		ctb_list(noone, noone, "Item expired");
 		return;	
 	}
+	change_mood(target, item.volume/10, true);
 	item.bites = 0;
 	target.stomach_food += item.volume;
 	target.undigested_calories += item.calories;
@@ -13,6 +14,9 @@ function item_consume(item, target){
 	}
 	if (item.alcohol > 0){
 		target.alcohol += item.alcohol;
+	}
+	if (item.high > 0){
+		target.high += item.high;
 	}
 	if (item.use_items != noone){
 		for (var i =0; i < ds_list_size(item.use_items);i++){
@@ -28,11 +32,15 @@ function item_consume_part(item, target){
 		ctb_list(noone, noone, "Item expired");
 		return;	
 	}
+	change_mood(target, item.bite_volume/10, true);
 	item.bites --;
 	target.stomach_food += item.bite_volume;
 	target.undigested_calories += item.bite_calories;
 	if (item.alcohol > 0){
 		target.alcohol += item.bite_alcohol;
+	}
+	if (item.high > 0){
+		target.high += item.bite_alcohol;
 	}
 	eat_sound(item);
 

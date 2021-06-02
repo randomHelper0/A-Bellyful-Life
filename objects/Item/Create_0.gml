@@ -21,6 +21,7 @@ volume = 0;
 calories = 0;
 energy = 0;
 alcohol = 0;
+high = 0;
 script_use = d_item_consume;
 script_use_on_item = noone;
 script_use_on_char = item_give_consume;

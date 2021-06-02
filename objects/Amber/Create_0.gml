@@ -8,6 +8,6 @@ met_player = false;
 //signal second time jogging
 jogged_today = false;
 
-has_number = true;
+//has_number = true;
 
 eating_out_init(rmFataurant, list_create(IBeer, IHotdog, ICakeSlice));

@@ -26,6 +26,8 @@ if (player_registered && !check_day(SAT, SUN)){
 		time_forward_minutes(minutes_worked);
 		
 		audio_play_sound(sndWork,0,0);
-		ctb_list(audio_stop_all, noone, "...", "...", msg);
+		global.stop_sound = sndWork;
+		ctb_list(audio_stop_sound_later, noone, "...", "...", msg);
 	}
 }
+

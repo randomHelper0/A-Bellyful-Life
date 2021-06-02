@@ -2,7 +2,7 @@ function is_location() {
 	if (room == rmJournal || room == rmBackpack || room == rmInteract || room == rmKitchenFridge
 		|| room == rmStatus || room == rmScene || room == rmShop
 	    //|| room == rmMapUni || room == rmMapShopping// || room == rmGeneralStore 
-	    || room == rmStat || room == rmAbilities)
+	    || room == rmStat || room == rmAbilities || room == rmSettings)
 	    return false;
 	else
 	    return true;

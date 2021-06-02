@@ -17,6 +17,8 @@ if (item.energy > 0)
 	desc = "Energy: +" + string(item.energy) + ". "  + desc;
 if (item.alcohol > 0)
 	desc = "Alcohol: +" + string(item.alcohol) + ". "  + desc;
+if (item.high > 0)
+	desc = "High: +" + string(item.high) + ". "  + desc;
 draw_text_ext(x+10,y+ 177, string_hash_to_newline(desc), -1, 450);
 //if(item.hours_left > 0)
 

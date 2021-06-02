@@ -19,11 +19,16 @@ function d_player_sleep(){
 }
 
 function d_player_bed(){
-	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6)
-		return;
-	
 	dialogue_init();
-	if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
+	
+	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6)
+		dialogue_create(
+		"1",
+		"Sleep until 6 am",
+		false,
+		"It's still too early. You usually go to bed at around 9pm"
+		)
+	else //if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
 		"1",
 		"Sleep until 6 am",
@@ -31,13 +36,13 @@ function d_player_bed(){
 		d_player_sleep
 		)
 		
-	dialogue_create(
+	/*dialogue_create(
 		"2",
 		"Massage belly",
 		false,
 		"Incomplete Scene"
 		//d_player_massage
-		)
+		)*/
 	
 	dialogue_start(true);
 }
@@ -55,13 +60,19 @@ function sleep_finish(){
 	var mult = 250;
 	if (object_index != Player)
 		mult = 600;
-		
+	
+	////////////////////////////////
 	inc_stomach = (daily_stomach_content/daily_minutes)*mult;
 	inc_bowels = (daily_bowels_content/daily_minutes)*mult;
+	
+	inc_stomach = 0;
+	inc_bowels = 0;
+	
 		//ctb_list(noone, noone, string(inc_stomach) + ", " + string(inc_bowels));
 	stomach_capacity += inc_stomach;
 	bowels_capacity += inc_bowels;
 	
+	////////////////////////////////
 	daily_stomach_content = 0;
 	daily_bowels_content = 0
 	daily_minutes = 0;

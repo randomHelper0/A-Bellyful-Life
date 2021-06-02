@@ -127,6 +127,12 @@ function d_taxi(){
 
 function route_go(){
 	var dest =  global.dest;
+	if (dest == rmMapShopping && !Bobbie.met_player){
+			global.last_dest = rmAlley;
+			room_goto(rmAlley);
+			return;
+	}
+	
 	global.last_dest =dest;
 	/*if (dest == rmMapUni)
 		global.last_dest = rmMapShopping;
