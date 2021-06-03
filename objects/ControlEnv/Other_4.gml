@@ -6,6 +6,9 @@ if (global.save_index != noone){
 	save_metadata[? "Day"] = day;
 	save_metadata[? "$"] = money;
 	save_metadata[? "Notes"] = notes;
+	if (ds_map_exists(global.metadata, str(global.save_index)))
+		ds_map_delete(global.metadata, str(global.save_index));
+	
 	ds_map_add_map(global.metadata, str(global.save_index), save_metadata);
 	save_map_to_file(global.metadata, "metadata.json");
 	

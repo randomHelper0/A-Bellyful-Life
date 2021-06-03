@@ -11,4 +11,6 @@ if (!file_exists(working_directory + "metadata.json")){
 	file_text_close(file);	
 }else{
 	global.metadata = json_decode(file_read_all(working_directory + "metadata.json"));
+	//show_debug_message("HERE")
+	//show_message(file_exists(working_directory + "metadata.json"))
 }
