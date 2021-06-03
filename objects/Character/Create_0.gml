@@ -1,3 +1,10 @@
+init_data_excludes("statuses_count", "statuses", 
+		"eating_out_script", "visit_location", 
+		"sprite_expression", "expression",
+		"script_location", "script_dialogue", "script_idle", "script_observe",
+		"eating_out", "eating_out_threshold", "eating_out_location", "eating_out_items",
+		"inflate_interest_msg", "disinterest_msg", "hate_msg", "stuffing_interest_msg");
+
 //sprites
 sprite_expression = noone;
 expression = ex_idle;
@@ -75,22 +82,28 @@ persistent = true;
 visible = false;
 image_speed = 0;
 name = object_get_name(object_index)
-triggers = ds_list_create();
+//triggers = ds_list_create();
 
-data = ds_map_create();
+//data = ds_map_create();
 
 //skew_init(SKEW_ABSOLUTE, 0,0,0,0);
 skew_common();
 statuses = ds_map_create();
-statuses[? "pill_digest"] = ds_list_create();
-statuses[? "pill_diet"] = ds_list_create();
-statuses[? "pill_gas"] = ds_list_create();
-statuses[? "pill_noise"] = ds_list_create();
-statuses[? "pill_laxative"] = ds_list_create();
+ds_map_add_list(statuses, "pill_diet", ds_list_create());
+ds_map_add_list(statuses, "pill_digest", ds_list_create());
+ds_map_add_list(statuses, "pill_gas", ds_list_create());
+ds_map_add_list(statuses, "pill_noise", ds_list_create());
+ds_map_add_list(statuses, "pill_laxative", ds_list_create());
 
 statuses_count = ds_map_create();
-ds_map_copy(statuses_count,statuses)
-set_all_map_entries_to_value(statuses_count,0);
+statuses_count[? "pill_diet" ] = 0;
+statuses_count[? "pill_digest" ] = 0;
+statuses_count[? "pill_gas" ] = 0;
+statuses_count[? "pill_noise" ] = 0;
+statuses_count[? "pill_laxative" ] = 0;
+
+//ds_map_copy(statuses_count,statuses)
+//set_all_map_entries_to_value(statuses_count,0);
 
 
 visiting = false;
@@ -101,8 +114,8 @@ arrived_notice = false;
 visit_arrival = -1;
 visit_minutes = 0;
 visited = false;
-interest_inflate = 0;
-interest_stuffing = 0;
+desire_inflate = 0;
+desire_stuffing = 0;
 desire_inflate = 0;
 desire_stuffing = 0;
 inflate_interest_msg = "(she seems interested in what you were doing)";

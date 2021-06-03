@@ -1,4 +1,8 @@
-alarm[0] = 2;
+init_data_excludes("blur", "usize", "location", "room_counter");
+
+if (global.load_index == noone)
+	alarm[0] = 2;
+	
 global.show_follower = false;
 global.values = ds_map_create();
 global.scene_actors = ds_list_create();

@@ -63,3 +63,28 @@ function in_dialogue(){
 function audio_stop_sound_later(){
 	audio_stop_sound(global.stop_sound);	
 }
+
+function file_read_all(fname){
+	/*var file = file_text_open_read(fname);
+	var content = "";
+
+	while !file_text_eof(file)
+	{
+	    content += file_text_read_string(file);
+	    file_text_readln(file);
+	}	
+	file_text_close(file);*/
+	var buffer = buffer_load(fname);
+	var content = buffer_read(buffer, buffer_text);
+	buffer_delete(buffer);
+	return content;
+}
+
+function map_to_string(map){
+	var content = "";
+	for (var k = ds_map_find_first(map); !is_undefined(k); k = ds_map_find_next(map, k)) {
+	  var v = map[? k];
+	  content += k+": " + str(v) + "#";
+	}
+	return content;
+}

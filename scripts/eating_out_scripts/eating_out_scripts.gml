@@ -47,7 +47,7 @@ function eating_out_action(){
 	}else{
 		ControlEnv.money -= global.eating_out_cost;
 		char.likability += 4;
-		char.interest_stuffing += 4;
+		char.desire_stuffing += 4;
 		char.eating_out = true;
 		char.visiting = false;
 		char.visit_minutes = 0;

@@ -10,7 +10,7 @@ function instance_dupplicate(inst_id){
 	
 	return nw;
 }
-
+/*
 function instance_save(inst_id, excludes){
 	var data = ds_map_create();
 	var vars = variable_instance_get_names(inst_id)
@@ -62,4 +62,4 @@ function variables_instance_set(inst_id){
 				value = argument[i+1];
 			variable_instance_set(inst_id, name, value);
 	}
-}
+}*/

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Save Load",
-    "path": "folders/Scripts/Save Load.yy",
+    "name": "Save Load (leg)",
+    "path": "folders/Scripts/Save Load (leg).yy",
   },
   "resourceVersion": "1.0",
   "name": "Character_SaveLoad",

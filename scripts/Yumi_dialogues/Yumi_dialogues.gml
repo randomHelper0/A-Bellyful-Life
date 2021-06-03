@@ -70,8 +70,8 @@ function Yumi_exam(){
 		Yumi.interested = true;
 		Yumi.has_number = true;
 		ControlEnv.money += 25;
-		Yumi.interest_inflate += 10;
-		Yumi.interest_stuffing += 10;
+		Yumi.desire_inflate += 10;
+		Yumi.desire_stuffing += 10;
 		Yumi.likability += 5;
 	}else{
 		ctb_list(noone, noone, "You're as healthy as you can be, no health problems whatsoever.");
@@ -85,8 +85,8 @@ function Yumi_exam2(){
 	if (Player.total_content/Player.total_capacity >= 0.8){
 		Yumi.likability += 9;
 		ControlEnv.money += 10;
-		Yumi.interest_inflate += 9;
-		Yumi.interest_stuffing += 9;
+		Yumi.desire_inflate += 9;
+		Yumi.desire_stuffing += 9;
 		ctb_list(noone, noone, "[set_speaker:Yumi]"+cmd_ex(ex_surprise)+"(She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
 				cmd_ex(ex_idle) + "[set_speaker:Player](You tried your best not to blush)",
 				"[set_speaker:Yumi]"+cmd_ex(ex_smile2)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
@@ -97,8 +97,8 @@ function Yumi_exam2(){
 				)
 	}else if (Player.total_content/Player.total_capacity >= 0.5){
 		Yumi.likability += 5;
-		Yumi.interest_inflate += 5;
-		Yumi.interest_stuffing += 5;
+		Yumi.desire_inflate += 5;
+		Yumi.desire_stuffing += 5;
 		ctb_list(noone, noone, 
 				"[set_speaker:Yumi]"+cmd_ex(ex_smile)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
 				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",

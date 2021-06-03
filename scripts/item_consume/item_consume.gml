@@ -99,8 +99,8 @@ with (ControlBackpack) refresh_backpack();
 
 function item_give_consume(char){
 		//item is food
-		if ((char.interest_stuffing < 30 && char.stomach_content/char.stomach_capacity >= 0.5) ||
-				(char.interest_stuffing < 70 && char.stomach_content/char.stomach_capacity >= 0.9)	||
+		if ((char.desire_stuffing < 30 && char.stomach_content/char.stomach_capacity >= 0.5) ||
+				(char.desire_stuffing < 70 && char.stomach_content/char.stomach_capacity >= 0.9)	||
 				(char.stomach_content/char.stomach_capacity >= 1.2)){
 				ctb_list(noone, noone,  choose(
 					"Thank you, but I'm not hungry right now.",
@@ -112,7 +112,7 @@ function item_give_consume(char){
 				return false;
 			}
 			
-			char.interest_stuffing *= 1.05;
+			char.desire_stuffing *= 1.05;
 			
 			ctb_list(noone, noone, choose(
 				"thanks!",

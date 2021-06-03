@@ -1,3 +1,9 @@
+init_data_excludes(
+	"character", "zone", 
+	"script_use", "script_use_on_item", "script_use_on_char",
+	"sfx", "use_items"
+)
+
 price = 0;
 
 name = object_get_name(object_index);
