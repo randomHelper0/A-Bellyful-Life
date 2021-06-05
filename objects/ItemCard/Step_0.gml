@@ -24,6 +24,7 @@ if (dragging){
 	//move out if in inventory
 	if (item.script_use_on_item == noone && room == rmBackpack && point_distance(x,y,xstart, ystart) > 100){
 		persistent = true;
+		depth = -2;
 		room_goto(global.last_room);
 	}
     

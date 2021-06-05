@@ -4,3 +4,4 @@
  global.settings[? "All Sounds"] = true;
  global.settings[? "Music"] = true;
  global.settings[? "Skew Animation"] = true;
+ global.settings[? "Enable Portals"] = false;

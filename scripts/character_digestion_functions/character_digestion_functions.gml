@@ -60,11 +60,6 @@ function digest_step(minutes){
 	if (high > 0)
 		high -= min(minutes/12, high);
 		
-	var gas = statuses_count[? "pill_gas"];
-	if (gas > 0){
-		stomach_air += minutes * 6;
-		bowels_air += minutes * 6;
-	}
 	var noise = statuses_count[? "pill_noise"];
 	if (noise > 0){
 		if (random(1) < (noise * minutes)/10){
@@ -74,17 +69,20 @@ function digest_step(minutes){
 	}
 	
 	var lax = statuses_count[? "pill_laxative"];
-	if (lax > 0){
+	if (lax > 0 && !in_dialogue() && is_location()){
 		if (random(1) < (lax * minutes)/30){
 			ds_list_clear(statuses[? "pill_laxative"]);
 			audio_play_sound(sndFlush, 0,0);
 			change_mood(id, -20, 1);
 			change_energy(id, -30, 1);
-			ctb_list(noone, noone, "Unable to hold it in any longer, you ran to the nearest bathroom.");
-			time_forward_minutes(15);
+			ctb_list(noone, noone, "Unable to hold it in any longer, "+name+" ran to the nearest bathroom.");
+			in_bathroom = 15;
+			refresh_location();
+			if (object_index == Player)
+				time_forward_minutes(15);
 		}else{
 			play_stomach_sound();
-			if (!instance_exists(obj_textbox))
+			if (!in_dialogue() && object_index == Player)
 				ctb_list(noone, noone, "Your stomach aches terribly.");
 		}
 	}
@@ -128,7 +126,7 @@ function digest_step(minutes){
 	
 		    stomach_water -= amount*w_water;
 			stomach_air -= amount*w_air;
-		
+			//show_message(str(amount) + "*"+str(w_air))
 			if (stomach_food > 0){
 				var digested_cal = (undigested_calories* amount*w_food)/stomach_food;
 				stomach_food -= amount*w_food;
@@ -154,7 +152,11 @@ function digest_step(minutes){
 		bowels_food -= amount*w_food;
 	}
 
-	
+	var gas = statuses_count[? "pill_gas"];
+	if (gas > 0){
+		stomach_air += minutes * 6;
+		bowels_air += minutes * 6;
+	}
 }
 
 function character_capacity_modifier(target){

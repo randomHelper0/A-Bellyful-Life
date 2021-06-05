@@ -1,5 +1,8 @@
 function load_all(fname){
-	with (Item) instance_destroy();
+	with (Item){
+		if (!is_template)
+			instance_destroy();
+	}
 	
 	var data = json_decode(file_read_all(working_directory + fname)),
 		characters = data[? "characters"],
@@ -21,6 +24,10 @@ function load_all(fname){
 		 var item = items[? k],
 			  item_index = asset_get_index(item[? "item_name"]);//asset_get_index(k),
 			  use_items = item[? "use_items"];
+			  
+		if (item[? "is_template"]){
+			continue;
+		}
 			  
 		var new_item = create_item(item_index);
 		

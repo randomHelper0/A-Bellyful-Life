@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Items",
-    "path": "folders/Objects/Items.yy",
+    "path": "folders/Items.yy",
   },
   "resourceVersion": "1.0",
   "name": "ControlStatus",

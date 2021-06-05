@@ -92,7 +92,7 @@ function Yumi_exam2(){
 				"[set_speaker:Yumi]"+cmd_ex(ex_smile2)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
 				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",
 				cmd_speaker(Yumi) + "Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
-				"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
+				cmd_ex(ex_idle)+"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a large margin."
 				)
 	}else if (Player.total_content/Player.total_capacity >= 0.5){

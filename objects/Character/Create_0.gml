@@ -3,7 +3,7 @@ init_data_excludes("statuses_count", "statuses",
 		"sprite_expression", "expression",
 		"script_location", "script_dialogue", "script_idle", "script_observe",
 		"eating_out", "eating_out_threshold", "eating_out_location", "eating_out_items",
-		"inflate_interest_msg", "disinterest_msg", "hate_msg", "stuffing_interest_msg");
+		"inflate_interest_msg", "disinterest_msg", "hate_msg", "stuffing_interest_msg","arrive_msg");
 
 //sprites
 sprite_expression = noone;
@@ -122,9 +122,12 @@ inflate_interest_msg = "(she seems interested in what you were doing)";
 disinterest_msg = "(she doesn't seem very interested in what you were doing)"
 hate_msg = "(she seems repulsed by what you did)";
 stuffing_interest_msg =  "(she seems very interested in what you were doing)";
+arrive_msg = "I'm finally here!";
 
 eating_out = false;
 eating_out_threshold = 5;
 eating_out_location = noone;
 eating_out_items = noone;
 eating_out_script = asset_get_index(name+"_eating_out"); //-1 if not
+
+in_bathroom = 0;

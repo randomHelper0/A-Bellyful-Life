@@ -13,8 +13,8 @@
   "soundFile": "fridge_loop.mp3",
   "duration": 3.149,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "fridge_loop",

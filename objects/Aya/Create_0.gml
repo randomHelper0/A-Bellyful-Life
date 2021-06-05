@@ -15,3 +15,5 @@ studied_today = false;
 likability = 20;
 
 eating_out_init(rmFatbucks, list_create(IFrappuccino, ICakeSlice, IApple))
+
+arrive_msg = "Oh, are you gonna give me a tour of your new place?";

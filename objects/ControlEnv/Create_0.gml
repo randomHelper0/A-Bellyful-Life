@@ -11,7 +11,7 @@ global.scene_sound_sporadic =  ds_map_create();
 global.scene_sound_sporadic_rate = -1;
 global.watched_inflate = false;
 global.scene_from = noone;
-
+global.portal_entrance = noone;
 global.last_bg = noone;
 global.shop_bg = sprBlank;
 global.clicked_shop_bt = noone;
@@ -22,6 +22,7 @@ global.dialogies_icons = noone;
 
 global.settings[? "burp sound"] = false;
 global.settings[? "fart sound"] = false;
+
 
 global.last_dest = rmBedroom;
 
@@ -59,8 +60,10 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 	IHamburger, IHotdog, IHugeburger, IFries,
 	 IPillDiet, IPillDigest, IPillGas, IPillNoise, IPillLaxative,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
+		IBottle, IBottleWater, IUmbrella,
 		IBike,
 IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack);
+create_item(instance_find(IBottleWater,0));
 //create_item(instance_find(IPump,0));
 //create_item(instance_find(IPillDiet,0));
 //create_item(instance_find(IBottleDiet,0));

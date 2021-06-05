@@ -26,11 +26,26 @@ function Amber_eating_out(){
 }
 
 function amber_more_jog(){
+	var minutes = 40;
+	var cost = -minutes/2,
+	fraction =  (Player.total_content/Player.total_capacity);
+	energy_charge =fraction*cost + cost;
+	if (change_energy(Player, energy_charge, false) == -1){
+		ctb_list(noone, noone, "You're too tired!");
+		return;
+	}
+	change_mood(Player, -energy_charge, true);
+	
+	
+	global.player_increase_endurance =  -energy_charge/1000;
+	global.player_jog_minutes = minutes;
+	
 	Amber.likability += 5;
 	character_finish_visit(Amber);
 	global.scene_script = amber_jog;
 	time_forward_minutes(15);
 	scene_start_from(rmPark);
+	global.last_dest = rmPark;
 }
 
 function amber_jog(){

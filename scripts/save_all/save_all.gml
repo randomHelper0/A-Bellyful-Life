@@ -20,7 +20,7 @@ function save_all(fname){
 		if (item.use_items != noone){
 			 use_items = ds_list_create();
 			for (var ii=0; ii<ds_list_size(item.use_items); ii++)
-				ds_list_add(use_items, object_get_name(item.use_items[| ii].object_index));
+				ds_list_add(use_items, object_get_name(item.use_items[| ii]));
 			
 			ds_map_add_list(idata, "use_items", use_items);
 		}else

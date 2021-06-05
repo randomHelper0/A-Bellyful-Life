@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bar",
-    "path": "folders/Objects/Items/Bar.yy",
+    "path": "folders/Items/Bar.yy",
   },
   "resourceVersion": "1.0",
   "name": "ICocktail1",

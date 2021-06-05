@@ -13,8 +13,8 @@
   "soundFile": "sndFootstep2.wav",
   "duration": 1.486156,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndFootstep2",

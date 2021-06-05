@@ -13,8 +13,8 @@
   "soundFile": "sndSloshWalk2.wav",
   "duration": 2.239603,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndSloshWalk2",

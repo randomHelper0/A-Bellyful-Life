@@ -7,7 +7,7 @@ function create_item(argument0) {
 	var item = template.nw;
 	item.is_template = false;
 	return item;*/
-	 instance_dupplicate(template);
+	//instance_dupplicate(template);
 	var item = instance_dupplicate(template);
 	item.is_template = false;
 	return item;

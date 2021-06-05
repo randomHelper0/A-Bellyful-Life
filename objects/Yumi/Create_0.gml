@@ -10,3 +10,5 @@ gave_exam_today = false;
 //has_number = true;
 
 eating_out_init(rmBar, list_create(ICocktail1, ICocktail2));
+
+arrive_msg = "Hm? Are you going to show me something?";

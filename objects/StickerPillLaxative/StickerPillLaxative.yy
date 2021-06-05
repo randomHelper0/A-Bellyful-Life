@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Stickers",
-    "path": "folders/Objects/Items/Pharmacy/Stickers.yy",
+    "path": "folders/Items/Pharmacy/Stickers.yy",
   },
   "resourceVersion": "1.0",
   "name": "StickerPillLaxative",

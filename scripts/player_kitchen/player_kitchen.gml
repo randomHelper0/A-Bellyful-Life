@@ -26,6 +26,20 @@ function d_kitchen_sink(){
 	player_throw_up
 	)
 	
+	global.has_bottle = false;
+	with(IBottle){
+		if (!is_template)
+			global.has_bottle = true;
+	}
+	if (global.has_bottle){
+		dialogue_create(
+		"Refill Bottle",
+		"Refill Bottle",
+		true,
+		refill_bottles
+		)	
+	}
+	
 	with (Character){
 		if (following){
 			dialogue_create(
@@ -38,4 +52,15 @@ function d_kitchen_sink(){
 	}
 	
 	dialogue_start(true);
+}
+
+function refill_bottles(){
+	ctb_msg("You refilled all bottles, including ones in the fridge.")
+	with (IBottle){
+		if (!is_template){
+			var bw = create_item(instance_find(IBottleWater, 0));
+			bw.in_fridge = in_fridge;
+			instance_destroy();
+		}
+	}
 }

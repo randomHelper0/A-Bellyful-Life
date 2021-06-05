@@ -43,6 +43,14 @@ function d_bathtub(){
 	scene_start
 	)
 	
+	if (Yumi.following)
+		dialogue_create(
+			"3",
+			"Ask Yumi to unhook shower hose",
+			true,
+			Yuni_ask_bathtub
+		)
+	
 	dialogue_start(true);
 }
 

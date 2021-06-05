@@ -13,8 +13,8 @@
   "soundFile": "sndWork.mp3",
   "duration": 20.285,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndWork",

@@ -2,6 +2,7 @@ if (!instance_exists(item)){
 	instance_destroy();
 	exit;
 }
+draw_cached();
 
 draw_set_color(make_colour_rgb(201,70,38));
 draw_set_alpha(0.5*image_alpha);
@@ -35,4 +36,12 @@ if (item.show_volume){
     draw_text(x+5,y + 50, string_hash_to_newline(string(item.volume) + "cc"));
 }
 
-
+if (place_meeting(x,y,CharacterHolder) && global.settings[? "Enable Portals"]){
+		var holder = instance_place(x,y,CharacterHolder)
+		draw_set_color(c_orange);
+		draw_line_width(holder.x, holder.y + holder.sprite_height*0.35, 
+					holder.x + holder.sprite_width, holder.y + holder.sprite_height*0.35, 5);
+		draw_sprite_ext(sprPortal, 0, mouse_x, mouse_y, 1,1, ControlEnv.room_counter, c_white, 1);
+	}
+	
+draw_load_cache();

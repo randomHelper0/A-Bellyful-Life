@@ -7,7 +7,8 @@ stomach_content  = stomach_water + stomach_air + stomach_food;
 bowels_content  = bowels_water + bowels_air + bowels_food;
 total_content = stomach_content + bowels_content;
 total_capacity = stomach_capacity + bowels_capacity;
-encumbered =  (total_content/total_capacity > 0.5);
+total_food_air = stomach_food+stomach_air+bowels_food+bowels_air;
+encumbered =  (total_food_air/total_capacity > 0.5);
 
 //no divide by 0
 stomach_content = max(0.1, stomach_content);
@@ -52,12 +53,19 @@ if (!visited){
 	arrived_notice = false;	
 }
 
-if (arrived_notice && !instance_exists(obj_textbox)){
-	ctb_list(noone, noone, name + " has arrived at your place.");	
+if (arrived_notice && !in_dialogue() && is_location()){
+	var msg = "";
+	if (visit_location != room){
+		msg = " They sent you a text:";
+	}
+	
+	ctb_list(noone, noone, name + " has arrived at your place." + msg,
+		cmd_speaker(object_index) + arrive_msg);	
+		
 	arrived_notice = false;
 }
 
-if (!in_dialogue() && stomach_content > stomach_capacity*1.1 && is_location()){
+if (!in_dialogue() && stomach_content > stomach_capacity*1.1*character_capacity_modifier(id) && is_location()){
 	sndVomit = get_random_asset("sndVomit", 1, 5);
 	audio_play_sound(sndVomit, 0, 0);
 	
@@ -66,4 +74,22 @@ if (!in_dialogue() && stomach_content > stomach_capacity*1.1 && is_location()){
 	stomach_water *= 0.5;
 	stomach_food *= 0.5;
 	stomach_pressure *=0.5;
+}
+
+if (!in_dialogue() && bowels_content > bowels_capacity*1.1*character_capacity_modifier(id) && is_location()){
+	//sndVomit = get_random_asset("sndVomit", 1, 5);
+	audio_play_sound(sndFlush, 0, 0);
+	if (object_index == Player){
+		time_forward_minutes(15);
+		ctb_msg("You ran to the bathroom and returned.");
+	}else{
+		ctb_msg(name + " clutched her stomach and ran away to the nearest bathroom in a hurry!");
+		in_bathroom = 15;
+		refresh_location();
+	}
+	//Player.stomach_content -= min(Player.stomach_capacity/5,Player.stomach_content);
+	bowels_air *= 0.5;
+	bowels_water *= 0.5;
+	bowels_food *= 0.5;
+	bowels_pressure *=0.5;
 }

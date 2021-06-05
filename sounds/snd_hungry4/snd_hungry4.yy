@@ -13,8 +13,8 @@
   "soundFile": "snd_hungry4.wav",
   "duration": 5.169694,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_hungry4",

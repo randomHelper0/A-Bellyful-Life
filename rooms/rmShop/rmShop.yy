@@ -16,6 +16,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"btArrowNavi","path":"objects/btArrowNavi/btArrowNavi.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":62.0,"y":0.0,"resourceVersion":"1.0","name":"inst_595720D1","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"ControlBackpack","path":"objects/ControlBackpack/ControlBackpack.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":813.0,"y":163.0,"resourceVersion":"1.0","name":"inst_63C38CB8","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"WalletSticker","path":"objects/WalletSticker/WalletSticker.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":352.0,"y":672.0,"resourceVersion":"1.0","name":"inst_37C49A69","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"assets":[
         {"spriteId":{"name":"sprBackpackBG","path":"sprites/sprBackpackBG/sprBackpackBG.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":0.0,"resourceVersion":"1.0","name":"graphic_743B9763","tags":[],"resourceType":"GMRSpriteGraphic",},
@@ -28,6 +29,7 @@
   "instanceCreationOrder": [
     {"name":"inst_595720D1","path":"rooms/rmShop/rmShop.yy",},
     {"name":"inst_63C38CB8","path":"rooms/rmShop/rmShop.yy",},
+    {"name":"inst_37C49A69","path":"rooms/rmShop/rmShop.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

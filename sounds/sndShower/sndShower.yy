@@ -13,8 +13,8 @@
   "soundFile": "sndShower.mp3",
   "duration": 23.165,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndShower",

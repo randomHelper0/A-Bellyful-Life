@@ -14,3 +14,5 @@ practice = 3;
 just_rescued = false;
 
 eating_out_init(rmFatdonalds, list_create(IHamburger, IHotdog, ISoda))
+
+arrive_msg = "Ok, where are we going?";

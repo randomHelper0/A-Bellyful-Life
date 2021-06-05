@@ -1,4 +1,4 @@
-if (!ControlEnv.screen_lock && !instance_position(mouse_x, mouse_y, btArrowNavi) && room != rmBackpack){
+if (room != rmScene && !ControlEnv.screen_lock && !instance_position(mouse_x, mouse_y, btArrowNavi) && room != rmBackpack){
     global.dialogue_char = Player;
     with (CharacterHolder){
         enabled = false;

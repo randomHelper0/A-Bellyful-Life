@@ -8,7 +8,8 @@ function time_forward_minutes(argument0) {
 		ControlEnv.blur = random_range(Player.alcohol/2, Player.alcohol);
 	}
 
-	Player.daily_calories -= Player.min_calories_uptake * minutes;
+	if (ControlEnv.hours > 6) //don't get hungry while sleeping!
+		Player.daily_calories -= Player.min_calories_uptake * minutes;
 	
 	ControlEnv.raining -= min(ControlEnv.raining,minutes);
 

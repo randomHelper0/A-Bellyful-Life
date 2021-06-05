@@ -1,4 +1,7 @@
 function schedule_get_location() {
+	if (global.dialogue_char!= noone && global.dialogue_char.in_bathroom > 0)
+		return noone;
+	
 	for (var i = 0; i < argument_count; i +=3){
 	    var time_start = argument[i];
 	    var time_end = argument[i+1];

@@ -1,9 +1,11 @@
+draw_cached();
 draw_self();
 draw_set_font(fontReport);
 draw_set_color(c_black);
-draw_text(x+ 5,y+3, string_hash_to_newline(item.name));
+draw_text(x+ 10,y+8, string_hash_to_newline(item.name));
 draw_set_font(fnt_dialogue);
 
+draw_set_color(c_white);
 if (item.price > 0)
 	draw_text(x+10,y+ 70, string_hash_to_newline("Price: $" + string(item.price)));
 
@@ -31,3 +33,4 @@ if (item.do_expire){
 	draw_text(x+10,y+ 252 , string_hash_to_newline("Uses left: " + string(item.uses)));
 }
 
+draw_load_cache();

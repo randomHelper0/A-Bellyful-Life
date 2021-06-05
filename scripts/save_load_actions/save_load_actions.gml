@@ -9,6 +9,8 @@ function save_action(){
 }
 
 function load_action(){
+	audio_stop_sound(bgm_intro);
+	audio_sound_gain(bgmA, 1, 60);
 	with (SaveSticker) {
 		if (image_alpha == 1){
 			global.load_index = index;	

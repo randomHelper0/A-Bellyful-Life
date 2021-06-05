@@ -13,8 +13,8 @@
   "soundFile": "pageflip3.mp3",
   "duration": 0.509,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "pageflip3",

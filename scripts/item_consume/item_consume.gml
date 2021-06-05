@@ -5,9 +5,30 @@ function item_consume(item, target){
 	}
 	change_mood(target, item.volume/10, true);
 	item.bites = 0;
-	target.stomach_food += item.volume;
+	
+	if (global.portal_entrance == noone || global.portal_entrance == ORAL)
+		target.stomach_food += item.volume;
+	else
+		target.bowels_food += item.volume;
+
 	target.undigested_calories += item.calories;
-	eat_sound(item);
+	
+	if (global.portal_entrance == noone)
+		eat_sound(item);
+	else{
+		target.expression = ex_blush;
+		target.alarm[11] = 60;
+		audio_play_sound(sndPortal, 0, 0);
+		if (floor(random(3)) == 0){
+			ctb_msg(cmd_speaker(target.object_index)+choose(
+					"I felt...strange",
+					"My stomach feels weird...",
+					"Eh??",
+					"(She seemed startled and stared at her belly)"
+				))
+		}
+	}
+		
 	if (item.energy > 0){
 		change_energy(target, item.energy, 1);
 		target.jittery += item.energy;	
@@ -135,12 +156,13 @@ function item_on_item(otherItemCard){
 		ctb_list(noone, noone, "There's no more space left!");
 		return;
 	}
-	ds_list_add(otherItemCard.item.use_items, item);
+	ds_list_add(otherItemCard.item.use_items, item.object_index);
 	item.uses --;
 	item.bites--;
 }
 
 function item_apply_item(item, target){
+	//show_message(object_get_name(item))
 	 item = create_item(item);
 	global.temp_target = target;
 	//hack to pretend item is its ItemCard
@@ -149,6 +171,7 @@ function item_apply_item(item, target){
 		if (script_use != noone){
 			script_execute(script_use, global.temp_target);
 		}
+		 instance_destroy();
 	}
-	with (item) instance_destroy();
+	//with (item) instance_destroy();
 }

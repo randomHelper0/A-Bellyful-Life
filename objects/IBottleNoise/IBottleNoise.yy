@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pharmacy",
-    "path": "folders/Objects/Items/Pharmacy.yy",
+    "path": "folders/Items/Pharmacy.yy",
   },
   "resourceVersion": "1.0",
   "name": "IBottleNoise",

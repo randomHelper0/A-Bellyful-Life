@@ -1,6 +1,6 @@
 event_inherited();
 volume = 350;
 calories = 100;
-price = 0.6;
+price = 2;
 
 sfx = LIQUID;

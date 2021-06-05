@@ -2,10 +2,26 @@ with(ItemCard) image_alpha = 1;
 if (persistent){
 	var holder = instance_place(x,y,CharacterHolder);
 	if (item.script_use_on_char != noone && instance_exists(holder)){
+		ControlEnv.room_counter = 0;
 		var char =  holder.character;
 		global.dialogue_char = char;
 		
-		script_execute(item.script_use_on_char, char);
+		if (!global.settings[? "Enable Portals"])
+			script_execute(item.script_use_on_char, char);
+		else {
+			if (y < holder.y + holder.sprite_height*0.35)
+				global.portal_entrance = ORAL;
+			else
+				global.portal_entrance = ANAL;
+
+			if (item.script_use == d_item_consume){
+				item_consume(item, holder.character);
+			} else if (item.script_use != noone){
+				script_execute(item.script_use);
+			}
+		}
+			
+		global.portal_entrance = noone;
 			
 		if (item.consumable && item.bites <= 0){
 			if (item.uses <= 0)

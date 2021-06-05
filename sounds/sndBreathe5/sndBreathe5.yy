@@ -13,8 +13,8 @@
   "soundFile": "sndBreathe5.wav",
   "duration": 3.317333,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndBreathe5",

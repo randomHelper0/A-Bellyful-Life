@@ -51,8 +51,17 @@ function d_route(dest){
 	//	show_message("error");
 	
 	var dist = point_distance(prev_x, prev_y, dest_x, dest_y);
+	global.has_umbrella = false;
+	with (IUmbrella){
+		if (!is_template)
+			global.has_umbrella = true;
+	}
 	if (ControlEnv.raining > 0)
-		dist *= 2;
+		if (!global.has_umbrella)
+			dist *= 2;
+		else
+			dist *= 1.5;
+			
 	var walk_time = ceil((dist/100)*1.5),
 		bike_time = walk_time*0.5,
 		taxi_time = ceil(walk_time*0.1),

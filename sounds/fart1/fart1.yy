@@ -13,8 +13,8 @@
   "soundFile": "fart1.wav",
   "duration": 0.221508,
   "parent": {
-    "name": "Ayme New Mansion",
-    "path": "Ayme New Mansion.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "fart1",

@@ -8,7 +8,7 @@ if (ControlEnv.hours >= 6 && ControlEnv.minutes > 30 && !first_text && is_locati
 	//var char = global.dialogue_char;
 	global.dialogue_char = id;
 	ctb_list(noone, noone, 
-		"(You received a text from Aya, your high school best friend who's also going to the same uni with you after summer ends.)",
+		cmd_speaker(Aya)+"(You received a text from Aya, your high school best friend who's also going to the same uni with you after summer ends.)",
 		"Hey Ayume! I heard that you moved into a fancy new house today. I hope that you didn't forget your promise to study together with me throughout the summer.",
 		"The university we're going to isn't the slacker type, the first semester is the toughest so I really want to get you ready for it!",
 		"Also I'd love to check out your new place! Just give me a text and I'll come right over :)",

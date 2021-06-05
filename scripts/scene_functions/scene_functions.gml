@@ -59,6 +59,9 @@ function scene_auto_sound(entrance, type){
 
 function repulsed_message(){
 	global.show_follower = false;
+	if (Yumi.following)
+		return;
+	
 	follow_char = noone;
 	with (Character){
 		if (following && in_house())
