@@ -215,7 +215,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "path": "folders/Other/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "f_other",

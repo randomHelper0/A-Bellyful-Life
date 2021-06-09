@@ -1,9 +1,9 @@
-function d_talk() {
+/*function d_talk() {
 	
 
 	//script_execute(d_topics_common);
-	
-	script_execute(global.dialogue_char.script_dialogue);
+	global.dialogue_char.script_dialogue();
+	//script_execute(global.dialogue_char.script_dialogue);
 /*
 dialogue_init()
 	if (global.dialogue_char == Player){
@@ -20,6 +20,6 @@ dialogue_init()
 
 	dialogue_start(true);
 
-*/
 
-}
+
+}*/

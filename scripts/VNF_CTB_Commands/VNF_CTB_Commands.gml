@@ -1,4 +1,7 @@
 function ctb_cmd_set_speaker(speaker){
+	if (is_string_a_number(speaker))
+		speaker = object_get_name(speaker);
+		
 	if (speaker == "noone" || speaker == "system"){
 		global.dialogue_char = noone;
 		return;	
@@ -15,6 +18,9 @@ function ctb_cmd_set_speaker(speaker){
 }
 
 function make_set_speaker_cmd(speaker){
+	//if (is_string_a_number(speaker))
+		//speaker = asset_get_index(speaker);
+	
 	return ("[set_speaker:"+object_get_name(speaker)+"]");
 }
 
@@ -44,6 +50,9 @@ function ctb_cmd_set_expression(expression){
 	if (char == noone)
 		return;
 		
+	if (!is_string_a_number(expression))
+		expression = get_expression_index(expression);
+		
 	char.expression = real(expression);
 }
 
@@ -66,4 +75,26 @@ function ctb_cmd_next_background(speaker,animation){
 
 function cmd_sound(snd){
 	return 	"[sound:" + audio_get_name(snd) + "]";
+}
+
+function get_expression_index(ex){
+	ex = string_replace(ex, "ex_", "");
+	switch (ex){
+		case "idle":
+			return ex_idle;
+		case "talk":
+			return ex_talk;
+		case "smile":
+			return ex_smile;
+		case "smile2":
+			return ex_smile2;
+		case "blush":
+			return ex_blush;
+		case "sad":
+			return ex_sad;
+		case "surprise":
+			return ex_surprise;
+		default:
+			show_message("ERROR EX: " + ex);
+	}
 }

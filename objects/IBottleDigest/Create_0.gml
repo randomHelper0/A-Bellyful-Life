@@ -7,3 +7,4 @@ script_use = pill_digest;
 sfx = LIQUID;
 uses = 20
 name = "Pill Digest Bottle";
+desc = "Increase digestion speed by 50% (stackable)";

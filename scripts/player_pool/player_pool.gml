@@ -51,7 +51,7 @@ function d_player_week_pass(){
 }
 
 function d_player_pool_leave(){
-	room_goto(rmMapUni);
+	custom_goto(rmMapUni);
 }
 
 function d_player_pool(){

@@ -14,7 +14,7 @@ if (target_room != noone){
 		change_energy(Player, -3, true);
 	}*/
 	//time_forward_minutes(7);
-	//room_goto(target_room);
+	//custom_goto(target_room);
 	d_route(target_room);
 }
 

@@ -33,7 +33,7 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 		if (type != noone && actor_id.id == Player.id && PlayerHolder.char != Player){
 			watched_inflate = true;	
 		}
-		spr_id  = asset_get_index("spr"+actor_id.name + "_" + global.scene_name + "_" + string(actor_id.fat_level));
+		spr_id  = asset_get_index("spr"+object_get_name(actor_id.object_index) + "_" + global.scene_name + "_" + string(actor_id.fat_level));
 		//draw_sprite(spr_id, actor_id.belly_index, 0,0);
 		skew_draw_other(actor_id, spr_id, character_belly_index(actor_id, spr_id), 0,0);
 		
@@ -48,13 +48,14 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 					change_energy(actor_id, -35, 1);
 					change_mood(actor_id, -30, 1);
 					time_forward_minutes(15);
-					ctb_list(player_expel, rmBathroom, "You couldn't hold it in and was forced to run to the toilet!");
+					character_expel(actor_id);
+					ctb_list(noone, rmBathroom, actor_id.name + " couldn't hold it in and was forced to run to the toilet!");
 				}else{
 					change_energy(actor_id, -35, 1);
 					change_mood(actor_id, -30, 1);
 					time_forward_minutes(5);
-					player_throw_up();
-					ctb_list(noone, global.last_room, "You couldn't hold it in and was forced to throw up!");
+					character_throw_up(actor_id);
+					ctb_list(noone, global.last_room, actor_id.name + " couldn't hold it in and was forced to throw up!");
 				}
 			}
 			rot += random_range(-rot*0.1, rot*0.1);
@@ -65,7 +66,7 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 			continue;
 			
 		if (BtPlay.toggled && actor_id.energy <= 1){
-			ctb_list(noone, noone, "You're too tired to continue, take a break.");
+			ctb_list(noone, noone, actor_id.name + " is too tired to continue, take a break.");
 			BtPlay.toggled = false;
 		}
 		

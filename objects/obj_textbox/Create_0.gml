@@ -25,9 +25,12 @@ ctb_add_color( "yellow", c_yellow );
 ctb_add_color( "red", c_red );
 
 // Add some fonts
-ctb_add_font( "default", f_normal );
-ctb_add_font( "normal", f_normal );
-ctb_add_font( "other", f_other );
+ctb_add_font( "default", fnt_popup );
+ctb_add_font( "normal", fnt_popup );
+ctb_add_font( "small", f_other );
+ctb_add_font( "tiny", fntTiny );
+ctb_add_font( "large", fntLarge );
+ctb_add_font( "huge", fntHuge );
 
 // Add a sound
 //ctb_add_sound( "gun", snd_gun );

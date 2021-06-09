@@ -3,7 +3,8 @@ init_data_excludes("statuses_count", "statuses",
 		"sprite_expression", "expression",
 		"script_location", "script_dialogue", "script_idle", "script_observe",
 		"eating_out", "eating_out_threshold", "eating_out_location", "eating_out_items",
-		"inflate_interest_msg", "disinterest_msg", "hate_msg", "stuffing_interest_msg","arrive_msg");
+		"inflate_interest_msg", "disinterest_msg", "hate_msg", "stuffing_interest_msg","arrive_msg",
+		"status_notify");
 
 //sprites
 sprite_expression = noone;
@@ -101,6 +102,14 @@ statuses_count[? "pill_digest" ] = 0;
 statuses_count[? "pill_gas" ] = 0;
 statuses_count[? "pill_noise" ] = 0;
 statuses_count[? "pill_laxative" ] = 0;
+
+//once per day
+status_notify = ds_map_create();
+status_notify[? "pill_diet" ] = 15;
+status_notify[? "pill_digest" ] = 15;
+status_notify[? "pill_gas" ] = 15;
+status_notify[? "pill_noise" ] = 15;
+status_notify[? "pill_laxative" ] = 15;
 
 //ds_map_copy(statuses_count,statuses)
 //set_all_map_entries_to_value(statuses_count,0);

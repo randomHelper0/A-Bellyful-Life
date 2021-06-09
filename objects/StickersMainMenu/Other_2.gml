@@ -5,3 +5,8 @@
  global.settings[? "Music"] = true;
  global.settings[? "Skew Animation"] = true;
  global.settings[? "Enable Portals"] = false;
+ 
+ global.settings[? "burp sound"] = false;
+global.settings[? "fart sound"] = false;
+global.settings[? "vomit sound"] = true;
+global.version = "0.1.1";

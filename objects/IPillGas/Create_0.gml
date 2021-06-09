@@ -7,3 +7,4 @@ script_use = pill_gas;
 sfx = LIQUID;
 
 name = "Pill Gas";
+desc = "Increase stomach gas production";

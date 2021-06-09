@@ -1,0 +1,1 @@
+url_open_ext("https://sites.google.com/view/absol-vn-guide", "_blank");

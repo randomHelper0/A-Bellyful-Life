@@ -37,7 +37,7 @@ function d_fatdonalds_shop(){
 		global.shop_bg = background_get();
 		global.shop_items = list_create(IHamburger, IFries, IHotdog, ISoda, IEspresso, ISundea, IHugeburger);	
 		global.last_room = room;
-		room_goto(rmShop);
+		custom_goto(rmShop);
 }
 
 function d_fatdonalds_quit(){

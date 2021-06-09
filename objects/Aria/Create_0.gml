@@ -8,7 +8,7 @@ sprite_expression = sprAriaExpressions_0;
 finished_intro = false;
 finished_intro_pump = false;
 finished_pump = false;
-practice = 3;
+practice = 0;
 
 //has_number = true;
 just_rescued = false;

@@ -82,7 +82,8 @@ function Yumi_exam(){
 function Yumi_exam2(){
 	Yumi.gave_exam_today = true;
 	ControlEnv.money += 25;
-	if (Player.total_content/Player.total_capacity >= 0.8){
+	var ratio = Player.total_content/(clamp(Player.total_capacity, 3000, 6500));
+	if (ratio >= 0.8){
 		Yumi.likability += 9;
 		ControlEnv.money += 10;
 		Yumi.desire_inflate += 9;
@@ -95,7 +96,7 @@ function Yumi_exam2(){
 				cmd_ex(ex_idle)+"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a large margin."
 				)
-	}else if (Player.total_content/Player.total_capacity >= 0.5){
+	}else if (ratio >= 0.5){
 		Yumi.likability += 5;
 		Yumi.desire_inflate += 5;
 		Yumi.desire_stuffing += 5;

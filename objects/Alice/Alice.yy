@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Characters(legacy)",
-    "path": "folders/Objects/Characters(legacy).yy",
+    "path": "folders/Other/Objects/Characters(legacy).yy",
   },
   "resourceVersion": "1.0",
   "name": "Alice",

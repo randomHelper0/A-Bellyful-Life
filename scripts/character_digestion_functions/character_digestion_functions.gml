@@ -62,6 +62,8 @@ function digest_step(minutes){
 		
 	var noise = statuses_count[? "pill_noise"];
 	if (noise > 0){
+		pill_notify("pill_noise",d_pill_noise, minutes);
+		
 		if (random(1) < (noise * minutes)/10){
 			play_stomach_sound()	
 		}//else
@@ -112,7 +114,7 @@ function digest_step(minutes){
 	}
 	
 	if (stomach_content/stomach_capacity >= 0.9 && stomach_air > 30)
-		do_burp();
+			do_burp();
 	
 	daily_stomach_content += (stomach_content/stomach_capacity)*minutes;
 	amount =( minutes/1600)*stomach_capacity; //complete digestion in 480 minutes
@@ -137,6 +139,7 @@ function digest_step(minutes){
 		}
 	if (bowels_content/bowels_capacity >= 0.9 && bowels_air > 30)
 		do_fart();
+		
 	daily_bowels_content += (bowels_content/bowels_capacity)*minutes;
 		
 	amount =( minutes/1600)*bowels_capacity;
@@ -154,6 +157,7 @@ function digest_step(minutes){
 
 	var gas = statuses_count[? "pill_gas"];
 	if (gas > 0){
+		pill_notify("pill_gas", d_pill_gas, minutes);
 		stomach_air += minutes * 6;
 		bowels_air += minutes * 6;
 	}

@@ -11,3 +11,4 @@ last_hours_without_eating = 0;
 pool_pass = 0;
 
 likability = 100;
+

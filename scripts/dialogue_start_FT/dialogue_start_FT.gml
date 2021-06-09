@@ -7,7 +7,7 @@ function dialogue_start_FT(argument0) {
 	    if (!Gate.running)
 	        gate_goto(rmDialogue);
 	    else
-	        room_goto(rmDialogue);
+	        custom_goto(rmDialogue);
 	}else{
 	    gate_goto(rmMainMenu);
 	}

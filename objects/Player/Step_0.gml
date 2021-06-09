@@ -30,7 +30,7 @@ if (hours_without_eating >=12){
 	show_debug_message("undigested_calories" + string(undigested_calories))
 	show_debug_message("hours_without_eating" + string(hours_without_eating))*/
 	if (room != rmClinic)
-		room_goto(rmClinic);
+		custom_goto(rmClinic);
 	else{
 		daily_calories = 0;
 		global.last_dest = rmClinic;

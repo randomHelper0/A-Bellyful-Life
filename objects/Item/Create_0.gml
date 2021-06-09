@@ -49,3 +49,5 @@ in_fridge = false;
 expire_in = 60*15;
 
 use_items = noone;
+
+no_custom_destroy = false;

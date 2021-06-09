@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Triggers",
-    "path": "folders/Objects/Triggers.yy",
+    "path": "folders/Other/Objects/Triggers.yy",
   },
   "resourceVersion": "1.0",
   "name": "T_Anna_Goodnight",

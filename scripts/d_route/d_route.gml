@@ -11,7 +11,7 @@ function d_route(dest){
 		if(is_map_room(dest))
 			global.last_dest = room;
 			
-		room_goto(dest);
+		custom_goto(dest);
 		return;
 	}
 	global.dest = dest;
@@ -138,7 +138,7 @@ function route_go(){
 	var dest =  global.dest;
 	if (dest == rmMapShopping && !Bobbie.met_player){
 			global.last_dest = rmAlley;
-			room_goto(rmAlley);
+			custom_goto(rmAlley);
 			return;
 	}
 	
@@ -159,5 +159,5 @@ function route_go(){
 		global.clicked_shop_bt = noone;	
 		global.shop_bg = noone;
 	}
-	room_goto(dest);	
+	custom_goto(dest);	
 }

@@ -5,7 +5,7 @@ function save_action(){
 		}
 	}
 	
-	room_goto(rmBedroom);
+	custom_goto(rmBedroom);
 }
 
 function load_action(){
@@ -16,7 +16,7 @@ function load_action(){
 			global.load_index = index;	
 		}
 	}
-	room_goto(rmBedroom);
+	custom_goto(rmBedroom);
 }
 
 function delete_action(){

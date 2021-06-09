@@ -7,3 +7,4 @@ script_use = pill_diet;
 sfx = LIQUID;
 
 name = "Pill Diet";
+desc = "Decrease digestion speed by 50% (stackable)"

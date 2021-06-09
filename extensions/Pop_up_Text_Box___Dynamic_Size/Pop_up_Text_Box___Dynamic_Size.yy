@@ -56,7 +56,7 @@
   "tvosCocoaPodDependencies": "",
   "parent": {
     "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "path": "folders/Other/Extensions.yy",
   },
   "resourceVersion": "1.2",
   "name": "Pop_up_Text_Box___Dynamic_Size",

@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "dropdown menu",
-    "path": "folders/Objects/UI/Dialogues/dropdown menu.yy",
+    "path": "folders/Other/Objects/UI/Dialogues/dropdown menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDropDown",

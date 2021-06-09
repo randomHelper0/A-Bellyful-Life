@@ -30,10 +30,12 @@ function Aya_eating_out(){
 }
 
 function aya_more_study(){
+	time_forward_minutes(45);
 	if (Player.mood <= 10){
 		ctb_list(noone, noone, "You're too bored to suggest that!");
 	}else{
 		Aya.likability += 5;
+		time_forward_minutes(59);
 		global.scene_script = aya_study;
 		scene_start_from(rmLivingroom);
 	}
@@ -49,6 +51,7 @@ function aya_study(){
 	global.scene_interface = false;
 	global.show_follower = false;
 	Aya.likability += 5;
+	time_forward_minutes(59);
 	change_mood(Player, -45, true);
 	scene_add_actors(Aya, noone, noone);
 	background_set(sprAyaStudyBG);

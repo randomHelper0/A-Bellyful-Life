@@ -1,5 +1,5 @@
 function do_intro() {
-	room_goto(rmMainMenu);
+	custom_goto(rmMainMenu);
 
 
 

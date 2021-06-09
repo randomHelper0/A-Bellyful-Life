@@ -11,6 +11,14 @@ function player_sleep(){
 }
 
 function d_player_sleep(){
+	var has_visitor = check_all_for_var(Character, "visiting", true);
+	if (has_visitor){
+		if (ControlEnv.hours < 23){
+			ctb_msg("You have a visitor, please accompany them until the end of their stay first!");
+			return;
+		}
+	}
+	
 	warn_sleep1 = false;
 	warn_sleep2 = false;
 	
@@ -21,6 +29,7 @@ function d_player_sleep(){
 function d_player_bed(){
 	dialogue_init();
 	
+
 	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
 		"1",
@@ -61,9 +70,9 @@ function sleep_finish(){
 	ControlEnv.minutes = 10;
 	
 	with (Character){
-	var mult = 250;
+	var mult = 300;
 	if (object_index != Player)
-		mult = 600;
+		mult = 200;
 	
 	////////////////////////////////
 	inc_stomach = (daily_stomach_content/daily_minutes)*mult;
@@ -100,6 +109,8 @@ function sleep_finish(){
 	Player.mood = 100;
 	Player.shower_times = 0;
 	Player.TV_times = 0;
+	Player.warn_sleep1 = false;
+	Player.warn_sleep2 = false;
 	
 	//if (daily_calories < 0)
 	var last_fat = Player.fat_calories,
@@ -122,7 +133,15 @@ function sleep_finish(){
 	
 	Yumi.gave_exam_today = false;
 	Amber.jogged_today = false;
-	//room_goto(rmBedroom);
+	
+	with(Character){
+		status_notify[? "pill_diet" ] = 15;
+		status_notify[? "pill_digest" ] = 15;
+		status_notify[? "pill_gas" ] = 15;
+		status_notify[? "pill_noise" ] = 15;
+		status_notify[? "pill_laxative" ] = 15;
+	}
+	//custom_goto(rmBedroom);
 }
 
 function d_player_massage(){

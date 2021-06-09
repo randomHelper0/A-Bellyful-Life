@@ -30,7 +30,7 @@ function d_text_location() {
 }
 
 function d_text_hangout() {
-	if (ControlEnv.hours > 19){
+	if (ControlEnv.hours >= 19){
 		ctb_list(noone, noone, "Sorry but its a bit too late for me.");
 		return;
 	}

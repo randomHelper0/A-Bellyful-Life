@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Scene",
-    "path": "folders/Objects/UI/Scene.yy",
+    "path": "folders/Other/Objects/UI/Scene.yy",
   },
   "resourceVersion": "1.0",
   "name": "BtPause",

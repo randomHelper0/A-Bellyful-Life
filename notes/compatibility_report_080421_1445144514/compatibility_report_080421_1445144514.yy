@@ -1,7 +1,7 @@
 {
   "parent": {
     "name": "Notes",
-    "path": "folders/Notes.yy",
+    "path": "folders/Other/Notes.yy",
   },
   "resourceVersion": "1.1",
   "name": "compatibility_report_080421_1445144514",

@@ -19,9 +19,8 @@ global.clicked_shop_bt = noone;
 global.dialogies = noone;
 global.dialogies_icons = noone;
 
-
-global.settings[? "burp sound"] = false;
-global.settings[? "fart sound"] = false;
+global.debugging = true
+game_start = true;
 
 
 global.last_dest = rmBedroom;

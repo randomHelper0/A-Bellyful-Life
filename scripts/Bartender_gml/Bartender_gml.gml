@@ -37,7 +37,7 @@ function d_bartender_shop(){
 		global.shop_bg = background_get();
 		global.shop_items = list_create(ICocktail1, ICocktail2, ICocktail3, ICocktail4);	
 		global.last_room = room;
-		room_goto(rmShop);
+		custom_goto(rmShop);
 }
 
 function d_bartender_quit(){

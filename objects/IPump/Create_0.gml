@@ -7,6 +7,7 @@ script_use = d_player_pump;
 
 uses = 100;
 
-consumable = true;
+consumable = false;
+do_expire = false;
 
 desc = "Pump air into stuff. (Note: air will escape if you are filled above 90% capacity)";

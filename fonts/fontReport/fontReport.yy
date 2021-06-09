@@ -124,10 +124,10 @@
   ],
   "regenerateBitmap": false,
   "canGenerateBitmap": true,
-  "maintainGms1Font": true,
+  "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "path": "folders/Other/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "fontReport",

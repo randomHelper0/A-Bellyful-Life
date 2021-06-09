@@ -4,9 +4,10 @@ destroyed = true;
 if (finish_script != noone){
 	//if (finish_script == aya_choice)
 		//show_message("here2_" + str(id))
-    script_execute(finish_script);
+    //script_execute(finish_script);
+	finish_script();
 }
     
 if (finish_room != noone)
-    room_goto(finish_room);
+    custom_goto(finish_room);
 

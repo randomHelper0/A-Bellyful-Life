@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "fart3.wav",
-  "duration": 3.14441,
+  "soundFile": "fart3.mp3",
+  "duration": 0.867041,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

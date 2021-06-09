@@ -66,7 +66,7 @@ function amber_jog(){
 		Amber.has_number = true;
 		ctb_list(player_jog_finish, noone, "After a round of jogging, both of you stopped to take a small break",
 			make_set_speaker_cmd(Amber)+ "Good morning! I'm Amber. It's nice to have someone to jog with.",
-			make_set_speaker_cmd(Player)+"Yup! I'm <Player name>, nice to meet you. Do you jog here often?",
+			make_set_speaker_cmd(Player)+"Yup! I'm " +Player.name+", nice to meet you. Do you jog here often?",
 			make_set_speaker_cmd(Amber)+"Every morning from 6 to 8.");
 	}else{
 		ctb_list(player_jog_finish, noone, "You and Amber had a nice jogging routine together.");	

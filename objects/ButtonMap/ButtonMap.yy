@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Navigations",
-    "path": "folders/Objects/UI/Navigations.yy",
+    "path": "folders/Other/Objects/UI/Navigations.yy",
   },
   "resourceVersion": "1.0",
   "name": "ButtonMap",

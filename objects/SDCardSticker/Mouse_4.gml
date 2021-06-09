@@ -3,4 +3,4 @@ if (!visible)
 
 //global.last_room = room;
 audio_play_sound(pageflip3, 0, 0);
-room_goto(rmSaveLoad);
+custom_goto(rmSaveLoad);

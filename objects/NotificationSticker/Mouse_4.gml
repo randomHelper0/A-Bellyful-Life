@@ -4,7 +4,7 @@ if (!visible || y < 0 || mouse_y < y + 91)
 if (mouse_x > x + 227){
 	
 }else{
-	//room_goto(event_room);	
+	//custom_goto(event_room);	
 }
 
 y = -1000;	

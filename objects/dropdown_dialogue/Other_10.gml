@@ -8,8 +8,8 @@ if (!item[1]){
     //say(item[2]);
     ctb_list(noone, noone, item[2]);
 }else{
-    script_execute(item[2]);
+    //script_execute(item[2]);
+	item[2]();
 }
 
 instance_destroy();
-

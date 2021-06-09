@@ -85,7 +85,7 @@
   "tvosCocoaPodDependencies": "",
   "parent": {
     "name": "Extensions",
-    "path": "folders/Extensions.yy",
+    "path": "folders/Other/Extensions.yy",
   },
   "resourceVersion": "1.2",
   "name": "CTB___Ced_s_Textbox___DEMO",

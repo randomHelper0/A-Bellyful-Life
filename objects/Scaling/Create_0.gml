@@ -4,3 +4,7 @@ width = base_width;
 height = base_height;
 alarm[0] = 30;
 
+global.goto_room = noone;
+load_counter = 0;
+
+surface_depth_disable(true);

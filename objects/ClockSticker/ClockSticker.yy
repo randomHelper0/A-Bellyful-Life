@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "path": "folders/Other/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "ClockSticker",

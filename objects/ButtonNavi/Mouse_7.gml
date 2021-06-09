@@ -1,2 +1,2 @@
-room_goto(target_room);
+custom_goto(target_room);
 

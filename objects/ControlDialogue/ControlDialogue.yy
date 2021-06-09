@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Controls",
-    "path": "folders/Objects/Controls.yy",
+    "path": "folders/Other/Objects/Controls.yy",
   },
   "resourceVersion": "1.0",
   "name": "ControlDialogue",

@@ -9,3 +9,6 @@ if (!global.settings[? "Music"]){
 	audio_sound_gain(bgmB, 0, 0);
 }
 
+if (!audio_is_playing(bgm_intro)  && !audio_is_playing(bgmA_intro) && !audio_is_playing(bgmA)){
+	audio_play_sound(bgmA, 0, 1);
+}

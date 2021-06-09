@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Interactive",
-    "path": "folders/Objects/UI/Interactive.yy",
+    "path": "folders/Other/Objects/UI/Interactive.yy",
   },
   "resourceVersion": "1.0",
   "name": "Stat",

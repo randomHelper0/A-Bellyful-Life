@@ -1,5 +1,5 @@
 function show_profile() {
-	room_goto(rmProfile);
+	custom_goto(rmProfile);
 
 
 

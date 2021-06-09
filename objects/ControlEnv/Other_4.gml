@@ -6,6 +6,7 @@ if (global.save_index != noone){
 	save_metadata[? "Day"] = day;
 	save_metadata[? "$"] = money;
 	save_metadata[? "Notes"] = notes;
+	save_metadata[? "Version"] = global.version;
 	if (ds_map_exists(global.metadata, str(global.save_index)))
 		ds_map_delete(global.metadata, str(global.save_index));
 	
@@ -19,7 +20,11 @@ if (global.save_index != noone){
 if (global.load_index != noone){
 	load_all("save" + str(global.load_index)+ ".json");
 	global.load_index = noone;
+	game_start = false;
 	exit;
+}else if (game_start){
+	game_start = false;
+	Player.name = get_string("Enter your name:", "Ayume");	
 }
 
 

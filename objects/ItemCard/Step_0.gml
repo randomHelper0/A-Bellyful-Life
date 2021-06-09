@@ -25,7 +25,7 @@ if (dragging){
 	if (item.script_use_on_item == noone && room == rmBackpack && point_distance(x,y,xstart, ystart) > 100){
 		persistent = true;
 		depth = -2;
-		room_goto(global.last_room);
+		custom_goto(global.last_room);
 	}
     
 }else{
@@ -33,7 +33,7 @@ if (dragging){
     if (!item.in_stomach && !item.in_bowels){
 		if (persistent &&  point_distance(x,y,xstart, ystart) <= 100){
 			persistent = false;
-			room_goto(rmBackpack);
+			custom_goto(rmBackpack);
 		}
 		
         dis = point_distance(x,y,xorg, yorg);

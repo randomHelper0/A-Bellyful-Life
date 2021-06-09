@@ -88,3 +88,25 @@ function map_to_string(map){
 	}
 	return content;
 }
+
+function check_all_for_var(obj_idx, var_name, value){
+  with (obj_idx){
+    if (variable_instance_get(id, var_name) == value)
+      return true;
+  }
+  return false;
+}
+
+function custom_goto(rm){
+	global.goto_room = rm;
+}
+
+function is_character_in_room(char){
+	return (char.object_index == Player || (char.script_location() == room));
+}
+
+function is_string_a_number(text){
+	var s = text;
+	var n = string_length(string_digits(s));
+	return n && n == string_length(s) - (string_char_at(s, 1) == "-") - (string_pos(".", s) != 0);	
+}

@@ -19,7 +19,7 @@ function scene_start(){
 	global.scene_do_breath = false;
 	global.show_follower = true;
 	ds_list_clear(global.scene_actors);
-	room_goto(rmScene);
+	custom_goto(rmScene);
 }
 
 function scene_play(){
@@ -31,7 +31,7 @@ function scene_pause(){
 }
 
 function scene_exit(){
-	room_goto( global.last_room);
+	custom_goto( global.last_room);
 }
 
 ///scene_add_actor(ActorID, spritename, oral/anal, inflate_type)
@@ -88,5 +88,5 @@ function scene_check_actor(char){
 
 function scene_start_from(rm){
 	global.scene_from = rm;
-	room_goto(rm);
+	custom_goto(rm);
 }

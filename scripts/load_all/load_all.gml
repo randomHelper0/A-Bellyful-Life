@@ -1,7 +1,9 @@
 function load_all(fname){
 	with (Item){
-		if (!is_template)
+		if (!is_template){
+			no_custom_destroy = true;
 			instance_destroy();
+		}
 	}
 	
 	var data = json_decode(file_read_all(working_directory + fname)),

@@ -14,9 +14,12 @@
   ],
   "layers": [
     {"instances":[
+        {"properties":[],"isDnd":false,"objectId":{"name":"HelpSticker","path":"objects/HelpSticker/HelpSticker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":612.0,"y":4.0,"resourceVersion":"1.0","name":"inst_6C5D799B","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":-100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances_1","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"ControlJournal","path":"objects/ControlJournal/ControlJournal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":200.0,"y":45.0,"resourceVersion":"1.0","name":"inst_7DB892D0","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"ButtonNavi","path":"objects/ButtonNavi/ButtonNavi.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.34,"scaleY":1.46,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":97.0,"y":64.0,"resourceVersion":"1.0","name":"inst_F99A5BDF","tags":[],"resourceType":"GMRInstance",},
-      ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Compatibility_Instances_Depth_0","tags":[],"resourceType":"GMRInstanceLayer",},
+      ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Compatibility_Instances_Depth_0","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"PhoneBack","path":"objects/PhoneBack/PhoneBack.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.016,"scaleY":1.00495863,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":199.0,"y":42.0,"resourceVersion":"1.0","name":"inst_B1BBA41C","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":2,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Compatibility_Instances_Depth_2","tags":[],"resourceType":"GMRInstanceLayer",},
@@ -34,6 +37,7 @@
     {"name":"inst_F99A5BDF","path":"rooms/rmJournal/rmJournal.yy",},
     {"name":"inst_B1BBA41C","path":"rooms/rmJournal/rmJournal.yy",},
     {"name":"inst_7D91095B","path":"rooms/rmJournal/rmJournal.yy",},
+    {"name":"inst_6C5D799B","path":"rooms/rmJournal/rmJournal.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

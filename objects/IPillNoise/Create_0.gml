@@ -7,3 +7,4 @@ script_use = pill_noise;
 sfx = LIQUID;
 
 name = "Pill Noise";
+desc = "Increase stomach noise production";

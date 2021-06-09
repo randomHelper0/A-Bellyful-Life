@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MapLocations",
-    "path": "folders/Objects/UI/MapLocations.yy",
+    "path": "folders/Other/Objects/UI/MapLocations.yy",
   },
   "resourceVersion": "1.0",
   "name": "BtDormitoriesB",

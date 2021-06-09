@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Abilities",
-    "path": "folders/Objects/UI/Journal/Contact/Abilities.yy",
+    "path": "folders/Other/Objects/UI/Journal/Contact/Abilities.yy",
   },
   "resourceVersion": "1.0",
   "name": "TaskNote",

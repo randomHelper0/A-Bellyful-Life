@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Timed Events",
-    "path": "folders/Objects/UI/Timed Events.yy",
+    "path": "folders/Other/Objects/UI/Timed Events.yy",
   },
   "resourceVersion": "1.0",
   "name": "ScheduleSticker",

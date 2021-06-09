@@ -37,7 +37,7 @@ function d_fataurant_shop(){
 		global.shop_bg = background_get();
 		global.shop_items = list_create(ISundea, ISoda);	
 		global.last_room = room;
-		room_goto(rmShop);
+		custom_goto(rmShop);
 }
 
 function d_fataurant_quit(){

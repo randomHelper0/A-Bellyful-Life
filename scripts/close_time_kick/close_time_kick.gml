@@ -4,7 +4,7 @@ function close_time_kick() {
 	
 	//kicks the player out if the location is closed at this time
 	if (ControlEnv.hours >= global.close_times[? room]){
-	    room_goto(rmMapUni);
+	    custom_goto(rmMapUni);
 	    ctb_list(noone, noone, "The location is closed at this time.");
 	}
 

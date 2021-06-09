@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Dialogues",
-    "path": "folders/Objects/UI/Dialogues.yy",
+    "path": "folders/Other/Objects/UI/Dialogues.yy",
   },
   "resourceVersion": "1.0",
   "name": "Bubble",

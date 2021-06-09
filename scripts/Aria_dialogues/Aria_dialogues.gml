@@ -47,6 +47,7 @@ function aria_intro_scene(){
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
 	global.scene_exit = false;
+	global.show_follower = false;
 	//scene_add_actors(Player, noone, noone);
 	background_set(sprAriaIntro1);
 	time_forward_minutes(30);
@@ -60,6 +61,8 @@ function aria_intro_scene(){
 }
 
 function aria_practice_scene(){
+	Aria.practice ++;	
+	Aria.finished_pump = false;
 	global.scene_name = "PracticeAfterPump";
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
@@ -112,11 +115,12 @@ function aria_practice_scene(){
 	else
 		ctb_list(noone, rmPool , msg, msg2, msg3);
 		
-	Aria.stomach_capacity += Aria.stomach_pressure * 50;
+	//Aria.stomach_capacity += Aria.stomach_pressure * 50;
 	ControlEnv.money += 30;
 }
 
 function aria_intro_pump(){
+	Aria.finished_intro_pump = true;
 	global.scene_name = "Aria Intro Pump";
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
@@ -131,6 +135,7 @@ function aria_intro_pump(){
 }
 
 function aria_pump(){
+	Aria.finished_pump = true;
 	global.scene_name = "Pump";
 	global.scene_inflate_rate = 2;
 	scene_add_actors(Aria, ORAL, AIR);
@@ -139,5 +144,15 @@ function aria_pump(){
 }
 
 function checkAriaEvent(){
-	return (ControlEnv.hours == 7 && ControlEnv.minutes <= 35 && room == rmPool);
+	return (ControlEnv.hours == 7 && ControlEnv.minutes <= 35 && room == rmPool && !in_dialogue() && is_location());
+}
+
+function aria_after_first_pump(){
+	ctb_msg( // after first water inflation
+		"[speaker:Aria][ex:ex_blush]Wow...",
+		"[speaker:Player] So, how was that?",
+		"[speaker:Aria][ex:ex_blush][sound:belly_slosh] It's so sloshy, could I use this to help with my swim lessons?",
+		"[speaker:Player] I don't think s-",
+		"[speaker:Aria][ex:ex_smile]",
+		"[speaker:Player] uh, yeah it should work",)	
 }

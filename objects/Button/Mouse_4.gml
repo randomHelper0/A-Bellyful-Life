@@ -7,8 +7,8 @@ if (script != noone){
 
 if (target_room != noone){
     if (!transition)
-        room_goto(target_room);
+        custom_goto(target_room);
     else
-        room_goto(target_room);
+        custom_goto(target_room);
 }
 
