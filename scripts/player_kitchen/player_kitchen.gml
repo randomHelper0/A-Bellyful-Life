@@ -1,6 +1,7 @@
 function player_kitchen(){
 	global.scene_name = "SinkKitchen";
 	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
 	scene_add_actors(Player, ORAL, WATER);
 	background_set(sprKitchenZoomed);
 	scene_auto_sound(ORAL, WATER);

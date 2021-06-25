@@ -1,7 +1,3 @@
 function player_dialogue() {
-	var d = global.dialogues;
-
-
-
-
+	ctb_list("...");
 }

@@ -4,7 +4,7 @@ function aria_dialogue(){
 	if (Aria.practice > 2 && in_house())
 	dialogue_create(
 	        "1",
-	        "Let's do more swim practice!",
+	        "Let's do more swim practice! (1hr)",
 	        true,
 			aria_more_practice
 	)
@@ -22,10 +22,10 @@ function Aria_eating_out(){
 		cmd_ex(ex_talk)+cmd_sound(get_random_asset("chewsoft", 1,4))+"...",
 		cmd_ex(ex_smile2)+cmd_sound(get_random_asset("drink", 1,4))+"...",
 		cmd_ex(ex_smile)+cmd_sound(get_random_asset("chewsoft", 1,4))+
-		"So delicious!" + cmd_ex(ex_idle),
-		cmd_speaker(Player) + "(You could only gawk as Aria rapidly chomp down her food. You had to remind her multiple times to slow down to avoid choking)",
-		cmd_speaker(Aria)+cmd_ex(ex_blush) + "Sorry! It's just that ever since you helped me, my swimming sessions have gone so well and somehow I'd feel an insatiable hunger for the rest of the day.",
-		cmd_ex(ex_idle) + cmd_speaker(Player) + "(You concluded that perhaps her metabolism had changed after many intensive swim sessions)."
+		"So delicious![ex:idle]",
+		"[speaker:Player](You could only gawk as Aria rapidly chomp down her food. You had to remind her multiple times to slow down to avoid choking)",
+		"[speaker:Aria][ex:blush]Sorry! It's just that ever since you helped me, my swimming sessions have gone so well and somehow I'd feel an insatiable hunger for the rest of the day.",
+		"[ex:idle][speaker:Player](You concluded that perhaps her metabolism had changed after many intensive swim sessions)."
 		//cmd_speaker(
 	)
 }
@@ -58,6 +58,7 @@ function aria_intro_scene(){
 		"the life guard was too occupied looking at his phone to notice. It would be faster to jump into the pool yourself.",
 		"[set_background:sprAriaIntro2]Without wasting a hearbeat, you jumped in and gently pulled her out.");
 	Aria.just_rescued = true;
+	Aria.finished_intro = true;
 }
 
 function aria_practice_scene(){
@@ -66,19 +67,21 @@ function aria_practice_scene(){
 	global.scene_name = "PracticeAfterPump";
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
+	global.show_follower = false;
 	global.scene_exit = false;
 	Aria.likability += 5;
 	//scene_add_actors(Player, noone, noone);
 	
-	if (Aria.stomach_pressure <= 0)
+	if (Aria.bowels_pressure <= 0)
 		background_set(asset_get_index("sprAriaPractice" + string(Aria.practice)));
 	else{
 		//var frac = Aria.total_content/Aria.total_capacity;
-		Aria.total_content*=1.5;
+		//Aria.total_content*=1.5;
 		with (Aria) skew_none();
 		scene_add_actors(Aria, noone, noone);
 	}
-	time_forward_minutes(60);
+	//time_forward_minutes(60);
+	ControlEnv.hours ++;
 	
 	if (ControlEnv.hours < 9){
 		ControlEnv.hours = 9;
@@ -100,16 +103,17 @@ function aria_practice_scene(){
 			msg2 = "[set_speaker:Aria] Please! I don't mind it as long as I am able to swim on my own. Please tell me your idea!"
 			msg3 = "[set_speaker:Player] You began explaining to Aria on how to use the hand pump to turn herself into a large float, while ignoring her major blushing episode."
 		}
-	}*/else if (Aria.stomach_pressure < 30){
+	}*/else if (Aria.bowels_content < 950){
 		msg = "Swiming on an empty stomach, the results were not as desired. Aria was able to practice her swim form, but she'll sink quickly when left alone.";	
-	}else  if (Aria.stomach_pressure < 70){
-		msg = "Both you and Aria could visibly observe major improvements. Aria doesn't seem to immediately sink when you elt go anymore";	
+	}else  if (Aria.bowels_content < 1400){
+		msg = "Both you and Aria could visibly observe major improvements. Aria doesn't seem to immediately sink when you let go anymore";	
 		msg2 = "Although she would eventually get pulled to the bottom of the pool when left swiming in a straight line for a while."
 		msg3 = "You can't help but imagine the better results if Aria is inflated even more."
 	}else {
 		msg = "The swim practice went great! There wasn't a moment when Aria wasn't afloat. She could do whatever she wanted, swim in whatever form she likes"
 		msg2 = "Aria doesn't even seem to mind her large bloated belly at all and happily swimed everywhere. You can see a happy smile plastered on her face the entire time.";	
 	}
+	
 	if (msg2 == "")
 		ctb_list(noone, rmPool , msg);
 	else
@@ -123,6 +127,7 @@ function aria_intro_pump(){
 	Aria.finished_intro_pump = true;
 	global.scene_name = "Aria Intro Pump";
 	global.scene_inflate_rate = 0;
+	global.scene_pressure_match = 1.1;
 	global.scene_interface = false;
 	global.scene_exit = false;
 	//scene_add_actors(Player, noone, noone);
@@ -138,7 +143,8 @@ function aria_pump(){
 	Aria.finished_pump = true;
 	global.scene_name = "Pump";
 	global.scene_inflate_rate = 2;
-	scene_add_actors(Aria, ORAL, AIR);
+	scene_add_actors(Aria, ANAL, AIR);
+	global.scene_sound_action = list_create(sndAirpump);
 	background_set(sprLockerroom);
 	//ctb_list(noone, rmPool , "stufffff");
 }

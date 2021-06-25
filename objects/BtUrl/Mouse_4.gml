@@ -1,3 +1,6 @@
+if (in_dialogue())
+	exit;
+
 if (roomid != noone){
     custom_goto(roomid)
     }

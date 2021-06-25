@@ -1,0 +1,10 @@
+Bored when skip time
+
+Animations:
+- Either have only one or two belly sizes (must fall within x threshold to trigger)
+
+walk around
+- Fixed time (30m)
+- spend energy + inc max energy
+- 30% chance of encountering someone who is not busy
+	- Simply state that you saw them, then jump to conversation

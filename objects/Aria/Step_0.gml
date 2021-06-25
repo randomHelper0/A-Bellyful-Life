@@ -15,34 +15,38 @@ if (just_rescued && room == rmPool){
 		"Also here is my number, lets hang out when you're free.",
 		cmd_ex(ex_idle)+"[speaker:noone] (You updated your journal schedule and added her number to your phone)");*/
 		
-		ctb_msg("[speaker:Aria][ex_smile]Thank you so so much for saving me! I don't even know I can thank you.",
-       "[ex:idle][speaker:Player] [c:blue]I can think of a few things... [c:default]",
-        "[speaker:Aria][ex:ex_talk]So uh, do you come here often?",
-        "[speaker:Player] Uhh yeah! [font:tiny] This is totally not my first time. [font: normal]",
-        "[speaker:Aria][ex:ex_blush] Then please, would you mind giving me swim lessons? My previous swim teacher had to leave. I'll pay you $30 per session!",
-        "[speaker:Player] Cmon, If I save your life for free it's only fair I teach you how to swim for free.",
-        "[speaker:Aria][ex:ex_surprise] Please! I can't ask you to do this for free.",
-        "[speaker:Player][c:blue] Odd, I wonder why she's so adament about paying me?",
-        "[speaker:Player][c:blue] I should probably find out why she's so desperate later [c:default]",
-        "[speaker:Aria][ex:ex_smile]Thank you so much! I will be here from 7 to 9 am every monring. Come whever you can!", 
-        "Also here is my number, lets hang out when you're free.",
-	"[speaker:Player] Of course! I could even help you with your swimming if you'd like [font: tiny] I have a few pump related ideas...[font:normal]",
-	"[speaker:Aria][ex:ex_smile2] that sounds amazing![font:tiny]What was that last part though?[font:default]",
-        "[ex:ex_idle][speaker:noone] (You updated your journal schedule and added her number to your phone)");
+		ctb_list(
+		noone,
+		noone, 
+		"[speaker:Aria][ex:ex_smile]Thank you so so much for saving me! I don't even know I can thank you.",
+		"[ex:idle][speaker:Player] [c:blue]I can think of a few things... [c:default]",
+		"[speaker:Aria][ex:ex_talk]So uh, do you come here often?",
+		"[speaker:Player] Uhh yeah! [font:tiny] This is totally not my first time. [font:normal]",
+		"[speaker:Aria][ex:ex_blush] Then please, would you mind giving me swim lessons? My previous swim teacher had to leave. I'll pay you $30 per session!",
+		"[speaker:Player] Cmon, If I save your life for free it's only fair I teach you how to swim for free.",
+		"[speaker:Aria][ex:ex_surprise] Please! I can't ask you to do this for free.",
+		"[speaker:Player][c:blue] Odd, I wonder why she's so adament about paying me?",
+		"[speaker:Player][c:blue] I should probably find out why she's so desperate later [c:default]",
+		"[speaker:Aria][ex:ex_smile]Thank you so much! I will be here from 7 to 9 am every monring. Come whever you can!", 
+		"Also here is my number, lets hang out when you're free.",
+		"[speaker:Player] Of course! I could even help you with your swimming if you'd like [font:tiny] I have a few pump related ideas...[font:normal]",
+		"[speaker:Aria][ex:ex_smile2] that sounds amazing![font:tiny]What was that last part though?[font:default]",
+		"[ex:ex_idle][speaker:noone] (You updated your journal schedule and added her number to your phone)");
 		just_rescued = false;
 		has_number = true;
 		likability = 5;
 }
 
 if (!finished_intro && Player.pool_pass > 0){
-		finished_intro = true;
 		global.scene_script = aria_intro_scene;
 		scene_start();
+		exit;
 }
 
-if (!finished_intro || Player.pool_pass <= 0)
+if (!finished_intro || Player.pool_pass <= 0 || room == rmScene)
 	return;
 
+//show_message("JERE")
 notify_time(7, 0, 35, "Aria's swim practice", rmPool, "Pool");
 
 if (checkAriaEvent() && finished_intro){

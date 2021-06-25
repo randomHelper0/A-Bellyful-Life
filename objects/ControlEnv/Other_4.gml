@@ -1,4 +1,12 @@
 room_counter = 0;
+if (global.upload_content != noone){
+	load_all_text(global.upload_content);
+	global.upload_content = noone;
+	game_start = false;
+	alarm[0] = -1;
+	exit;
+}
+
 if (global.save_index != noone){
 	var notes = get_string("Notes:", "");
 	save_all("save" + str(global.save_index)+ ".json");
@@ -24,7 +32,11 @@ if (global.load_index != noone){
 	exit;
 }else if (game_start){
 	game_start = false;
-	Player.name = get_string("Enter your name:", "Ayume");	
+	//var new_name = undefined;
+	//while (is_undefined(new_name))	
+//		new_name = get_string("Enter your name:", "Ayume");
+	
+	Player.name = str(get_string("Enter your name:", "Ayume"));
 }
 
 

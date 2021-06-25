@@ -2,7 +2,8 @@ if (global.screen_lock)
     exit;
 
 if (script != noone){
-    script_execute(script);
+    //script_execute(script);
+	script();
 }
 
 if (target_room != noone){

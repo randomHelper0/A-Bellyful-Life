@@ -1,6 +1,7 @@
 function player_greenhouse(){
 	global.scene_name = "Greenhouse";
 	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
 	scene_add_actors(Player, ANAL, WATER);
 	scene_auto_sound(ANAL, WATER);
 	background_set(sprGreenhouseScene);
@@ -20,5 +21,14 @@ function d_greenhouse(){
 	true,
 	scene_start
 	)
+	
+	if (Amber.following){
+		dialogue_create(
+		"2",
+		"Ask Amber to use hose",
+		true,
+		Amber_ask_garden
+		)
+	}
 	dialogue_start(true);
 }

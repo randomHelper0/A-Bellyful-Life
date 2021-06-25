@@ -20,7 +20,7 @@ function time_forward_minutes(argument0) {
 				if (!in_fridge)
 					expire_in -= global.temp;
 				else
-					expire_in -= global.temp/5;
+					expire_in -= global.temp/6;
 		}
 	}
 	

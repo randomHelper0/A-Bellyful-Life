@@ -35,6 +35,9 @@ function pill_laxative(target){
 
 function pill_notify(status_name, d_script, minutes){
 	var char = global.dialogue_char;
+	if (object_index == Player)
+		return;
+	
 	global.dialogue_char  = object_index;
 	//show_message("1." + str(minutes) +", "+ status_name + ", " +str(status_notify[? status_name]) + ", "
 		//+ str(in_dialogue()) + ", " +str(is_character_in_room(id)) + str(room_get_name(script_location())));

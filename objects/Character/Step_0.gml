@@ -1,5 +1,6 @@
 if (is_npc)
 	exit;
+	
 
 skew_step();
 

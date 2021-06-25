@@ -4,7 +4,7 @@ function Bobbie_dialogues(){
 	if (in_house())
 		dialogue_create(
 		        "1",
-		        "Let's smoke more weed!",
+		        "Let's smoke more weed! (45m)",
 		        true,
 		        Bobbie_smoke_together//"(Event not implemented)"
 		)
@@ -37,6 +37,7 @@ function Bobbie_eating_out(){
 
 function Bobbie_drink_kitchensink(){
 	global.scene_name = "Drink";
+	global.allow_stream = true;
 	global.scene_inflate_rate = 2;
 	scene_add_actors(Bobbie, ORAL, WATER);
 	background_set(sprKitchenZoomed);
@@ -67,6 +68,8 @@ function Bobbie_smoke_together(){
 }
 
 function Bobbie_smoke2(){
+	time_forward_minutes(45);
+	
 	global.has_food = false;
 	with (Item){
 		if (!is_template){
@@ -81,10 +84,10 @@ function Bobbie_smoke2(){
 		Bobbie.high += 20;
 		Player.high += 20;
 		ctb_msg(
-			"[speaker:Bobbie][ex:ex_sad] Oh, it looks like you don't have much...",
-			"[speaker:Player]That's alright I'll restock for next time",
-			"[speaker:noone]It looks like Bobbie likes you a bit more",
-			"[speaker:noone]Maybe have some more food next time if you want something to happen ;)"
+		"[speaker:Bobbie][ex:ex_sad] Oh, it looks like you don't have much...",
+		"[speaker:Player]That's alright I'll restock for next time",
+		"[speaker:noone]It looks like Bobbie likes you a bit more",
+		"[speaker:noone]Maybe have some more food next time if you want something to happen ;)"
 		)
 	}else{
 		Bobbie.likability += 6;
@@ -105,18 +108,18 @@ function Bobbie_smoke2(){
 			}
 		if (!Bobbie.first_stuffing){
 			Bobbie.first_stuffing = true;
-			ctb_msg("[speaker:noone]Renders not completed, sorry :(",
-				"[speaker:Bobbie][ex:ex_surprise]*Bobbie opens the fridge and is positively overwhelmed at the mass of food stored there*",
-				"[speaker:Player][c:blue] Hmm... I wonder how much that girl can fit in her belly? [c:default]",
-				"[speaker:Bobbie][ex:ex_smile]Hey, Y'know this stuff really calms my nerves.",
-				"[speaker:Bobbie]Would you mind feeding m-",
-				"[speaker:Player]On it!",
-				"[speaker:noone]You immedately start stuffing Bobbie with as much food and drink as you have",
-				"[speaker:Bobbie][sound:burp1]Woah, that was some surreal shit...",
-				"[speaker:Bobbie]I feel super bloated and I can't quite say I dislike it",
-				"[speaker:Bobbie]Can we maybe do this again?",
-				"[speaker:Player]Anytime!",
-				"[speaker:noone]Bobbie has begun to feel a craving to stuff herself, keep it up :)")
+	ctb_msg("[speaker:noone]Renders not completed, sorry :(",
+		"[speaker:Bobbie][ex:ex_surprise]*Bobbie opens the fridge and is positively overwhelmed at the mass of food stored there*",
+		"[speaker:Player][c:blue] Hmm... I wonder how much that girl can fit in her belly? [c:default]",
+		"[speaker:Bobbie][ex:ex_smile]Hey, Y'know this stuff really calms my nerves.",
+		"[speaker:Bobbie]Would you mind feeding m-",
+		"[speaker:Player]On it!",
+		"[speaker:noone]You immedately start stuffing Bobbie with as much food and drink as you have",
+		"[speaker:Bobbie][sound:burp1]Woah, that was some surreal shit...",
+		"[speaker:Bobbie]I feel super bloated and I can't quite say I dislike it",
+		"[speaker:Bobbie]Can we maybe do this again?",
+		"[speaker:Player]Anytime!",
+		"[speaker:noone]Bobbie has begun to feel a craving to stuff herself, keep it up :)")
 		}else{
 			ctb_msg(
 				"[speaker:noone]Bobbie seems eager this time to get the stuffing on, you feed her and she rubs her belly",

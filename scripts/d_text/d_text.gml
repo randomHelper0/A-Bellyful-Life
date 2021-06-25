@@ -15,6 +15,13 @@ function d_text() {
 	        true,
 	        d_text_hangout
 	)
+	
+	dialogue_create(
+	        "2Status",
+	        "Status",
+	        true,
+	        d_status
+	)
 
 	dialogue_start(true);
 

@@ -4,7 +4,7 @@ function aya_dialogue(){
 	if (in_house())
 	dialogue_create(
 	        "1",
-	        "Let's study some more!",
+	        "Let's study some more! (1hr)",
 	        true,
 			aya_more_study
 	)
@@ -68,6 +68,7 @@ function aya_study(){
 }
 
 function Aya_drink_kitchensink(){
+	global.allow_stream = true;
 	global.scene_name = "Drink";
 	global.scene_inflate_rate = 2;
 	scene_add_actors(Aya, ORAL, WATER);

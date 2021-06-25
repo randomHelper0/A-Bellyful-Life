@@ -1,6 +1,7 @@
 function player_pump(){
 	global.scene_name = "Pump";
 	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
 	
 	background_set(global.pump_bg);
 	global.scene_sound_action = list_create(sndAirpump);

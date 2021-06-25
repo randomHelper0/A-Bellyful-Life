@@ -17,8 +17,8 @@
   "width": 1280,
   "height": 720,
   "textureGroupId": {
-    "name": "bgScenes",
-    "path": "texturegroups/bgScenes",
+    "name": "Aria_0",
+    "path": "texturegroups/Aria_0",
   },
   "swatchColours": null,
   "gridX": 0,

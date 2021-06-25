@@ -68,7 +68,7 @@ function eating_out_action(){
 			}
 		}
 		//
-		
+		char.following = false;
 		ctb_list(noone, char.eating_out_location,"You both took took the taxi to the shopping district.", "(no scene render yet!)");
 	}
 }

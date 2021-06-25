@@ -130,10 +130,13 @@ function sleep_finish(){
 	)
 	
 	FatbucksCashier.last_cancelled --;	
+	FataurantCashier.last_cancelled --;	
+	FatdonaldsCashier.last_cancelled --;	
 	
 	Yumi.gave_exam_today = false;
 	Amber.jogged_today = false;
 	
+	ControlEnv.battery = 30*60*3;
 	with(Character){
 		status_notify[? "pill_diet" ] = 15;
 		status_notify[? "pill_digest" ] = 15;

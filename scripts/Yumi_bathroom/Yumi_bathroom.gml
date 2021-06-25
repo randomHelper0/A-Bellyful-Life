@@ -1,6 +1,6 @@
 function Yumi_bathtub(){
 	global.show_follower = false;
-	
+	global.allow_stream = true;
 	global.scene_name = "Tub";
 	global.scene_inflate_rate = 2;
 	scene_add_actors(Yumi, ANAL, WATER);
@@ -11,7 +11,7 @@ function Yumi_bathtub(){
 	with (Yumi) skew_common();
 }
 
-function Yuni_ask_bathtub(){
+function Yumi_ask_bathtub(){
 	if(Yumi.desire_inflate + Yumi.likability >= 20){
 		var msg = "Yumi eagerly agreed.";
 		

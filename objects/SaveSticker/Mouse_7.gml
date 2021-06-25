@@ -27,6 +27,13 @@ dialogue_init()
 			        true,
 			       delete_action
 		)
+		
+		dialogue_create(
+			        "4",
+			        "Download",
+			        true,
+			       download_action
+		)
 	}
 
 	dialogue_start(true);

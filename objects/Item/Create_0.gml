@@ -20,6 +20,7 @@ in_stomach = false;
 in_bowels = false;
 zone = noone;
 character = noone;
+is_hidden = false;
 
 is_pill = false;
 is_tool = false;

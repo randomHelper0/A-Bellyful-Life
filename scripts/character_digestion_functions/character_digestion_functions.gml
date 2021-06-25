@@ -53,6 +53,28 @@ function pressure_step(minutes){
 }
 
 function digest_step(minutes){
+	if (using_mpump){
+		//ingest(id,ANAL, AIR, minutes*20);
+		global.mpump_target = object_get_name(object_index);
+		global.mpump_mins = minutes;
+		global.mpump = noone;
+		with (IMiniPump){
+			if (target == global.mpump_target){
+				if (batteries > 0)
+					batteries -= global.mpump_mins;
+				global.mpump = id;
+			}
+		}
+		if (global.mpump.batteries > 0 &&bowels_content < bowels_capacity){
+			bowels_air += minutes*15;
+			bowels_content += minutes*15;
+				/*using_mpump = false;
+				global.mpump.target = "";
+				global.mpump.is_hidden = false;*/
+		}
+		
+	}
+	
 	if (jittery > 0)
 		jittery -= min(minutes/12, jittery);
 	if (alcohol > 0)
@@ -166,10 +188,10 @@ function digest_step(minutes){
 function character_capacity_modifier(target){
 		var m = 1;
 		if (target.alcohol >= 30){
-			m += target.alcohol/100;
+			m += clamp(target.alcohol, 0, 100)/200;
 		}
-		if (target.jittery >= 30){
-			m += target.jittery/200;
+		if (target.high >= 30){
+			m += clamp(target.high, 0, 50)/100;
 		}
 		
 		return m;

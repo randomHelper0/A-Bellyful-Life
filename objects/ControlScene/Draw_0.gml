@@ -34,13 +34,24 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 			watched_inflate = true;	
 		}
 		spr_id  = asset_get_index("spr"+object_get_name(actor_id.object_index) + "_" + global.scene_name + "_" + string(actor_id.fat_level));
+		/*if (keyboard_check(vk_delete)){
+			show_message(spr_id);
+			show_message(sprite_get_name(spr_id));
+		}*/
 		//draw_sprite(spr_id, actor_id.belly_index, 0,0);
 		skew_draw_other(actor_id, spr_id, character_belly_index(actor_id, spr_id), 0,0);
 		
 		
 		if (global.scene_interface){
 			draw_sprite(sprGaugeBack, 0, x, y);
-			
+		
+		if (global.scene_pressure_match){
+			 variable_instance_set(actor_id, entrance_name+"_pressure", 
+				(variable_instance_get(actor_id, entrance_name+"_content")/variable_instance_get(actor_id, entrance_name+"_capacity"))
+				* 115 * global.scene_pressure_match
+			 );
+		}
+		
 			var rot = variable_instance_get(actor_id, entrance_name+"_pressure");
 			if (rot > 115){
 				BtPlay.toggled = false;

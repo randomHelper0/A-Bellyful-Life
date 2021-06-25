@@ -32,6 +32,15 @@ function d_standard() {
 	        d_status
 	)
 	
+	if (char.using_mpump){
+		dialogue_create(
+		    "pump",
+		    "Detach mini pump",
+		    true,
+		    detach_mpump
+		)
+	}
+	
 	if (char.visiting){
 		dialogue_create(
 		        "4",

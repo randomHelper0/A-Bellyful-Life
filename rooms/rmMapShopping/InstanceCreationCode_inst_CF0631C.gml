@@ -1,3 +1,3 @@
 name = "Bike Store";
 
-init_shop(sprBikeStore, IPump, IBike);
+init_shop(sprBikeStore, IPump, IMiniPump, IBike);

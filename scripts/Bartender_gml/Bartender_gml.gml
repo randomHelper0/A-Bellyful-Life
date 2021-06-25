@@ -41,7 +41,7 @@ function d_bartender_shop(){
 }
 
 function d_bartender_quit(){
-	Bartender.last_cancelled = 3;
+	Bartender.last_cancelled = 1;
 	Bartender.player_registered = false;
 	
 	ctb_list(noone, noone, "You're no longer a Fatbucks employee");
@@ -49,7 +49,7 @@ function d_bartender_quit(){
 
 function d_bartender_ptj(){
 	if (Bartender.last_cancelled > 0){
-		ctb_list(noone, noone, "You've just quit recently! Maybe wait a few more days?");
+		ctb_list(noone, noone, "You've just quit today! At least wait until tomorrow to reapply?");
 		return;
 	}
 	

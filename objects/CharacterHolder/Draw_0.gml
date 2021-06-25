@@ -13,3 +13,10 @@ if (!character.is_npc){
     draw_sprite(character.sprite_index, character.image_index, x,y);
 }
 
+if (character.using_mpump){
+	var sprMPump = getMPumpSprite(character, "Front");
+		
+	if (sprMPump >= 0){
+		skew_draw_other(character, sprMPump ,0, x, y);
+	}
+}

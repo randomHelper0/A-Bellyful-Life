@@ -1,6 +1,6 @@
 function check_day(){
 	for (var i=0; i<argument_count; i ++)
-		if (argument[i] == ControlEnv.day)
+		if (argument[i] == ControlEnv.day % 7)
 			return true;
 	
 	return false;

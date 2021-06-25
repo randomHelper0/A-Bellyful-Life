@@ -85,7 +85,7 @@ function skew_draw_other(other_id, sprite, subimg, xx,yy){
 }
 
 function skew_common(){
-	skew_init(SKEW_ABSOLUTE, 10, 0, 0.2, true);
+	skew_init(SKEW_ABSOLUTE, 8, 0, 0.2, true);
 	skew_xoffset =random(6.28319);
 }
 

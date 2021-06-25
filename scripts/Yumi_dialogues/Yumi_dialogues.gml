@@ -52,20 +52,20 @@ function Yumi_exam(){
 	}
 	Yumi.gave_exam_today = true;
 	if (Player.total_content/Player.total_capacity >= 0.5){
-		ctb_list(noone, noone, make_expression_cmd(ex_surprise)+"[set_speaker:Yumi]Hmm.. She immediately placed her focus on your bloated belly. Are you currently pregnant?",
+		ctb_list(noone, noone, "[set_speaker:Yumi][ex:surprise]Hmm.. She immediately placed her focus on your bloated belly. Are you currently pregnant?",
 			"[set_speaker:Player]No. (You then begrudgingly explains to her what you did to make your belly so big).",
-			 make_expression_cmd(ex_talk, Yumi)+"I see, as a medical professional I will have to warn you that going over your own limit will have deadly consequences.",
+			"[set_speaker:Yumi][ex:talk]I see, as a medical professional I will have to warn you that going over your own limit will have deadly consequences.",
 			"Though it doesn't look like you're willing to stop just because I said so.",
 			"[set_speaker:Player] (You shook your head)",
-			 make_expression_cmd(ex_sad, Yumi)+"Fine, just know that you could end up in the hospital if you don't know your own limits.",
-			 make_expression_cmd(ex_idle)+"(She seriously contemplated for a while before making a determined look)",
-			make_expression_cmd(ex_talk)+"I shouldn't be saying this, but I'm very interested in how you would progress. How about this,",
+			 "[set_speaker:Yumi][ex:sad]Fine, just know that you could end up in the hospital if you don't know your own limits.",
+			 "[ex:idle](She seriously contemplated for a while before making a determined look)",
+			"[ex:talk]I shouldn't be saying this, but I'm very interested in how you would progress. How about this,",
 			"Come back here often when you inflate, I want to observe your body's changes and also warn you if something seems wrong.",
 			"I'll even pay you $25 for each interesting visit (once per day).",
 			"[set_speaker:Player] Alright",
 			"[set_speaker:Yumi]Actually, here's my number. I'm off my shift at 4pm everyday. Give me a text any time after and I will drop by your place to make observations.",
 			"Also, I've refunded your money and here is your first $25 for today. Come back often.",
-			make_expression_cmd(ex_idle)+"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit."
+			"[ex:idle][set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit."
 			);
 		Yumi.interested = true;
 		Yumi.has_number = true;
@@ -88,12 +88,12 @@ function Yumi_exam2(){
 		ControlEnv.money += 10;
 		Yumi.desire_inflate += 9;
 		Yumi.desire_stuffing += 9;
-		ctb_list(noone, noone, "[set_speaker:Yumi]"+cmd_ex(ex_surprise)+"(She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
-				cmd_ex(ex_idle) + "[set_speaker:Player](You tried your best not to blush)",
-				"[set_speaker:Yumi]"+cmd_ex(ex_smile2)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
-				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",
-				cmd_speaker(Yumi) + "Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
-				cmd_ex(ex_idle)+"[set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
+		ctb_list(noone, noone, "[set_speaker:Yumi][ex:surprise](She widened her eyes)I'm astonished at how much you're stretched right now. How is this even possible?",
+				"[ex:idle][set_speaker:Player](You tried your best not to blush)",
+				"[set_speaker:Yumi][ex:smile2]She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
+				"[speaker:Player]Kya! (You let out a cute moan as she pressed hard on a particular spot)",
+				"[speaker:Yumi]Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
+				"[ex:idle][set_speaker:Player](You noticed in her excitement, she handed you an extra $10 bill, but you didn't have to correct her)",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a large margin."
 				)
 	}else if (ratio >= 0.5){
@@ -101,11 +101,11 @@ function Yumi_exam2(){
 		Yumi.desire_inflate += 5;
 		Yumi.desire_stuffing += 5;
 		ctb_list(noone, noone, 
-				"[set_speaker:Yumi]"+cmd_ex(ex_smile)+"(She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
-				cmd_speaker(Player) + "Kya! (You let out a cute moan as she pressed hard on a particular spot)",
-				cmd_speaker(Yumi) + cmd_ex(ex_talk)+ "Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
+				"[set_speaker:Yumi][ex:smile](She  took various measurements and rapidly took notes while mumbling to herself.) I see, I see",
+				 "[speaker:Player]Kya! (You let out a cute moan as she pressed hard on a particular spot)",
+				"[speaker:Yumi][ex:talk]Anyway, that was some good data. Remeber, don't push yourself too hard or else I'll see you here in stretchers. Here's your $25, comeback tomorrow",
 				"[set_speaker:system] You have raised Yumi's interest in inflation and stuffing by a little bit.",
-				cmd_speaker(Yumi) + cmd_ex(ex_idle) + "..."
+				"[speaker:Yumi][ex:idle]..."
 				)
 	}else{
 		ctb_list(noone, noone, 

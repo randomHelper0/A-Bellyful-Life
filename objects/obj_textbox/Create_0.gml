@@ -3,6 +3,7 @@
     all the below functions.
 */
 //html5 compatibility
+depth = -10000;
 alarm[0] = 1;
 destroyed = false; //WTF
 

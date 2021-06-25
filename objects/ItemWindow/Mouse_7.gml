@@ -10,8 +10,10 @@ if (mouse_x > x + sprite_width/2){
 	with (item) instance_destroy();
 	with (card) instance_destroy();
 }else{
-	if (item.script_use != noone)
+	if (item.script_use != noone){
+		global.item_window_item = item;
 		script_execute(item.script_use);	
+	}
 }
 
 if (!is_template)
@@ -19,8 +21,8 @@ if (!is_template)
 if (item.consumable && item.bites <= 0){
 	if (item.uses <= 0)
 		with (item) instance_destroy();
-	else
-		item.uses --;
+	//else
+		//item.uses --;
 }
 	
 instance_destroy();

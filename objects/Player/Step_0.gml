@@ -13,6 +13,8 @@ if (ControlEnv.hours >= 23 && !warn_sleep2){
 }
 
 if (is_location() && (ControlEnv.hours > 23 &&ControlEnv.minutes > 30 || ControlEnv.hours < 6)){
+		global.last_room = rmBedroom;
+		global.last_dest = rmBedroom;
 		ctb_list(d_player_sleep, noone, "Begrudgingly, you returned to your bed because you're too tired to stay awake any longer.");
 }
 

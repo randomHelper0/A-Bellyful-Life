@@ -1,0 +1,1 @@
+tooltip_start(x,y,"Battery", "Needed for running the camera. You'll recharge the battery when you sleep.");

@@ -2,6 +2,6 @@
 event_inherited();
 
 if (!is_template){
-	ControlEnv.has_bike = true;
+	ControlEnv.has_umbrella = true;
 	instance_destroy();
 }

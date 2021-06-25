@@ -1,3 +1,5 @@
+depth = -99;
+
 draw_cached();
 draw_self();
 draw_set_font(fontReport);

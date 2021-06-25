@@ -14,6 +14,7 @@ function d_bathroom_toilet(){
 function player_bathtub(){
 	global.scene_name = "Bathtub";
 	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
 	scene_add_actors(Player, ANAL, WATER);
 	scene_auto_sound(ANAL, WATER);
 	background_set(sprBathtubHose);
@@ -48,7 +49,15 @@ function d_bathtub(){
 			"3",
 			"Ask Yumi to unhook shower hose",
 			true,
-			Yuni_ask_bathtub
+			Yumi_ask_bathtub
+		)
+		
+	if (Bobbie.following)
+		dialogue_create(
+			"3",
+			"Ask Bobbie to unhook shower hose",
+			true,
+			Bobbie_ask_bathtub
 		)
 	
 	dialogue_start(true);
@@ -57,6 +66,7 @@ function d_bathtub(){
 function player_bathroom_sink(){
 	global.scene_name = "BathroomSink";
 	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
 	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
 	scene_add_actors(Player, ORAL, WATER);
 	scene_auto_sound(ORAL, WATER);

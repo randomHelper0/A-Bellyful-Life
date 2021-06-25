@@ -110,3 +110,27 @@ function is_string_a_number(text){
 	var n = string_length(string_digits(s));
 	return n && n == string_length(s) - (string_char_at(s, 1) == "-") - (string_pos(".", s) != 0);	
 }
+
+function downloadFile(fileName, content){
+	//show_message(content);
+	jsAddJs(@"
+	var saveObj = "+content+@"
+	
+	  var element = document.createElement('a');
+	  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(saveObj)));
+	  element.setAttribute('download', " +chr(34)+fileName+chr(34)+ @");
+
+	  element.style.display = 'none';
+	  document.body.appendChild(element);
+
+	  element.click();
+
+	  document.body.removeChild(element);
+	");	
+}
+
+function background_set_html(bg){
+	jsExecute(
+		"document.body.style.backgroundImage = " + chr(34) + " url('html5game/"+background+".png')"+ chr(34) +"; " + chr(34) + ");"
+	);
+}

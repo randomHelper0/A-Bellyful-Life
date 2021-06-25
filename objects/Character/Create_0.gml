@@ -10,6 +10,7 @@ init_data_excludes("statuses_count", "statuses",
 sprite_expression = noone;
 expression = ex_idle;
 high = 0;
+using_mpump = false;
 
 //common stats, attributes
 affection = 0;

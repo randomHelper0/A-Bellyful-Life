@@ -3,6 +3,9 @@ height = item.sprite_height + 10;
 image_xscale = width/100;
 image_yscale = height/100;
 
+if (item.is_hidden)
+	visible = false;
+
 if (!global.abilities[? "check"] && 
     (item.in_stomach || item.in_bowels)){
     visible = false;

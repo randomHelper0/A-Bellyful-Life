@@ -1,4 +1,10 @@
 function load_all(fname){
+	var data = file_read_all(working_directory + fname);
+	load_all_text(data);
+	
+}
+
+function load_all_text(data){
 	with (Item){
 		if (!is_template){
 			no_custom_destroy = true;
@@ -6,8 +12,8 @@ function load_all(fname){
 		}
 	}
 	
-	var data = json_decode(file_read_all(working_directory + fname)),
-		characters = data[? "characters"],
+	data = json_decode(data);
+	var characters = data[? "characters"],
 		items = data[? "items"],
 		control = data[? "control"];
 	

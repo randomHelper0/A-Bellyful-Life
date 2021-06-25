@@ -5,6 +5,7 @@ if (!global.settings[? "All Sounds"]){
 }
 
 if (!global.settings[? "Music"]){
+	audio_sound_gain(bgm_intro, 0, 0);
 	audio_sound_gain(bgmA, 0, 0);
 	audio_sound_gain(bgmB, 0, 0);
 }

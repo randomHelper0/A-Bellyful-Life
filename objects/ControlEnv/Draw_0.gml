@@ -3,13 +3,6 @@ if(raining > 0 &&  (room == rmMapShopping || room == rmMapUni || room == rmPark)
 	draw_sprite_ext(sprRain, counter/4, 0,0, 2,2, 0, c_white, 1);	
 }
 
-if blur > 0 //only apply shader if the enabled = 1
-{
-	blur --;
-    shader_set(shaderBlur)
-    shader_set_uniform_f(usize,512,512,8)//width,height,radius
-}else// if blur == 0
-	shader_reset()
 
 
 

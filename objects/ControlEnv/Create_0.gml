@@ -21,6 +21,7 @@ global.dialogies_icons = noone;
 
 global.debugging = true
 game_start = true;
+battery = 30*60*3;
 
 
 global.last_dest = rmBedroom;
@@ -34,6 +35,8 @@ audio_sound_gain(sndWind, 0, 0);
 audio_sound_gain(sndRain, 0, 0);*/
 
 has_bike = false;
+has_umbrella = false;
+has_tripod = false;
 
 raining = 0;
 minutes = 30;
@@ -54,16 +57,16 @@ item_init(Player, Aria, Aya, Yumi,  Amber, Bobbie, FatbucksCashier, FatdonaldsCa
 //show_debug_message("affter init")
     //Librarian);
 item_init(ICocktail1, ICocktail2, ICocktail3, ICocktail4, IBeer,
-IPump, IApple,IOrange, ICakeSlice, INextLine,
+IPump, IMiniPump, IApple,IOrange, ICakeSlice, INextLine,
 IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 	IHamburger, IHotdog, IHugeburger, IFries,
 	 IPillDiet, IPillDigest, IPillGas, IPillNoise, IPillLaxative,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
 		IBottle, IBottleWater, IUmbrella,
-		IBike,
+		IBike, ITripod,
 IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack);
 create_item(instance_find(IBottleWater,0));
-//create_item(instance_find(IPump,0));
+create_item(instance_find(IMiniPump,0));
 //create_item(instance_find(IPillDiet,0));
 //create_item(instance_find(IBottleDiet,0));
 for (i = 0; i <8; i ++){
@@ -99,3 +102,5 @@ global.status_desc[? "pill_relaxant"] = "";
 //shader
 blur = -1;
 usize = shader_get_uniform(shaderBlur,"size");//uniform for width, height, radius
+//depth = -1000;
+

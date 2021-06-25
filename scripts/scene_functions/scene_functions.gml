@@ -9,6 +9,7 @@ function scene_start(){
 	if (room != rmBackpack)
 		global.last_room = room;
 	global.scene_exit = true;
+	global.scene_pressure_match = false;
 	global.scene_bgm = false;
 	global.scene_playing = true;
 	global.scene_sound_action =  noone;
@@ -18,6 +19,8 @@ function scene_start(){
 	global.scene_interface = true;
 	global.scene_do_breath = false;
 	global.show_follower = true;
+	global.allow_stream = false;
+	global.streaming = false;
 	ds_list_clear(global.scene_actors);
 	custom_goto(rmScene);
 }

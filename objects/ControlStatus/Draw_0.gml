@@ -7,6 +7,13 @@ sprite = asset_get_index(spr_name);
 //  draw_sprite_ext(character.sprite_expression, character.expression, x,y, 1,1,0, c_white, 1);
 skew_draw_other(character, sprite, character.belly_index, x,y);
 skew_draw_other(character, character.sprite_expression, character.expression, x,y);
+if (character.using_mpump){
+	var sprMPump = getMPumpSprite(character, "Front");
+		
+	if (sprMPump >= 0){
+		skew_draw_other(character,sprMPump ,0, x, y);
+	}
+}
 	
 var char = global.dialogue_char;
 draw_cached();
