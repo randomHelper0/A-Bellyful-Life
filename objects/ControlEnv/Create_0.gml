@@ -91,10 +91,30 @@ money = 500;
 counter = 0;
 
 global.status_desc = ds_map_create();
-global.status_desc[? "pill_digest"] = "(Increase digestion speed by 50% (stackable). Side effects: higher stomach pressure (harder to inflate), gas production, loose some energy over time)";
-global.status_desc[? "pill_diet"] = "(Decrease digestion speed by 50%(stackable). Side effects: Max energy temporary reduced by 5%. ";
-global.status_desc[? "pill_gas"] = "Increase stomach gas production";
-global.status_desc[? "pill_noise"] = "Increase stomach noise production";
+global.status_desc[? "pill_digest"] = 
+strlan(EN, "(Increase digestion speed by 50% (stackable). Side effects: higher stomach pressure (harder to inflate), gas production, loose some energy over time)",
+	CN, "(消化速度加快50%(可叠加).副作用:腹部压力更大(更难使腹部变大), 产生气体,以及随着时间流逝会消耗一些能量)",
+	JP, "（消化速度を50%上昇(重複可)。副作用：胃の圧力が高くなる（膨らみにくくなる）、ガスが発生する、時間の経過とともにエネルギーが低下する。）",
+	RUS, "(Увеличивает скорость пищеварения на 50% (складывается). Побочные эффекты: более высокое давление в желудке (труднее надуть), выделение газа, со временем теряется часть энергии)"
+);
+global.status_desc[? "pill_diet"] = 
+strlan(EN,"(Decrease digestion speed by 50%(stackable). Side effects: Max energy temporary reduced by 5%. ",
+	CN, "(消化速度减慢50%(可叠加).副作用: 最大能量值减少5%(暂时的)",
+	JP, "（消化速度を50%低下させる(重複可)。副作用：最大エネルギーが一時的に５%減少。",
+	RUS, "(Уменьшает скорость пищеварения на 50% (складывается). Побочные эффекты: Макс. Энергия временно снижена на 5%. "
+);
+global.status_desc[? "pill_gas"] = 
+strlan(EN,"Increase stomach gas production",
+	CN, "增加肚子里气体的产生",
+	JP, "胃のガス発生量を増やす。",
+	RUS, "Увеличивает газообразование в желудке"
+);
+global.status_desc[? "pill_noise"] = 
+strlan(EN, "Increase stomach noise production",
+	CN, "增加肚子里声音的产生",
+	JP, "胃のガス発生量を増やす。",
+	RUS, "Увеличивает количество шума в желудке"
+);
 global.status_desc[? "pill_laxative"] = "";
 global.status_desc[? "pill_relaxant"] = "";
 

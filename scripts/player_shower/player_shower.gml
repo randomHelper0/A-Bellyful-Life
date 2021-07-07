@@ -6,15 +6,6 @@ function player_shower(){
 	scene_add_actors(Player, noone, noone);
 	background_set(sprBathtubShower);
 	global.scene_sound_action = list_create(sndShower);
-	var msg 
-	if (Player.shower_times == 0)
-		msg = "You can feel the refreshing water run through your body, restoring your energy and mood!";
-	else if (Player.shower_times == 1)
-		msg = "The cool water restored some of your energy and mood.";
-	else if (Player.shower_times == 2)
-		msg = "You let the chilly water wash over your body, but some of your fatigue remained.";
-	else
-		msg = "(You don't think you should take anymore showers today.)";
 	
 	if (Player.shower_times <= 2){
 		change_energy(Player, (Player.energy_max/3) / ((Player.shower_times+1)/2) , true);
@@ -23,7 +14,8 @@ function player_shower(){
 	
 	Player.shower_times++;
 	
-	ctb_list(player_shower_finish,noone , msg);
+	exelan("msg_player_shower");
+	
 	with(Player)skew_init(SKEW_ABSOLUTE, 0,0,0,0);
 	//with (Player) skew_common();
 }

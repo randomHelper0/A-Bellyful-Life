@@ -31,9 +31,11 @@ for (i = 0; i < instance_number(Item); i++){
     }
 }*/
 
-//belly_size = round(stomach_content/stomach_capacity*2)
-belly_size = (stomach_content/stomach_capacity)*55
-    + (bowels_content/bowels_capacity)*55;
+//belly_size = (stomach_content/stomach_capacity)*55
+ //   + (bowels_content/bowels_capacity)*55;
+
+belly_size = (stomach_content/stomach_capacity)*50
+    + (bowels_content/bowels_capacity)*50;
 	
 belly_size *= (stomach_capacity + bowels_capacity)/final_capacity;
 

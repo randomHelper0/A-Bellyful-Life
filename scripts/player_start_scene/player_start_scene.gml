@@ -7,5 +7,5 @@ function player_start_scene(){
 	global.scene_bgm = true;
 	//scene_add_actors(Player, noone, noone);
 	background_set(sprSceneStart);
-	ctb_list(noone, rmBedroom , "You are "+Player.name+", a bubbly girl with lots of quirky desires.", " You just won a big lottery and is now moving out to rent your own mansion so you can do everything that you want!");
+	exelan("msg_player_start");
 }

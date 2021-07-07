@@ -4,14 +4,24 @@ function Bobbie_dialogues(){
 	if (in_house())
 		dialogue_create(
 		        "1",
-		        "Let's smoke more weed! (45m)",
+		        strlan(
+					EN, "Let's smoke more weed! (45m)",
+					CN, "我们一起来接着哈草(45m)",
+					RUS, "Давай покурим ещё травки! (45 мин)",
+					JP, "もっと葉っぱを吸おう！（45分）"
+				),
 		        true,
 		        Bobbie_smoke_together//"(Event not implemented)"
 		)
 	
 	dialogue_create(
 		        "2",
-		        "Make a purchase",
+				strlan(
+					EN, "Make a purchase",
+					CN, "购买物品",
+					RUS, "Сделать заказ",
+					JP, "購入する"
+				),
 		        true,
 		       bobbie_shop
 		)
@@ -20,7 +30,14 @@ function Bobbie_dialogues(){
 	eating_out_ask(Bobbie);
 	dialogue_start(true);
 	
-	ctb_msg(cmd_speaker(Bobbie)+"Welcome to my secret shop! (she opened her backpack, revealing all the goods).");
+	ctb_msg(cmd_speaker(Bobbie)+
+		strlan(
+			EN, "Welcome to my secret shop! (she opened her backpack, revealing all the goods).",
+			CN, "欢迎来到我的秘密商店！(她打开了她的背包，展示所有的物品).",
+			RUS, "Добро пожаловать в мой секретный магазинчик! (она открыла рюкзак, показывая все товары).",
+			JP, "私の秘密のお店へようこそ！（彼女はバックパックを開き、すべての商品を見せた）"
+		)
+	);
 }
 
 function Bobbie_eating_out(){
@@ -53,18 +70,7 @@ function bobbie_shop(){
 }
 
 function Bobbie_smoke_together(){
-	ctb_list(Bobbie_smoke2, noone, "[speaker:Bobbie][ex:ex_smile] Hope you don't mind but when I smoke I tend to get a [font:large]MASSIVE[font:normal] case of the munchies",
-	"[speaker:Player] Oh, I don't mind at all...",
-	"[speaker:Player] In fact, please dont hesitate to use my fridge",
-	"[speaker:Bobbie][ex:ex_surprise] [font:large] OH WORD!? [font:normal] That's real cool of you "+Player.name+" you're a true homegirl",
-	"[speaker:Player][ex:ex_idle] Don't even worry about it, I like to help",
-	"[speaker:noone] *Time passes and Bobbie begins to feel the effects of her smoking binge*",
-	"[speaker:Bobbie] [ex:ex_smile2] You ever just have a moment where you forgot what you were thinking",
-	"[speaker:Player] Yeah, I get tha-",
-	"[speaker:noone][sound:snd_hungry4]*A loud gurgle from Bobbie's belly seems to have interrupted your train of thought",
-	"[speaker:Bobbie][ex:ex_blush] Yooo I'm pretty hungry, I'd bet you could probably already tell",
-	"[speaker:Bobbie][ex:ex_smile] Could I maybe dig into your food now?");	
-	
+	exelan("msg_Bobbie_smoke_together");
 }
 
 function Bobbie_smoke2(){
@@ -83,12 +89,7 @@ function Bobbie_smoke2(){
 		Bobbie.likability += 3;
 		Bobbie.high += 20;
 		Player.high += 20;
-		ctb_msg(
-		"[speaker:Bobbie][ex:ex_sad] Oh, it looks like you don't have much...",
-		"[speaker:Player]That's alright I'll restock for next time",
-		"[speaker:noone]It looks like Bobbie likes you a bit more",
-		"[speaker:noone]Maybe have some more food next time if you want something to happen ;)"
-		)
+		exelan("msg_Bobbie_smoke_together_nofood");
 	}else{
 		Bobbie.likability += 6;
 		Bobbie.high += 30;
@@ -108,23 +109,9 @@ function Bobbie_smoke2(){
 			}
 		if (!Bobbie.first_stuffing){
 			Bobbie.first_stuffing = true;
-	ctb_msg("[speaker:noone]Renders not completed, sorry :(",
-		"[speaker:Bobbie][ex:ex_surprise]*Bobbie opens the fridge and is positively overwhelmed at the mass of food stored there*",
-		"[speaker:Player][c:blue] Hmm... I wonder how much that girl can fit in her belly? [c:default]",
-		"[speaker:Bobbie][ex:ex_smile]Hey, Y'know this stuff really calms my nerves.",
-		"[speaker:Bobbie]Would you mind feeding m-",
-		"[speaker:Player]On it!",
-		"[speaker:noone]You immedately start stuffing Bobbie with as much food and drink as you have",
-		"[speaker:Bobbie][sound:burp1]Woah, that was some surreal shit...",
-		"[speaker:Bobbie]I feel super bloated and I can't quite say I dislike it",
-		"[speaker:Bobbie]Can we maybe do this again?",
-		"[speaker:Player]Anytime!",
-		"[speaker:noone]Bobbie has begun to feel a craving to stuff herself, keep it up :)")
+			exelan("msg_Bobbie_smoke_together_hasfood_firsttime");
 		}else{
-			ctb_msg(
-				"[speaker:noone]Bobbie seems eager this time to get the stuffing on, you feed her and she rubs her belly",
-				"[speaker:noone]Bobbie's like for stuffing has increased largely"
-			);
+			exelan("msg_Bobbie_smoke_together_hasfood_afterfirsttime");
 		}
 	}	
 }

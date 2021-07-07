@@ -1,10 +1,11 @@
 #macro EN 0
 #macro RUS 1
-#macro JAP 2
+#macro JP 2
 #macro VN 3
+#macro CN 4
 
 
-global.language = EN;
+global.language = RUS;
 function strlan(){
 	var en_str = "";
 	for (var i=0; i<argument_count; i+= 2){
@@ -35,10 +36,12 @@ function language_str(index){
 			return "EN";
 		case RUS:
 			return "RUS";
-		case JAP:
-			return "JAP";
+		case JP:
+			return "JP";
 		case VN:
 			return "VN";
+		case CN:
+			return "CN";
 	}
 	
 	return "N/A";

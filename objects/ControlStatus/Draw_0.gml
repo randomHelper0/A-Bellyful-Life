@@ -14,12 +14,14 @@ if (character.using_mpump){
 		skew_draw_other(character,sprMPump ,0, x, y);
 	}
 }
-	
+
 var char = global.dialogue_char;
 draw_cached();
 draw_set_color(c_white);
 var base_y = 100, line_y = 45, base_x = 300, select = StickerStatuses.select;
 
+
+exit;
 if (select == 1){
 	//-----------------------stomach
 	draw_text(base_x, base_y, "Stomach: " + string(char.stomach_content) + "/"

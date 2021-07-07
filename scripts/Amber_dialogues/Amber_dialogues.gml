@@ -3,7 +3,11 @@ function Amber_dialogues(){
 	if (Amber.met_player && in_house())
 		dialogue_create(
 		        "1",
-		       strlan(EN, "Let's go jogging!", RUS,  "Давай пробежимся!"),
+		       strlan(EN, "Let's go jogging!", 
+						RUS,  "Давай пробежимся!",
+						CN,"我们一起去跑步吧！",
+						JP,  "ジョギングに行こ！"
+					),
 		        true,
 				amber_more_jog
 		)
@@ -63,7 +67,11 @@ function amber_jog(){
 		exelan("msg_Amber_jog");
 	}else{
 		ctb_list(player_jog_finish, noone, 
-			strlan(EN, "You and Amber had a nice jogging routine together.", RUS,  "Вы с Эмбер вместе отлично побегали трусцой.")
+			strlan(EN, "You and Amber had a nice jogging routine together.", 
+						RUS,  "Вы с Эмбер вместе отлично побегали трусцой.",
+						CN, "你和Amber如往常一样在一起慢跑。",
+						JP, "あなたとアンバーは一緒に日課のジョギングを楽しみました。"
+					)
 		);	
 	}
 

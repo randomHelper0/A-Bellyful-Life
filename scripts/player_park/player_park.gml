@@ -5,13 +5,27 @@ function player_park(){
 	scene_add_actors(Player, noone, noone);
 	background_set(sprPark);
 	
+	var msg_finish_jog = strlan(
+				EN, "You began jogging through the park. You can feel the refreshing air lifting your mood.",
+				CN, "你开始在公园中慢跑。清凉的空气改善了你的心情。",
+				JP, "公園をジョギングし始めた。爽やかな空気が気分を良くしてくれます。",
+				RUS, "Ты начала бегать по парку. Ты можешь почувствовать, как освежающий воздух поднимает твое настроение."
+			);
+	
 	if (script_execute(Amber.script_location) != rmPark)
-		ctb_list(player_jog_finish, noone , "You began jogging through the park. You can feel the refreshing air lifting your mood.");
+		ctb_list(player_jog_finish, noone , 
+			msg_finish_jog
+		);
 	else{
 		global.scene_script = amber_jog;
 		if (!Amber.met_player)
-			ctb_list(room_restart, noone , "You began jogging through the park. You can feel the refreshing air lifting your mood.", 
-				"During your jog, you noticed another girl up ahead. You both matched each other's pace.");
+			ctb_list(room_restart, noone , msg_finish_jog, 
+				strlan(EN, "During your jog, you noticed another girl up ahead. You both matched each other's pace.",
+					CN, "慢跑的时候，你看到前面有一个女孩也在跑步，你们慢慢步调一致起来。",
+					JP, "ジョギング中に、女の子が前を歩いている。あなたがペースを合わせると一緒にペースを合わせて歩いてくれました。",
+					RUS, "Во время пробежки ты заметила впереди другую девушку. Вы поравнялись друг с другом."
+				)
+			);
 		else{
 			room_restart();	
 		}
@@ -80,25 +94,7 @@ function d_player_jog(minutes){
 
 function player_jog_finish(){
 	time_forward_minutes(global.player_jog_minutes);
-	var msg = "It was a light running session.", 
-		msg2 = "You can feel your endurance improved a little bit",
-		inc = global.player_increase_endurance,
-		fraction =  (Player.total_content/Player.total_capacity);;
-	
-	if (fraction > 0.8){
-		msg = "It was extremely exhausting because you had to drag your very bloated belly through the park, but you did it!";
-		msg2 = "Your endurance improved drastically.";
-	}else if (fraction > 0.5){
-		msg = "It was quite tiring because your belly was dragging you down.";
-		msg2 = "Your endurance improved alot.";
-	}else if (fraction > 0.2){
-		msg = "It was more taxing than usual because of your bloated belly.";
-		msg2 = "Your endurance improved slightly.";
-	}
-	
-	msg2 += ". Max energy increased by " + string(inc*100) + " %";
-	Player.energy_max += Player.energy_max * inc;
-	ctb_list(noone,  global.last_room, msg, msg2);
+	exelan("msg_player_jog_finish");
 	
 	
 }

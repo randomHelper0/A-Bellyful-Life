@@ -10,14 +10,14 @@ function fatdonalds_dialogue(){
 	if (!FatdonaldsCashier.player_registered){
 		dialogue_create(
 		        "1",
-		        "Ask for part time job",
+		       msg_ask_ptj(),
 		        true,
 		       d_fatdonalds_ptj
 		)
 	}else{
 		dialogue_create(
 		        "1",
-		        "Quit part time job",
+		        msg_quit_ptj(),
 		        true,
 		       d_fatdonalds_quit
 		)
@@ -25,7 +25,7 @@ function fatdonalds_dialogue(){
 	
 	dialogue_create(
 		        "2",
-		        "Make a purchase",
+		        exelan("msg_make_purchase"),
 		        true,
 		       d_fatdonalds_shop
 		)
@@ -44,12 +44,12 @@ function d_fatdonalds_quit(){
 	FatdonaldsCashier.last_cancelled = 3;
 	FatdonaldsCashier.player_registered = false;
 	
-	ctb_list(noone, noone, "You're no longer a Fatbucks employee");
+	ctb_list(noone, noone, msg_fired("Fatdonalds"));
 }
 
 function d_fatdonalds_ptj(){
 	if (FatdonaldsCashier.last_cancelled > 0){
-		ctb_list(noone, noone, "You've just quit a few days ago! Maybe wait a few more days?");
+		ctb_list(noone, noone, msg_just_quit());
 		return;
 	}
 	
@@ -58,20 +58,26 @@ function d_fatdonalds_ptj(){
 
 	dialogue_create(
 	        "1",
-	        "Accept!",
+	        msg_accept(),
 	        true,
 	       d_fatdonalds_accept
 	)
 	
 	dialogue_create(
 	        "2",
-	        "I'll think about it",
+	        msg_think_about_it(),
 	        false,
-	       "Alright"
+	       msg_alright()
 	)
 
 	dialogue_start(false);
-	ctb_list(noone, noone,"You took some time to contemplate the job:#The pay is low, but you don't need to do much.","(Per hour) pay: $11, energy use: 8, mood: very  boring");
+	ctb_list(noone, noone, strlan(
+		EN, "You took some time to contemplate the job:#The pay is low, but you don't need to do much.","(Per hour) pay: $11, energy use: 8, mood: very  boring",
+		CN, "你考虑了下这份工作:#薪水很低，但是消耗额能量很少。","(每小时) 薪水：$11, 消耗能量: 8, 心情： 非常无聊",
+		JP, "あなたは仕事について考えこみました。：※ 給料は低いですが、あまり多くのことを求められません。","(1時間あたり)給料：$11, 体力消費：8,気分：やや退屈",
+		RUS, "Вам потребовалось время, чтобы понять в чем заключается работа:#Заработок невысокий, но много делать не нужно.","(В час) платят: $11, тратит энергии: 8, настроение: очень скучно"
+	)
+	);
 }
 
 function d_fatdonalds_accept(){
@@ -101,7 +107,7 @@ function d_fatdonalds_accept(){
 	)
 
 	dialogue_start(false);
-	ctb_list(noone, noone,"Welcome abroad! Which shift do you want to take?");
+	ctb_list(noone, noone,msg_ptj_welcome());
 }
 
 function d_fatdonalds_1stshift(){

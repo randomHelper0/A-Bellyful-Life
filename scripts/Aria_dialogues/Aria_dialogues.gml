@@ -4,7 +4,12 @@ function aria_dialogue(){
 	if (Aria.practice > 2 && in_house())
 	dialogue_create(
 	        "1",
-	        "Let's do more swim practice! (1hr)",
+	        strlan(
+				EN, "Let's do more swim practice! (1hr)",
+				RUS, "RUS NOT ADDED :<",
+				CN, "我们一起来做更多的游泳练习!(1hr)",
+				JP, "もっと水泳のレッスンをしよう！(1時間)"
+			),
 	        true,
 			aria_more_practice
 	)
@@ -17,17 +22,7 @@ function aria_dialogue(){
 }
 
 function Aria_eating_out(){
-	ctb_msg(
-		cmd_speaker(Aria)+
-		cmd_ex(ex_talk)+cmd_sound(get_random_asset("chewsoft", 1,4))+"...",
-		cmd_ex(ex_smile2)+cmd_sound(get_random_asset("drink", 1,4))+"...",
-		cmd_ex(ex_smile)+cmd_sound(get_random_asset("chewsoft", 1,4))+
-		"So delicious![ex:idle]",
-		"[speaker:Player](You could only gawk as Aria rapidly chomp down her food. You had to remind her multiple times to slow down to avoid choking)",
-		"[speaker:Aria][ex:blush]Sorry! It's just that ever since you helped me, my swimming sessions have gone so well and somehow I'd feel an insatiable hunger for the rest of the day.",
-		"[ex:idle][speaker:Player](You concluded that perhaps her metabolism had changed after many intensive swim sessions)."
-		//cmd_speaker(
-	)
+	exelan("msg_Aria_eating_out");
 }
 
 function aria_more_practice(){
@@ -36,10 +31,6 @@ function aria_more_practice(){
 	global.scene_script = aria_practice_scene;
 	time_forward_minutes(15);
 	scene_start_from(rmPool);
-}
-
-function aria_eat_out(){
-	
 }
 
 function aria_intro_scene(){
@@ -53,10 +44,7 @@ function aria_intro_scene(){
 	time_forward_minutes(30);
 	if (ControlEnv.hours < 9)
 		ControlEnv.hours = 9;
-	ctb_list(noone, rmPool ,
-		"Immediately after entering, you noticed a small girl strugglling underneath the waters",
-		"the life guard was too occupied looking at his phone to notice. It would be faster to jump into the pool yourself.",
-		"[set_background:sprAriaIntro2]Without wasting a hearbeat, you jumped in and gently pulled her out.");
+	exelan("msg_Aria_rescue_start");
 	Aria.just_rescued = true;
 	Aria.finished_intro = true;
 }
@@ -88,36 +76,7 @@ function aria_practice_scene(){
 		ControlEnv.minutes = 0;
 	}
 	
-	var msg = "", msg2 = "", msg3 = "";
-	if (Aria.practice == 1){
-		msg = "Your first swim practice with Aria went well. Aria is doing her best. Her movements and form is correct, but somehow she is still having great difficulty at keeping herself afloat.";	
-	}else if (Aria.practice == 2){
-		msg = "Aria followed your instructions carefully, her swim movements are almost perfect. Yet somehow she can't stay afloat. As if gravity itself wants to pull her down!";	
-		msg2 = "It looks like Aria might need to use a swim float at all times, which frustrates you both. Then you had an idea, why not make Aria herself a float? You wonder if she would go along with your plan.";
-		msg3 = "(You'll need a hand pump to execute your idea, come back next time with a hand pump!)"
-	}/*else if (Aria.practice == 3 &&  !Aria.finished_intro_pump){
-		if (!has_item(IPump))
-			msg = "(You'll need a hand pump to execute your idea, come back next time with a hand pump!)";	
-		else{
-			msg = "[set_speaker:Player] I have an idea on how to keep you floating without using a float, so you can swim as much as you want without sinking! Although you might find it a little ... strange";
-			msg2 = "[set_speaker:Aria] Please! I don't mind it as long as I am able to swim on my own. Please tell me your idea!"
-			msg3 = "[set_speaker:Player] You began explaining to Aria on how to use the hand pump to turn herself into a large float, while ignoring her major blushing episode."
-		}
-	}*/else if (Aria.bowels_content < 950){
-		msg = "Swiming on an empty stomach, the results were not as desired. Aria was able to practice her swim form, but she'll sink quickly when left alone.";	
-	}else  if (Aria.bowels_content < 1400){
-		msg = "Both you and Aria could visibly observe major improvements. Aria doesn't seem to immediately sink when you let go anymore";	
-		msg2 = "Although she would eventually get pulled to the bottom of the pool when left swiming in a straight line for a while."
-		msg3 = "You can't help but imagine the better results if Aria is inflated even more."
-	}else {
-		msg = "The swim practice went great! There wasn't a moment when Aria wasn't afloat. She could do whatever she wanted, swim in whatever form she likes"
-		msg2 = "Aria doesn't even seem to mind her large bloated belly at all and happily swimed everywhere. You can see a happy smile plastered on her face the entire time.";	
-	}
-	
-	if (msg2 == "")
-		ctb_list(noone, rmPool , msg);
-	else
-		ctb_list(noone, rmPool , msg, msg2, msg3);
+	exelan("msg_Aria_practice");
 		
 	//Aria.stomach_capacity += Aria.stomach_pressure * 50;
 	ControlEnv.money += 30;
@@ -133,10 +92,7 @@ function aria_intro_pump(){
 	//scene_add_actors(Player, noone, noone);
 	background_set(sprAria_Pump_intro);
 	
-	msg = "[set_speaker:Player] I have an idea on how to keep you floating without using a float, so you can swim as much as you want without sinking! Although you might find it a little ... strange";
-	msg2 = "[set_speaker:Aria] Please! I don't mind it as long as I am able to swim on my own. Please tell me your idea!"
-	msg3 = "[set_speaker:Player] You began explaining to Aria on how to use the hand pump to turn herself into a large float, while ignoring her major blushing episode."
-	ctb_list(noone, rmPool , msg, msg2, msg3);
+	exelan("msg_Aria_first_pump");
 }
 
 function aria_pump(){
@@ -154,11 +110,5 @@ function checkAriaEvent(){
 }
 
 function aria_after_first_pump(){
-	ctb_msg( // after first water inflation
-		"[speaker:Aria][ex:ex_blush]Wow...",
-		"[speaker:Player] So, how was that?",
-		"[speaker:Aria][ex:ex_blush][sound:belly_slosh] It's so sloshy, could I use this to help with my swim lessons?",
-		"[speaker:Player] I don't think s-",
-		"[speaker:Aria][ex:ex_smile]",
-		"[speaker:Player] uh, yeah it should work",)	
+	exelan("msg_Aria_after_first_pump");
 }

@@ -15,7 +15,15 @@ if (ControlEnv.hours >= 23 && !warn_sleep2){
 if (is_location() && (ControlEnv.hours > 23 &&ControlEnv.minutes > 30 || ControlEnv.hours < 6)){
 		global.last_room = rmBedroom;
 		global.last_dest = rmBedroom;
-		ctb_list(d_player_sleep, noone, "Begrudgingly, you returned to your bed because you're too tired to stay awake any longer.");
+		ctb_list(d_player_sleep, noone, 
+			strlan(
+				EN, "Begrudgingly, you returned to your bed because you're too tired to stay awake any longer.",
+				CN, "因为你太困了，你不情愿地上床睡觉。",
+				JP, "今日は疲れて眠い。あなたは布団に潜り込んだ。",
+				RUS,"Неохотно ты вернулась в кровать, потому что слишком устала, и не можешь оставаться на ногах."
+			)
+		
+		);
 }
 
 hunger = 0;
@@ -38,7 +46,13 @@ if (hours_without_eating >=12){
 		global.last_dest = rmClinic;
 		time_forward_minutes(30);
 		Nurse.bills += 100;
-		ctb_list(noone, noone, "You collapsed from hunger and was taken to the clinic. Please pay the medical bill before you leave. ");
+		ctb_list(noone, noone, 
+			strlan(
+				EN, "You collapsed from hunger and was taken to the clinic. Please pay the medical bill before you leave. "),
+				CN, "你饿晕了，被送到了诊所。离开之前请先结账。",
+				JP, "空腹で倒れて、病院に搬送された。退院する前に医療費を払ってください。",
+				RUS,"Ты потеряла сознание от голода и попала в клинику. Пожалуйста, оплати медицинский счет перед отъездом. "
+			)
 	}
 }
 

@@ -5,14 +5,6 @@ function player_TV(){
 	scene_add_actors(Player, noone, noone);
 	background_set(sprLivingroom);
 	
-	var msg 
-	if (Player.TV_times == 0)
-		msg = "You eagerly watched all of your favorite shows, catching up from yesterday, restoring your energy and mood.";
-	else if (Player.TV_times == 1 || Player.TV_times == 2)
-		msg = "You searched around other channels to see if there are anything interesting. Perhaps sitting around watching TV all day isn't good.";
-	else
-		msg = "(You don't think you should watch anymore TV today.)";
-	
 	if (Player.TV_times <= 2){
 		change_energy(Player, (Player.energy_max/3) / ((Player.TV_times+1)/2) , true);
 		change_mood(Player, 20, true)
@@ -20,7 +12,9 @@ function player_TV(){
 	
 	Player.TV_times++;
 	global.scene_sound_action = list_create(sndTV);
-	ctb_list(player_TV_finish, noone , msg);
+	
+	exelan("msg_player_TV");
+	
 	with (Player) skew_common();
 }
 

@@ -35,7 +35,11 @@ function d_player_bed(){
 		"1",
 		"Sleep until 6 am",
 		false,
-		"It's still too early. You usually go to bed at around 9pm"
+		strlan(EN, "It's still too early. You usually go to bed at around 9pm",
+					CN, "现在太早了。你一般晚上9点才去睡觉。",
+					JP, "（まだ、眠くない。ベッドで寝たい場合は21時以降になる必要がある）",
+					RUS, "Слишком рано. Обычно ты ложишься в кровать около 9 вечера"
+				)
 		)
 	else //if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
@@ -118,12 +122,33 @@ function sleep_finish(){
 	Player.fat_calories += Player.daily_calories;
 	
 	if (Player.daily_calories> 0)
-		msg_weight = "You gained some weight.";
+		msg_weight = strlan(
+										EN,"You gained some weight.",
+										CN, "你增加了一些体重",
+										JP, "体重が増えました。",
+										RUS, "Ты набрала немного вес."
+									);
 	else if (Player.daily_calories < 0)
-		msg_weight = "You lost some weight.";
+		msg_weight = strlan(
+										EN, "You lost some weight.",
+										CN, "你体重掉了一些",
+										JP, "体重が減りました。",
+										RUS, "Ты сбросила немного вес."
+									);
 		
-	msg_capacity = "Your stomach capacity increased by " + string(Player.inc_stomach) 
-		+"cc. Your bowels capacity increased by" + string(Player.inc_bowels) + "cc.";
+	msg_capacity = strlan(
+										EN, "Your stomach capacity increased by ",
+										CN, "你的腹部容量增加了",
+										JP, "胃の容量が増えました。",
+										RUS, "Вместимость твоего желудка увеличилась на"
+									) + string(Player.inc_stomach) 
+									+ "cc. " + 
+									strlan(
+										EN, "Your bowels capacity increased by ",
+										CN, "你的肠内容量增加了",
+										JP, "腸内の容量が増えました。",
+										RUS, "Вместимость твоего кишечника увеличилась на"
+									) + string(Player.inc_bowels) + "cc.";
 	
 	ctb_list(noone, noone,
 		msg_weight, msg_capacity	

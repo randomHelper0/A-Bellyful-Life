@@ -8,7 +8,13 @@ if (!global.streaming){
 	ControlEnv.battery --;
 	if (ControlEnv.battery <= 0){
 		global.streaming = false;
-		tooltip_start(room_width/2-100, 0, "Stream Off","Your camera ran out of battery, you'll recharge it when you sleep.");
+		tooltip_start(room_width/2-100, 0, "Stream Off", 
+		strlan(EN, "Your camera ran out of battery, you'll recharge it when you sleep.",
+			CN, "你的相机没电了,在你睡觉时将它充满电.",
+			JP, "カメラのバッテリーが切れました。就寝すると次の日の朝には充電されます。",
+			RUS, "У твоей камеры села батарейка, она зарядится, пока ты будешь спать."
+		)
+		);
 	}
 }
 

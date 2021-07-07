@@ -4,7 +4,13 @@ function player_pool(){
 	global.scene_interface = false;
 	scene_add_actors(Player, noone, noone);
 	background_set(sprPlayerSwimBG);
-	ctb_list(player_swim_finish, noone , "You began swimming earnessly. You can feel the refreshing water lifting your mood.");
+	ctb_list(player_swim_finish, noone , 
+	strlan(EN, "You began swimming earnessly. You can feel the refreshing water lifting your mood.",
+			CN, "你开始认真地游泳，清爽的感觉令你心情有所改善。",
+			JP, "あなたは夢中で泳ぎ始めました。水の心地よさが気分を高揚させているのを感じます。",
+			RUS, "Ты начала интенсивно плавать. Ты можешь почувствовать, как освежающая вода поднимает настроение."
+		)
+	);
 //	with (Player) skew_common();
 }
 
@@ -115,25 +121,5 @@ function d_player_swim(minutes){
 
 function player_swim_finish(){
 	time_forward_minutes(global.player_swim_minutes);
-	var msg = "It was a light swimming session.", 
-		msg2 = "You can feel your endurance improved a little bit",
-		inc = global.player_increase_endurance,
-		fraction =  (Player.total_content/Player.total_capacity);;
-	
-	if (fraction > 0.8){
-		msg = "It was extremely exhausting because you had to drag your very bloated belly through the pool, but you did it!";
-		msg2 = "Your endurance improved drastically.";
-	}else if (fraction > 0.5){
-		msg = "It was quite tiring because your belly was dragging you down.";
-		msg2 = "Your endurance improved alot.";
-	}else if (fraction > 0.2){
-		msg = "It was more taxing than usual because of your bloated belly.";
-		msg2 = "Your endurance improved slightly.";
-	}
-	
-	msg2 += ". Max energy increased by " + string(inc*100) + " %";
-	Player.energy_max += Player.energy_max * inc;
-	ctb_list(noone,  global.last_room, msg, msg2);
-	
-	
+	exelan("msg_player_swim_finish");
 }
