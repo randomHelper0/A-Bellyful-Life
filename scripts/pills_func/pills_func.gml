@@ -16,6 +16,7 @@ function pill_gas(target){
 	if (is_undefined(target))
 		target = global.dialogue_char;
 	character_add_status(target, "pill_gas", 60*4);
+	target.desire_inflate ++;
 	item_consume(item,target);
 }
 

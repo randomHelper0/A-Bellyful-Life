@@ -64,7 +64,8 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
 		IBottle, IBottleWater, IUmbrella,
 		IBike, ITripod,
-IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack);
+IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack,
+IButtPlug);
 create_item(instance_find(IBottleWater,0));
 create_item(instance_find(IMiniPump,0));
 //create_item(instance_find(IPillDiet,0));
