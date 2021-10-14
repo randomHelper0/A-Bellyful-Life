@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Scenes",
-    "path": "folders/Characters/Bambi/Sprites/Scenes.yy",
+    "name": "FeedCows",
+    "path": "folders/Characters/Bambi/Sprites/Scenes/FeedCows.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBambi_FeedCows_0",

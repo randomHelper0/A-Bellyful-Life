@@ -11,8 +11,14 @@ sprite_expression = noone;
 expression = ex_idle;
 high = 0;
 using_mpump = false;
+libido = 0;
+
+pop_warning = false;
+popped = 0;
+popping = false;
 
 //common stats, attributes
+go_resort = false;
 affection = 0;
 likability = 0;
 mental_stability = 100;

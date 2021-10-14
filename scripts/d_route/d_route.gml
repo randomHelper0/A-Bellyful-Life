@@ -79,23 +79,30 @@ function d_route(dest){
 	global.bike_energy = bike_energy;
 	
 	dialogue_init();
+	
+	var walk = strlan(EN, "Walk", RUS, "Ходить", JP, "歩く", CN, "走");
+	var energy = str_energy;
+	var mins = str_mins;
 	dialogue_create(
 	        "1",
-	        "Walk (" + string(walk_time) + " mins, " + string(walk_energy) + " energy)",
+	        walk+" (" + string(walk_time) + mins + ", "+ string(walk_energy) + energy + ")",
 	        true,
 	        d_walk
 	)
 	
+	var bike = strlan(EN, "Bike", RUS, "велосипед", JP, "自転車", CN, "自行车");
 	if (ControlEnv.has_bike)
 		dialogue_create(
 		        "2",
-		        "Bike (" + string(bike_time) + " mins, "+ string(walk_energy) + " energy)",
+		        bike+" (" + string(bike_time) + mins + ", "+ string(walk_energy) + energy + ")",
 		        true,
 		        d_bike
 		)
+		
+	var taxi = strlan(EN, "Taxi", RUS, "Такси", JP, "タクシー ", CN, "出租车");
 	dialogue_create(
 	        "3",
-	        "Taxi (" + string(taxi_time) + " mins, "+string(taxi_cost)+"$)",
+	        taxi+" (" + string(taxi_time) + mins + ", "+string(taxi_cost)+"$)",
 	        true,
 	        d_taxi
 	)

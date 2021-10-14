@@ -67,3 +67,7 @@ if (!audio_is_playing(sndRain)){
 		audio_stop_sound(sndRain);
 	}
 }*/
+
+depth = max(ButtonBackpack.depth, EnergySticker.depth) +1;
+
+

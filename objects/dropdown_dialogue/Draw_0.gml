@@ -11,6 +11,10 @@ draw_set_font(fnt_popup);
 draw_set_color(separator_color);
 draw_line(x1+total_icon_size,ty1,x1+total_icon_size,ty2);
 
+if ((global.language != EN && global.language != RUS) || 
+	room == rmSettings || room == rmMainMenu)
+draw_set_font(fntTiny);
+
 for(var i = 0; i < num; i++)
 {
     var y1 = y+(item_height*i)+y_offset+1;

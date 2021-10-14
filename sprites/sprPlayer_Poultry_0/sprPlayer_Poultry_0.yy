@@ -89,8 +89,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Resort",
-    "path": "folders/Characters/Player/Sprites/Resort.yy",
+    "name": "Farm",
+    "path": "folders/Characters/Player/Sprites/Scenes/Farm.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayer_Poultry_0",

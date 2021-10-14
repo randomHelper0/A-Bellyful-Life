@@ -7,6 +7,7 @@
  global.settings[? "Skew Animation"] = true;
  global.settings[? "Enable Portals"] = false;
  global.settings[? "Blurr Backgrounds"] = true;
+ global.settings[? "Belly Burst"] = true;
  
  global.settings[? "burp sound"] = false;
 global.settings[? "fart sound"] = false;

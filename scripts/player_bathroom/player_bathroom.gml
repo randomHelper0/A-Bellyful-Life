@@ -3,7 +3,7 @@ function d_bathroom_toilet(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	"Do your business",
+	strlan(EN, "Do your business", RUS, "пойти в туалет", JP, "トイレに行く", CN, "去洗手间"),
 	true,
 	player_expel
 	)
@@ -13,11 +13,18 @@ function d_bathroom_toilet(){
 
 function player_bathtub(){
 	global.scene_name = "Bathtub";
+	background_set(sprBathtubHose);
+	
+	if (global.last_room == rmBathroomResort){
+		global.scene_name = "ResortTub";	
+		background_set(sprBathtubResort);
+	}
+	
 	global.scene_inflate_rate = 2;
 	global.allow_stream = true;
 	scene_add_actors(Player, ANAL, WATER);
 	scene_auto_sound(ANAL, WATER);
-	background_set(sprBathtubHose);
+
 	global.scene_do_breath = true;
 	global.scene_sound_action = list_create(sndFlowWater);
 	with (Player) skew_common();
@@ -31,7 +38,7 @@ function d_bathtub(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	"Take a Shower (45 mins)",
+	strlan(EN, "Take a Shower (45 mins)", RUS, "Примите душ (45 минут)", JP, "シャワーを浴びる（45分）", CN, "淋浴（45 分钟）"),
 	true,
 	//scene_start
 	d_player_shower
@@ -39,7 +46,7 @@ function d_bathtub(){
 	
 	dialogue_create(
 	"2",
-	"unhook shower head",
+	str_unhook,
 	true,
 	scene_start
 	)
@@ -81,17 +88,48 @@ function d_bathroom_sink(){
 	dialogue_init();
 	dialogue_create(
 	"Drink",
-	"Drink",
+	str_drink,
 	true,
 	scene_start
 	)
 	
 	dialogue_create(
 	"Throw up",
-	"Throw up",
+	str_throwup,
 	true,
 	player_throw_up
 	)
+	
+	dialogue_start(true);
+}
+
+function d_bathtub_resort(){
+	global.scene_script = player_bathtub;
+	
+	dialogue_init();
+	/*dialogue_create(
+	"1",
+	"Take a Shower (45 mins)",
+	true,
+	//scene_start
+	d_player_shower
+	)*/
+	
+	dialogue_create(
+	"2",
+	str_unhook,
+	true,
+	scene_start
+	)
+	
+	if (Aria.go_resort)
+		dialogue_create(
+			"3",
+			"Ask Aria to unhook shower hose",
+			true,
+			Aria_ask_resortbathtub
+		)
+		
 	
 	dialogue_start(true);
 }

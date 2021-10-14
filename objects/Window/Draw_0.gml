@@ -4,7 +4,11 @@ draw_cached();
 draw_self();
 draw_set_font(fontReport);
 draw_set_color(c_black);
-draw_text(x+ 10,y+8, string_hash_to_newline(item.name));
+var display = item.name;
+/*var entry =  global.item_names[? string_replace(item.name, " ", "")];
+if (entry != undefined)
+	display = entry[| global.language-1];*/
+draw_text(x+ 10,y+8, string_hash_to_newline(display));
 draw_set_font(fnt_dialogue);
 
 draw_set_color(c_white);

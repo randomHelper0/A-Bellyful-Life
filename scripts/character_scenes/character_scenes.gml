@@ -1,8 +1,12 @@
 function character_drink_kitchensink(){
 	with (Character){
-		if (following){
+		if (following || schedule_get_location(id) == room){
 			global.dialogue_char = id;
 			var script = asset_get_index(name + "_drink_kitchensink");
+			
+			if (room == rmBathroomResort)
+				script = asset_get_index(name + "_drink_resortsink");
+				
 			if (script > -1 && desire_inflate + likability >= 10){
 				global.scene_script = script;
 				

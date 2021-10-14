@@ -12,12 +12,12 @@ function Bobbie_bathtub(){
 }
 
 function Bobbie_ask_bathtub(){
-	if(Yumi.desire_inflate + Yumi.likability >= 20){
+	if(Bobbie.desire_inflate + Bobbie.likability >= 20){
 		var msg = "Bobbie eagerly agreed.";
 		
-		if (Yumi.desire_inflate < 15){
+		if (Bobbie.desire_inflate < 15){
 			msg = "Bobbie doesn't seem very interested, but still agreed reluctantly (likability -1).";
-			Yumi.likability -= 1;
+			Bobbie.likability -= 1;
 		}
 		
 		global.scene_script = Bobbie_bathtub;	

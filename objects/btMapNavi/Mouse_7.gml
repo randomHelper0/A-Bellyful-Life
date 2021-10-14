@@ -19,4 +19,4 @@ if (target_room != noone){
 }
 
 if (target_script != noone)
-	script_execute(target_script);
+	target_script();

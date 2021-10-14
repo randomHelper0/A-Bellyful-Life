@@ -1,10 +1,10 @@
 event_inherited();
-script_location = Yumi_location;
-script_dialogue = Yumi_dialogues;
+script_location = Remi_location;
+script_dialogue = Remi_dialogues;
 //script_idle = alice_idle;
 //script_observe = alice_observe;
 
-sprite_expression = sprYumiExpressions_0;
+sprite_expression = sprRemiExpressions_0;
 interested = false;
 gave_exam_today = false;
 //has_number = true;

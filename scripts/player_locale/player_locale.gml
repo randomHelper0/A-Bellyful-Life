@@ -3,7 +3,7 @@ function msg_player_start_EN(){
 }
 
 function msg_player_start_CN(){
-	ctb_list(noone, rmBedroom , "你是"+Player.name+", 一个活泼的女孩，但心里有许多奇怪的癖好。","你刚刚通过彩票赢了很多钱，现在搬到了你自己的别墅里，想做什么都可以了！");
+	ctb_list(noone, rmBedroom , "你是"+Player.name+", 一个活泼的女孩，但心里有许多奇怪的癖好。","你刚刚通过彩票赢了很多钱，现在搬到了你自己的别墅里，想做什么都可以了！ ");
 }
 
 function msg_player_start_JP(){

@@ -1,9 +1,19 @@
 function player_pool(){
 	global.scene_name = "Swim";
+	background_set(sprPlayerSwimBG);
+	
+	if (global.last_room == rmPoolResort){
+		global.scene_name = "ResortPool";
+		background_set(sprPoolSideResort);
+			if (Aria.go_resort)
+				scene_add_actors(Aria, noone, noone);
+	}
+	
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
+	global.show_follower = false;
 	scene_add_actors(Player, noone, noone);
-	background_set(sprPlayerSwimBG);
+		
 	ctb_list(player_swim_finish, noone , 
 	strlan(EN, "You began swimming earnessly. You can feel the refreshing water lifting your mood.",
 			CN, "你开始认真地游泳，清爽的感觉令你心情有所改善。",
@@ -22,21 +32,21 @@ function d_player_pool_enter(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	"Buy a day pass for $7",
+	strlan(EN, "Buy a day pass for $7", RUS, "Купите дневной абонемент за 7 долларов", JP, "1日パスを7ドルで購入", CN, "花 7 美元购买一日通行证"),
 	true,
 	d_player_day_pass
 	)
 	
 	dialogue_create(
 	"2",
-	"Buy a week pass for $35",
+	strlan(EN,"Buy a week pass for $35", RUS, "Купите недельный абонемент за 35 долларов", JP, "ウィークパスを35ドルで購入", CN, "以 35 美元购买周票"),
 	true,
 	d_player_week_pass
 	)
 	
 	dialogue_create(
 	"3",
-	"Leave",
+	strlan(EN, "Leave", RUS, "Оставлять", JP, "離れる", CN, "离开"),
 	true,
 	d_player_pool_leave
 	)
@@ -62,23 +72,24 @@ function d_player_pool_leave(){
 
 function d_player_pool(){
 	dialogue_init();
+	var str_swim = strlan(EN, "Swim for", RUS, "Плавать", JP, "泳ぐ", CN, "游泳");
 	dialogue_create(
 	"1",
-	"swim for 20 minutes",
+	str_swim + " 20 " + str_mins,
 	true,
 	d_player_swim20
 	)
 	
 	dialogue_create(
 	"2",
-	"swim for 40 minutes",
+	str_swim + " 40 " + str_mins,
 	true,
 	d_player_swim40
 	)
 	
 	dialogue_create(
 	"3",
-	"swim for 60 minutes",
+	str_swim + " 60 " + str_mins,
 	true,
 	d_player_swim60
 	)
@@ -121,5 +132,8 @@ function d_player_swim(minutes){
 
 function player_swim_finish(){
 	time_forward_minutes(global.player_swim_minutes);
-	exelan("msg_player_swim_finish");
+	if (global.last_room != rmPoolResort)
+		exelan("msg_player_swim_finish");
 }
+
+

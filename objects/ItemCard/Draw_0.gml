@@ -27,8 +27,9 @@ draw_sprite_ext(item.sprite_index, item.image_index,
 
 draw_set_color(c_black);
 if (item.show_name){
+	var display = global.item_names[? item.name][| global.language];
     draw_set_font(fnt_popup)
-    draw_text(x+5,y + 5, string_hash_to_newline(item.name));
+    draw_text(x+5,y + 5, string_hash_to_newline(display));
 }
 
 if (item.show_volume){

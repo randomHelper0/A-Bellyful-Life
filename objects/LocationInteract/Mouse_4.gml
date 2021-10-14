@@ -5,7 +5,7 @@ if (ControlEnv.screen_lock || instance_exists(Tooltip)
     exit;
 
 if (target_script != noone){
-    script_execute(target_script);
+    target_script();
 }
 
 if (target_room != noone){

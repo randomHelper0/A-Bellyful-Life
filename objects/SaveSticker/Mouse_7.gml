@@ -8,7 +8,7 @@ dialogue_init()
 	if (instance_exists(ControlEnv))
 		dialogue_create(
 		        "1",
-		        "Save",
+		        strlan(EN, "Save", RUS, "Сохранить файл", JP, "ファイルを保存", CN, "保存存档"),
 		        true,
 		        save_action
 		)
@@ -16,21 +16,21 @@ dialogue_init()
 	if (ds_map_exists(metadata, str(index))){
 		dialogue_create(
 			        "2",
-			        "Load",
+			        strlan(EN, "Load", RUS, "Загрузить игру", JP, "ゲームのロード", CN, "加载游戏"),
 			        true,
 			       load_action
 		)
 	
 		dialogue_create(
 			        "3",
-			        "Delete",
+			       strlan(EN, "Delete", RUS, "Удалить", JP, "消去", CN, "删除"),
 			        true,
 			       delete_action
 		)
 		
 		dialogue_create(
 			        "4",
-			        "Download",
+			        strlan(EN, "Download", RUS, "Скачать", JP, "ダウンロード", CN, "下载"),
 			        true,
 			       download_action
 		)

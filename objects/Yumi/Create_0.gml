@@ -4,7 +4,7 @@ script_dialogue = Yumi_dialogues;
 //script_idle = alice_idle;
 //script_observe = alice_observe;
 
-sprite_expression = sprRemiExpressions_0;
+sprite_expression = sprYumiExpressions_0;
 interested = false;
 gave_exam_today = false;
 //has_number = true;

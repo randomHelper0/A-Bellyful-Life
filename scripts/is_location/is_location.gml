@@ -13,7 +13,7 @@ function is_map(){
 }
 
 function is_map_room(rm){
-	if (rm == rmMapCountryside || rm == rmMapUni || rm == rmMapShopping)
+	if (rm == rmMapCountryside || rm == rmMapUni || rm == rmMapShopping || rm == rmMapResort)
 		return true;
 	return false;
 }

@@ -85,7 +85,7 @@ function d_item_consume(){
 		if ( ItemWindow.item.bites > 1){
 			dialogue_create(
 			"1",
-			"Take a bite",
+			strlan(EN, "Take a bite", RUS, "Откусить", JP, "一口食べる", CN, "咬一口"),
 			true,
 			d_player_bite
 			)
@@ -93,7 +93,7 @@ function d_item_consume(){
 		
 		dialogue_create(
 		"2",
-		"Eat all",
+		strlan(EN, "Eat everything", RUS, "Есть все", JP, "すべてを食べる", CN, "什么都吃"),
 		true,
 		d_player_consume
 		)
@@ -127,7 +127,12 @@ function item_give_consume(char){
 					"Thank you, but I'm not hungry right now.",
 					"Sorry but I'm full."
 					),
-					"(You might get her to eat more if you increase her interest in stuffing)"
+					strlan(
+						EN, "(You might get her to eat more if you increase her interest in stuffing)",
+						RUS, "(Вы можете заставить ее есть больше, если увеличите ее интерес к начинке)", 
+						JP, "（スタッフィングへの関心を高めると、彼女にもっと食べさせるかもしれません）", 
+						CN, "（如果你增加她对馅料的兴趣，你可能会让她吃得更多）"
+						)
 					);		
 					
 				return false;
@@ -135,11 +140,15 @@ function item_give_consume(char){
 			
 			char.desire_stuffing *= 1.05;
 			
-			ctb_list(noone, noone, choose(
-				"thanks!",
-				"yum!",
-				"thank you"
-			));
+			if (global.language == EN)
+				ctb_list(noone, noone, choose(
+					"thanks!",
+					"yum!",
+					"thank you"
+				));
+				else
+					strlan(EN, "Thanks!", RUS, "Спасибо!", JP, "ありがとう！", CN, "谢谢!");
+			
 			item_consume(item, char);
 			return true;
 }

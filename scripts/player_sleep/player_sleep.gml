@@ -29,11 +29,13 @@ function d_player_sleep(){
 function d_player_bed(){
 	dialogue_init();
 	
+	var sleep = strlan(EN, "Sleep until 6 am",
+		RUS, "Спи до 6 утра", JP, "午前6時まで寝る", CN, "睡到早上六点");
 
 	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
 		"1",
-		"Sleep until 6 am",
+		sleep,
 		false,
 		strlan(EN, "It's still too early. You usually go to bed at around 9pm",
 					CN, "现在太早了。你一般晚上9点才去睡觉。",
@@ -44,7 +46,7 @@ function d_player_bed(){
 	else //if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
 		"1",
-		"Sleep until 6 am",
+		sleep,
 		true,
 		d_player_sleep
 		)
@@ -149,8 +151,10 @@ function sleep_finish(){
 										JP, "腸内の容量が増えました。",
 										RUS, "Вместимость твоего кишечника увеличилась на"
 									) + string(Player.inc_bowels) + "cc.";
-	
-	ctb_list(noone, noone,
+	var script = noone;
+	if (ControlEnv.resort_days > 0 && global.last_room == rmBedroom)
+		script = resort_trigger;
+	ctb_list(script, noone,
 		msg_weight, msg_capacity	
 	)
 	
@@ -160,6 +164,7 @@ function sleep_finish(){
 	
 	Yumi.gave_exam_today = false;
 	Amber.jogged_today = false;
+	Bambi.player_helped = false;
 	
 	ControlEnv.battery = 30*60*3;
 	with(Character){
@@ -169,9 +174,30 @@ function sleep_finish(){
 		status_notify[? "pill_noise" ] = 15;
 		status_notify[? "pill_laxative" ] = 15;
 	}
+	
+
+	
+	if (ControlEnv.resort_days  > 0)
+		ControlEnv.resort_days--;
 	//custom_goto(rmBedroom);
 }
 
 function d_player_massage(){
 	
+}
+
+function resort_trigger(){
+		if (ControlEnv.resort_days > 0 && global.last_room == rmBedroom){
+			ds_list_clear(global.scene_actors);
+		global.last_room = rmBedroomResort;	
+		ButtonMap.last_map = rmMapResort;
+		//global.scene_name = "Back";
+		ctb_list(noone, noone, "[speaker:noone][set_background:sprPacking]You woke up early at 4am to finalize your luggage.",
+				"[set_background:sprAirport]You arrived just in time before your flight leaves for the resort.")
+	}else if (ControlEnv.resort_days <= 0 && global.last_room != rmBedroom){
+		global.last_room = rmBedroom;	
+		ControlEnv.go_resort = false;
+	}
+	
+	btArrowNavi.target_room = global.last_room;
 }

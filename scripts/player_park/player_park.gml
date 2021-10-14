@@ -11,12 +11,14 @@ function player_park(){
 				JP, "公園をジョギングし始めた。爽やかな空気が気分を良くしてくれます。",
 				RUS, "Ты начала бегать по парку. Ты можешь почувствовать, как освежающий воздух поднимает твое настроение."
 			);
-	
+	///////FIX
+	global.dialogue_char = Amber;
 	if (script_execute(Amber.script_location) != rmPark)
 		ctb_list(player_jog_finish, noone , 
 			msg_finish_jog
 		);
 	else{
+		global.dialogue_char = noone;
 		global.scene_script = amber_jog;
 		if (!Amber.met_player)
 			ctb_list(room_restart, noone , msg_finish_jog, 
@@ -35,23 +37,24 @@ function player_park(){
 
 function d_player_park(){
 	dialogue_init();
+	var str_jog = strlan(EN, "Jog for", RUS, "Бег трусцой", JP, "ジョグ", CN, "慢跑");
 	dialogue_create(
 	"1",
-	"Jog for 20 minutes",
+	str_jog + " 20 " + str_mins,
 	true,
 	d_player_jog20
 	)
 	
 	dialogue_create(
 	"2",
-	"Jog for 40 minutes",
+	str_jog + " 40 " + str_mins,
 	true,
 	d_player_jog40
 	)
 	
 	dialogue_create(
 	"3",
-	"Jog for 60 minutes",
+	str_jog + " 60 " + str_mins,
 	true,
 	d_player_jog60
 	)

@@ -28,7 +28,7 @@ function d_player_TV(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	"Watch TV (45 mins)",
+	strlan(EN, "Watch TV (45 mins)", RUS, "Смотреть телевизор (45 минут)", JP, "テレビを見る（45分）", CN, "看电视（45 分钟）"),
 	true,
 	scene_start
 	)

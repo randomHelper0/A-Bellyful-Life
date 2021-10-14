@@ -82,9 +82,11 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 		}
 		
 		var modifier = character_capacity_modifier(actor_id);
+		var do_pop = global.settings[? "Belly Burst"] ;
+		var fraction = actor_id.stomach_content/(actor_id.stomach_capacity*modifier);
 			
 		if (entrance == ORAL){// && actor_id.stomach_content < actor_id.stomach_capacity){
-				if (actor_id.stomach_content >= actor_id.stomach_capacity*modifier){
+				if (fraction >= 1){
 					ctb_list(noone, noone, actor_id.name + "'s stomach is full!");
 					BtPlay.toggled = false;
 					BtPause.toggled = true;
@@ -92,8 +94,9 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 				//actor_id.stomach_content += global.scene_inflate_rate;
 		}
 		
+		fraction = actor_id.bowels_content /(actor_id.bowels_capacity*modifier);
 		if (entrance == ANAL){//&& actor_id.bowels_content < actor_id.bowels_capacity){
-				if (actor_id.bowels_content >= actor_id.bowels_capacity*modifier){
+				if (fraction >= 1){
 					ctb_list(noone, noone,actor_id.name + "'s bowels are full!");
 					BtPlay.toggled = false;
 					BtPause.toggled = true;

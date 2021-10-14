@@ -112,3 +112,56 @@ function checkAriaEvent(){
 function aria_after_first_pump(){
 	exelan("msg_Aria_after_first_pump");
 }
+
+function Aria_drink_kitchensink(){
+	global.scene_name = "Drink";
+	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
+	scene_add_actors(Aria, ORAL, WATER);
+	background_set(sprKitchenZoomed);
+	scene_auto_sound(ORAL, WATER);
+	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
+}
+
+function Aria_drink_resortsink(){
+	global.scene_name = "ResortSink";
+	global.scene_inflate_rate = 2;
+	global.allow_stream = true;
+	scene_add_actors(Aria, ORAL, WATER);
+	background_set(sprBathroomSinkResort);
+	scene_auto_sound(ORAL, WATER);
+	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
+	global.show_follower = false;
+}
+
+function Aria_ask_resortbathtub(){
+	if(Aria.desire_inflate + Aria.likability >= 20){
+		var msg = "Aria eagerly agreed.";
+		
+		if (Aria.desire_inflate < 15){
+			msg = "Aria doesn't seem very interested, but still agreed reluctantly (likability -1).";
+			Aria.likability -= 1;
+		}
+		
+		global.scene_script = Aria_resortbathtub;	
+		ctb_list(scene_start, noone, msg);
+	}else{
+		ctb_msg(
+			"[speaker:Aria][ex:blush]Ehhh, I'm sorry but I dont understand??",
+			"[ex:idle][speaker:noone]You noticed a hint of hesitation in her voice. Maybe she might agreed if you get closer?"
+		);
+	}
+}
+
+function Aria_resortbathtub(){
+	global.show_follower = false;
+	global.allow_stream = true;
+	global.scene_name = "ResortTub";
+	global.scene_inflate_rate = 2;
+	scene_add_actors(Aria, ANAL, WATER);
+	scene_auto_sound(ANAL, WATER);
+	background_set(sprBathtubResort);
+	global.scene_do_breath = true;
+	global.scene_sound_action = list_create(sndFlowWater);
+	with (Aria) skew_common();
+}

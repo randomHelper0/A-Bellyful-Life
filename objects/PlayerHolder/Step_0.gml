@@ -11,6 +11,9 @@ if (room == rmScene &&  global.show_follower){
 }
 
  var spr_name = "spr" + object_get_name(char.object_index) + "_Back_" + string(char.fat_level);
+ if (ButtonMap.last_map == rmMapResort)
+	spr_name += "_Resort";
+ 
 sprite_index = asset_get_index(spr_name);
 image_index = char.belly_index;
 

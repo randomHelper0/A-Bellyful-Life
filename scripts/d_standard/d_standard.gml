@@ -12,7 +12,7 @@ function d_standard() {
 	if (char.id != Player.id)
 	    dialogue_create(
 	            "1Actions",
-	            "Actions",
+	            strlan(EN, "Actions", RUS, "Действия", JP, "行動", CN, "行动"),
 	            true,
 	            //d_talk
 				function(){global.dialogue_char.script_dialogue();}
@@ -20,14 +20,14 @@ function d_standard() {
 	    else
 	    dialogue_create(
 	            "1Talk",
-	            "Talk",
+	            strlan(EN, "Talk", RUS, "Разговаривать", JP, "トーク", CN, "讲话"),
 	            false,
 	            "You can't talk to yourself!"
 	    )
 
 	dialogue_create(
 	        "2Status",
-	        "Status",
+	        strlan(EN, "Status", RUS, "Состояние", JP, "状態", CN, "健康）状况"),
 	        true,
 	        d_status
 	)
@@ -35,7 +35,7 @@ function d_standard() {
 	if (char.using_mpump){
 		dialogue_create(
 		    "pump",
-		    "Detach mini pump",
+		    strlan(EN,"Detach mini pump", RUS, "Отсоедините мини-насос.", JP, "ミニポンプを外す", CN, "拆下迷你泵"),
 		    true,
 		    detach_mpump
 		)
@@ -44,7 +44,7 @@ function d_standard() {
 	if (char.visiting){
 		dialogue_create(
 		        "4",
-		        "Ask them to leave",
+		        strlan(EN, "Ask them to leave", RUS, "Попроси ее уйти", JP, "彼女に去るように頼む", CN, "要求她离开"),
 		        true,
 		        function(){
 					var char = global.dialogue_char;
@@ -64,7 +64,7 @@ function d_standard() {
 		if (!char.following)
 			dialogue_create(
 		        "3",
-		        "Come with me for a bit",
+		        strlan(EN, "Come with me for a bit", RUS, "Пойдем со мной ненадолго", JP, "ちょっと一緒に来て", CN, "跟我来一会儿"),
 		        true,
 		        function(){
 					with (Character) following = false;
@@ -75,7 +75,7 @@ function d_standard() {
 		else
 			dialogue_create(
 		        "3",
-		        "Lets get back to what we were doing.",
+		        strlan(EN, "Lets get back to what we were doing.", RUS, "Вернемся к тому, что мы делали", JP, "やっていたことに戻りましょう", CN, "让我们回到我们正在做的事情上"),
 		        true,
 		        function(){
 					var char = global.dialogue_char;

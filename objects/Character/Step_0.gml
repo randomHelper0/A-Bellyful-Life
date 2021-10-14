@@ -15,6 +15,38 @@ encumbered =  (total_food_water/total_capacity > 0.5);
 stomach_content = max(0.1, stomach_content);
 bowels_content = max(0.1, bowels_content);
 total_content = max(0.1, total_content);
+
+
+/////popping
+var modifier = character_capacity_modifier(id);
+var do_pop = global.settings[? "Belly Burst"] ;
+var fraction = stomach_content/(stomach_capacity*modifier);
+var fraction2 = bowels_content/(bowels_capacity*modifier);
+
+if ( (fraction > 0.9  || fraction2 > 0.9)
+	&& do_pop && !popping &&popped <= 0 && !pop_warning
+){
+	pop_warning = true;
+	audio_play_sound(sndBallloonRub, 0, 0);
+}else if ( (fraction < 0.9  && fraction2 < 0.9)
+	&& pop_warning)
+	pop_warning = false;
+
+if ( (fraction >=1  || fraction2 >= 1)){
+	if (!popping && popped <= 0){
+		if (!is_location()){
+			room_goto(global.last_room);
+		}else{
+			popping = true;
+			audio_play_sound(sndBalloonPop,0 ,0);
+			global.pop_char = id;
+			exelan("msg_pop");
+			
+		}
+	}
+}
+
+//////
 //digest_step(0.01);
 
 /*calories_unabsorbed = 0;

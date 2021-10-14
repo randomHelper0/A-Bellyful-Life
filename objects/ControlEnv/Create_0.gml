@@ -1,5 +1,5 @@
 init_data_excludes("blur", "usize", "location", "room_counter");
-
+instance_create_depth(0,0,0,obj_console);
 if (global.load_index == noone)
 	alarm[0] = 2;
 	
@@ -19,7 +19,9 @@ global.clicked_shop_bt = noone;
 global.dialogies = noone;
 global.dialogies_icons = noone;
 
-global.debugging = true
+global.debugging = true;
+go_resort = false;
+resort_days = 0;
 game_start = true;
 battery = 30*60*3;
 
@@ -52,7 +54,9 @@ stat_init();
 abilities_init();
 //show_debug_message("before init")
 //show_debug_message(string(Player)+", "+string(FatbucksCashier))
-item_init(Player, Aria, Aya, Yumi,  Amber, Bobbie, FatbucksCashier, FatdonaldsCashier, FataurantCashier,  Bartender, Nurse);
+item_init(Player, Bambi, Aria, Aya, Yumi,  Amber, Bobbie, 
+	FatbucksCashier, FatdonaldsCashier, FataurantCashier, ResortCashier
+	,  Bartender, Nurse);
 //instance_create(-200,-200, );
 //show_debug_message("affter init")
     //Librarian);

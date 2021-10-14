@@ -7,12 +7,17 @@ draw_self();
 image_alpha = 1;
 
 draw_cached();
-draw_set_font( fontReport);
+if (global.language != EN && global.language != RUS)
+	draw_set_font( fntTiny);
+else
+	draw_set_font( fontReport);
 draw_set_halign(fa_center);
 
+if (display == "")
+	display = name;
 
-var width = string_width(name),
-	height = string_height(name);
+var width = string_width(display),
+	height = string_height(display);
 y += yy;
 
 draw_set_color(c_white);
@@ -21,6 +26,6 @@ draw_rectangle(x - width/2 - 15, y-3, x + width/2+15, y + height - 4, 0);
 draw_set_alpha(1);
 
 draw_set_color(make_color_rgb(255,102,0));
-draw_text(x,y,name);
+draw_text(x,y,display);
 draw_load_cache();
 y -= yy;

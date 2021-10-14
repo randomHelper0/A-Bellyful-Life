@@ -89,8 +89,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Scenes",
-    "path": "folders/Characters/Bambi/Sprites/Scenes.yy",
+    "name": "Poultry",
+    "path": "folders/Characters/Bambi/Sprites/Scenes/Poultry.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBambi_Poultry_0",

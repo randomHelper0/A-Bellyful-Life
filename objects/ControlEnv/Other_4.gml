@@ -26,6 +26,8 @@ if (global.save_index != noone){
 }
 
 if (global.load_index != noone){
+	resort_days = 0;
+	go_resort = false;
 	load_all("save" + str(global.load_index)+ ".json");
 	global.load_index = noone;
 	game_start = false;

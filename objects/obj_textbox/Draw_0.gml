@@ -10,7 +10,7 @@ draw_set_color(c_black);
 draw_rectangle(35, y - 20, 300, y+10, false);
 draw_set_alpha(1);
 draw_set_color(c_aqua);*/
-if (instance_exists(global.dialogue_char))
+if (instance_exists(global.dialogue_char) && global.dialogue_char > 0)
     draw_text(50, y-30, string_hash_to_newline(global.dialogue_char.name));
 else
     draw_text(50, y-30, string_hash_to_newline("System"));

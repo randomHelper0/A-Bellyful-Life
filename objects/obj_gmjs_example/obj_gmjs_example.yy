@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Objects.yy",
+    "path": "folders/Other/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_gmjs_example",

@@ -1,9 +1,15 @@
 function player_kitchen(){
 	global.scene_name = "SinkKitchen";
+	background_set(sprKitchenZoomed);
+	
+	if (global.last_room == rmBathroomResort){
+		global.scene_name = "ResortSink";
+		background_set(sprBathroomSinkResort);
+	}
+	
 	global.scene_inflate_rate = 2;
 	global.allow_stream = true;
 	scene_add_actors(Player, ORAL, WATER);
-	background_set(sprKitchenZoomed);
 	scene_auto_sound(ORAL, WATER);
 	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
 	with (Player) skew_common();
@@ -15,14 +21,14 @@ function d_kitchen_sink(){
 	dialogue_init();
 	dialogue_create(
 	"Drink",
-	"Drink",
+	str_drink,
 	true,
 	scene_start
 	)
 	
 	dialogue_create(
 	"Throw up",
-	"Throw up",
+	str_throwup,
 	true,
 	player_throw_up
 	)
@@ -35,14 +41,14 @@ function d_kitchen_sink(){
 	if (global.has_bottle){
 		dialogue_create(
 		"Refill Bottle",
-		"Refill Bottle",
+		str_refill,
 		true,
 		refill_bottles
 		)	
 	}
 	
 	with (Character){
-		if (following){
+		if (following || schedule_get_location(id) == room){
 			dialogue_create(
 			name,
 			"Ask " + name + " to drink.",

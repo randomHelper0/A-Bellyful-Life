@@ -1,2 +1,3 @@
 name = "";
+display = "";
 checked = false;
