@@ -13,8 +13,13 @@ if (ControlEnv.hours >= 23 && !warn_sleep2){
 }
 
 if (is_location() && (ControlEnv.hours > 23 &&ControlEnv.minutes > 30 || ControlEnv.hours < 6)){
-		global.last_room = rmBedroom;
-		global.last_dest = rmBedroom;
+		if (!ControlEnv.go_resort){
+			global.last_room = rmBedroom;
+			global.last_dest = rmBedroom;
+		}else{
+			global.last_room = rmBedroomResort;
+			global.last_dest = rmBedroomResort;
+		}
 		ctb_list(d_player_sleep, noone, 
 			strlan(
 				EN, "Begrudgingly, you returned to your bed because you're too tired to stay awake any longer.",
@@ -34,16 +39,24 @@ if (hours_without_eating >= 4){
 if (hours_without_eating >=7){	
 	hunger = 2;	
 }
-if (hours_without_eating >=12){
+if (hours_without_eating >=12 && is_location()){
 	/*show_debug_message("hourly_calories_uptake" + string(hourly_calories_uptake))
 	show_debug_message("daily_calories" + string(daily_calories))
 	show_debug_message("undigested_calories" + string(undigested_calories))
 	show_debug_message("hours_without_eating" + string(hours_without_eating))*/
-	if (room != rmClinic)
-		custom_goto(rmClinic);
+	
+	var clinic_room = rmClinic;
+	
+	/*if (ControlEnv.resort_days > 0)
+		clinic_room = rmBedroomResort;
+	else
+		show_message(ControlEnv.resort_days)*/
+	
+	if (room != clinic_room)
+		custom_goto(clinic_room);
 	else{
 		daily_calories = 0;
-		global.last_dest = rmClinic;
+		global.last_dest = clinic_room;
 		time_forward_minutes(30);
 		Nurse.bills += 100;
 		ctb_list(noone, noone, 

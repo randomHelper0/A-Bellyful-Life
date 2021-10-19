@@ -34,9 +34,10 @@ if (floor(random(rate))==0){
 }
 
 if (viewers > 0){
-	if ( BtPlay.toggled && floor(random(100 - viewers))==0)
+	if ( BtPlay.toggled && floor(random(100 - viewers))==0){
 		donations ++;	
 		ControlEnv.money++;
+	}
 	if ( floor(random(70 - clamp(viewers,0, 20)))==0)
 		create_chat_entry();
 }

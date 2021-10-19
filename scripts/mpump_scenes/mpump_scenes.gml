@@ -18,7 +18,7 @@ function mpump_on_char(char){
 	}else
 		ctb_msg("[speaker:noone]" +char.name + " eagerly agreed.");
 	
-	desire_inflate += 4;
+	char.desire_inflate += 4;
 	
 	if (char.using_mpump){
 		tooltip_start(ItemWindow.x, ItemWindow.y, "Error", "They are already using one!");

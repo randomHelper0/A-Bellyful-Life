@@ -3,7 +3,11 @@ function player_sleep(){
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
 	scene_add_actors(Player, noone, noone);
-	background_set(sprBedroomCorner);
+	
+	if (global.last_room == rmBedroom){
+		background_set(sprBedroomCorner);
+	}else
+		background_set(sprBedroomResort);
 	
 	ctb_list(sleep_finish, noone , "z.. z.. z..");
 	//sleep_finish();
@@ -152,11 +156,18 @@ function sleep_finish(){
 										RUS, "Вместимость твоего кишечника увеличилась на"
 									) + string(Player.inc_bowels) + "cc.";
 	var script = noone;
-	if (ControlEnv.resort_days > 0 && global.last_room == rmBedroom)
+	//if (ControlEnv.resort_days > 0 && global.last_room == rmBedroom)
+	if (ControlEnv.go_resort)
 		script = resort_trigger;
 	ctb_list(script, noone,
 		msg_weight, msg_capacity	
 	)
+	
+	/*if (ControlEnv.resort_days <= 0 && global.last_room == rmBedroomResort)
+		script = resort_return_trigger;
+	ctb_list(script, noone,
+		msg_weight, msg_capacity	
+	)*/
 	
 	FatbucksCashier.last_cancelled --;	
 	FataurantCashier.last_cancelled --;	
@@ -177,8 +188,8 @@ function sleep_finish(){
 	
 
 	
-	if (ControlEnv.resort_days  > 0)
-		ControlEnv.resort_days--;
+	//if (ControlEnv.resort_days  > 0)
+		//ControlEnv.resort_days--;
 	//custom_goto(rmBedroom);
 }
 
@@ -195,9 +206,36 @@ function resort_trigger(){
 		ctb_list(noone, noone, "[speaker:noone][set_background:sprPacking]You woke up early at 4am to finalize your luggage.",
 				"[set_background:sprAirport]You arrived just in time before your flight leaves for the resort.")
 	}else if (ControlEnv.resort_days <= 0 && global.last_room != rmBedroom){
+		ds_list_clear(global.scene_actors);
+		ctb_list(noone, noone, "[speaker:noone]You woke up early at 4am to finalize your luggage.",
+				"[set_background:sprAirport]You arrived just in time before your flight leaves for home.")
 		global.last_room = rmBedroom;	
 		ControlEnv.go_resort = false;
+		with (Character) go_resort = false;
+		ButtonMap.last_map = rmMapUni;
+	}
+	ControlEnv.resort_days--;
+	btArrowNavi.target_room = global.last_room;
+}
+
+/*function resort_return_trigger(){
+		if (ControlEnv.resort_days > 0 && global.last_room == rmBedroom){
+			ds_list_clear(global.scene_actors);
+		global.last_room = rmBedroomResort;	
+		ButtonMap.last_map = rmMapUni;
+		//global.scene_name = "Back";
+		ctb_list(noone, noone, "[speaker:noone][set_background:sprPacking]You woke up early at 4am to finalize your luggage.",
+				"[set_background:sprAirport]You arrived just in time before your flight leaves for home.")
+			global.last_room = rmBedroom;	
+		ControlEnv.go_resort = false;
+		with (Character) go_resort = false;
+		ButtonMap.last_map = rmMapUni;
+	}else if (ControlEnv.resort_days <= 0 && global.last_room != rmBedroom){
+		global.last_room = rmBedroom;	
+		ControlEnv.go_resort = false;
+		with (Character) go_resort = false;
+		ButtonMap.last_map = rmMapUni;
 	}
 	
 	btArrowNavi.target_room = global.last_room;
-}
+}*/

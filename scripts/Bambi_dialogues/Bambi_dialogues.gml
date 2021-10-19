@@ -21,6 +21,7 @@ function Bambi_intro_scene(){
 	//scene_add_actors(Player, noone, noone);
 	background_set(sprBambi_Intro1);
 	time_forward_minutes(30);
+	Bambi.has_number = true;
 	exelan("msg_Bambi_intro");
 }
 

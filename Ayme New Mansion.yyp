@@ -544,6 +544,7 @@
     {"id":{"name":"tick_all","path":"scripts/tick_all/tick_all.yy",},"order":7,},
     {"id":{"name":"say_bubble","path":"scripts/say_bubble/say_bubble.yy",},"order":1,},
     {"id":{"name":"chewcrunch1","path":"sounds/chewcrunch1/chewcrunch1.yy",},"order":14,},
+    {"id":{"name":"sprMapResortNight","path":"sprites/sprMapResortNight/sprMapResortNight.yy",},"order":12,},
     {"id":{"name":"dialogue_create","path":"scripts/dialogue_create/dialogue_create.yy",},"order":3,},
     {"id":{"name":"sprPoultry","path":"sprites/sprPoultry/sprPoultry.yy",},"order":1,},
     {"id":{"name":"say2","path":"scripts/say2/say2.yy",},"order":5,},

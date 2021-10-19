@@ -23,7 +23,7 @@ var do_pop = global.settings[? "Belly Burst"] ;
 var fraction = stomach_content/(stomach_capacity*modifier);
 var fraction2 = bowels_content/(bowels_capacity*modifier);
 
-if ( (fraction > 0.9  || fraction2 > 0.9)
+/*if ( (fraction > 0.9  || fraction2 > 0.9)
 	&& do_pop && !popping &&popped <= 0 && !pop_warning
 ){
 	pop_warning = true;
@@ -44,7 +44,7 @@ if ( (fraction >=1  || fraction2 >= 1)){
 			
 		}
 	}
-}
+}*/
 
 //////
 //digest_step(0.01);
