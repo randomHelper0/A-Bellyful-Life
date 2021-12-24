@@ -1,9 +1,19 @@
 Bored when skip time
 
+Remy: schedule at city streets afternoon, also add trigger event (use pump in public place)
+- Pick up and give lost wallets to gain likability
+- Or use lost wallets for
+money
+
+Use Tube together action: 
+- Beizer curve pipe between 2 characters
+
 Animations:
 - Either have only one or two belly sizes (must fall within x threshold to trigger)
 
 walk around
+- Walk around action in city street
+- Random city street bg
 - Fixed time (30m)
 - spend energy + inc max energy
 - 30% chance of encountering someone who is not busy

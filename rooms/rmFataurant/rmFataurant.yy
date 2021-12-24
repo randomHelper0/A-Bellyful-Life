@@ -13,13 +13,25 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
-    {"instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
+    {"instances":[
+        {"properties":[],"isDnd":false,"objectId":{"name":"CoinBlock","path":"objects/CoinBlock/CoinBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":2.76094937,"scaleX":2.48,"scaleY":1.72,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":494.0,"y":586.0,"resourceVersion":"1.0","name":"inst_5B549978","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"CoinBlock","path":"objects/CoinBlock/CoinBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":2.76094937,"scaleX":2.48,"scaleY":1.72,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":950.0,"y":642.0,"resourceVersion":"1.0","name":"inst_3D85325A","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"CoinBlock","path":"objects/CoinBlock/CoinBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":2.76094937,"scaleX":1.42,"scaleY":1.28,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":836.061157,"y":526.9745,"resourceVersion":"1.0","name":"inst_4293A94A","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"CoinBlock","path":"objects/CoinBlock/CoinBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-7.373724,"scaleX":1.42,"scaleY":1.28,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":648.2138,"y":609.380737,"resourceVersion":"1.0","name":"inst_1CAA9EB5","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"CoinBlock","path":"objects/CoinBlock/CoinBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":2.76094937,"scaleX":2.06,"scaleY":1.56887484,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1103.0,"y":641.6473,"resourceVersion":"1.0","name":"inst_583C3743","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":{"name":"sprFataurant","path":"sprites/sprFataurant/sprFataurant.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
   "inheritLayers": false,
   "creationCodeFile": "",
   "inheritCode": false,
-  "instanceCreationOrder": [],
+  "instanceCreationOrder": [
+    {"name":"inst_5B549978","path":"rooms/rmFataurant/rmFataurant.yy",},
+    {"name":"inst_3D85325A","path":"rooms/rmFataurant/rmFataurant.yy",},
+    {"name":"inst_4293A94A","path":"rooms/rmFataurant/rmFataurant.yy",},
+    {"name":"inst_1CAA9EB5","path":"rooms/rmFataurant/rmFataurant.yy",},
+    {"name":"inst_583C3743","path":"rooms/rmFataurant/rmFataurant.yy",},
+  ],
   "inheritCreationOrder": false,
   "sequenceId": null,
   "roomSettings": {

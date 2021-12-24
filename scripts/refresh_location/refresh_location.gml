@@ -1,4 +1,7 @@
 function refresh_location() {
+	if (!instance_exists(Coin))
+		 room_make_coin(room);
+	
 	if (ControlEnv.hours > 18 || ControlEnv.hours < 6)
 	    set_night_bg();
 	else

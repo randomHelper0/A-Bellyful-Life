@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Interactive",
-    "path": "folders/Other/Objects/UI/Interactive.yy",
+    "path": "folders/UI/Interactive.yy",
   },
   "resourceVersion": "1.0",
   "name": "ContentHidden",

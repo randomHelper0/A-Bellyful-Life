@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Time",
-    "path": "folders/Other/Objects/UI/Time.yy",
+    "path": "folders/UI/Time.yy",
   },
   "resourceVersion": "1.0",
   "name": "ButtonSleep",

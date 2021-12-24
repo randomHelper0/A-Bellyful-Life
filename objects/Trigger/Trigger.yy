@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Triggers",
-    "path": "folders/Other/Objects/Triggers.yy",
+    "path": "folders/Other/Characters(legacy)/Triggers.yy",
   },
   "resourceVersion": "1.0",
   "name": "Trigger",

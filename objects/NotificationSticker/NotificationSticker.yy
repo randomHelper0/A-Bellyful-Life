@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Timed Events",
-    "path": "folders/Other/Objects/UI/Timed Events.yy",
+    "path": "folders/UI/Timed Events.yy",
   },
   "resourceVersion": "1.0",
   "name": "NotificationSticker",

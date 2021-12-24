@@ -85,7 +85,7 @@ function d_route(dest){
 	var mins = str_mins;
 	dialogue_create(
 	        "1",
-	        walk+" (" + string(walk_time) + mins + ", "+ string(walk_energy) + energy + ")",
+	        walk+" (" + string(walk_time)+ " " + mins + ", "+ string(walk_energy) + " " + energy + ")",
 	        true,
 	        d_walk
 	)
@@ -94,7 +94,7 @@ function d_route(dest){
 	if (ControlEnv.has_bike)
 		dialogue_create(
 		        "2",
-		        bike+" (" + string(bike_time) + mins + ", "+ string(walk_energy) + energy + ")",
+		        bike+" (" + string(bike_time)+ " " + mins + ", "+ string(walk_energy)+ " " + energy + ")",
 		        true,
 		        d_bike
 		)
@@ -102,7 +102,7 @@ function d_route(dest){
 	var taxi = strlan(EN, "Taxi", RUS, "Такси", JP, "タクシー ", CN, "出租车");
 	dialogue_create(
 	        "3",
-	        taxi+" (" + string(taxi_time) + mins + ", "+string(taxi_cost)+"$)",
+	        taxi+" (" + string(taxi_time)+ " " + mins + ", "+string(taxi_cost)+"$)",
 	        true,
 	        d_taxi
 	)

@@ -4,8 +4,7 @@
 #macro CN 3
 #macro VN 4
 
-
-global.language = CN;
+global.language = EN;
 function strlan(){
 	var en_str = "";
 	for (var i=0; i<argument_count; i+= 2){

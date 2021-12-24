@@ -27,16 +27,18 @@ if (item.alcohol > 0)
 	desc = "Alcohol: +" + string(item.alcohol) + ". "  + desc;
 if (item.high > 0)
 	desc = "High: +" + string(item.high) + ". "  + desc;
-draw_text_ext(x+10,y+ 177, string_hash_to_newline(desc), -1, 450);
-//if(item.hours_left > 0)
 
 if (item.do_expire){
 	if(item.expire_in > 60)
-		draw_text(x+10,y+ 252 , string_hash_to_newline("Hours left: " + string(item.expire_in/60)));
+		desc += "#" + ("Hours left: " + string(item.expire_in/60));
 	else
-		draw_text(x+10,y+ 252 , string_hash_to_newline("Minutes left: " + string(item.expire_in)));
+		desc += "#" + ("Minutes left: " + string(item.expire_in));
 }else if (item.uses > 0){
-	draw_text(x+10,y+ 252 , string_hash_to_newline("Uses left: " + string(item.uses)));
-}
+	desc += "#" + ("Uses left: " + string(item.uses));
+}	
+	
+draw_text_ext(x+10,y+ 177, string_hash_to_newline(desc), -1, 450);
+//if(item.hours_left > 0)
+
 
 draw_load_cache();

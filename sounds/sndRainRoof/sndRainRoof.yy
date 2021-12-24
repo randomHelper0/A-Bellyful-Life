@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndRainRoof.mp3",
-  "duration": 15.2082653,
+  "duration": 15.2032652,
   "parent": {
     "name": "Ayme New Mansion",
     "path": "Ayme New Mansion.yyp",

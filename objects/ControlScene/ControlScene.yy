@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Controls",
-    "path": "folders/Other/Objects/Controls.yy",
+    "path": "folders/Controls.yy",
   },
   "resourceVersion": "1.0",
   "name": "ControlScene",

@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndBreathe1.wav",
-  "duration": 2.50581312,
+  "duration": 2.500812,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

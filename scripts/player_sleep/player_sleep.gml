@@ -186,7 +186,7 @@ function sleep_finish(){
 		status_notify[? "pill_laxative" ] = 15;
 	}
 	
-
+	coins_reset();
 	
 	//if (ControlEnv.resort_days  > 0)
 		//ControlEnv.resort_days--;

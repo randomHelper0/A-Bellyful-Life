@@ -25,6 +25,7 @@ resort_days = 0;
 game_start = true;
 battery = 30*60*3;
 
+coins_reset();
 
 global.last_dest = rmBedroom;
 

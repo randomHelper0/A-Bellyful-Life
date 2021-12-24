@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "UIControls",
-    "path": "folders/Other/Objects/UI/UIControls.yy",
+    "path": "folders/UI/UIControls.yy",
   },
   "resourceVersion": "1.0",
   "name": "ControlJournal",

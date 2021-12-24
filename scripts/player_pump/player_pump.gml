@@ -20,13 +20,23 @@ function player_pump(){
 	with (Player) skew_common();
 }
 
+function pump_caught_check(){
+	return false;
+}
+
 function player_pump_mouth(){
+	if (pump_caught_check())
+		return;
+	
 	global.pump_type = 0;
 	global.scene_script = player_pump;
 	scene_start();
 }
 
 function player_pump_butt(){
+	if (pump_caught_check())
+		return;
+		
 	global.pump_type = 1;
 	global.scene_script = player_pump;
 	scene_start();
@@ -34,7 +44,7 @@ function player_pump_butt(){
 
 function d_player_pump(){
 	if (!is_location_room(global.last_room) || room == rmShop){
-		ctb_msg("You can't use this here!");
+		ctb_msg("You can't use this here, so many people are around!");
 		return;
 	}
 	

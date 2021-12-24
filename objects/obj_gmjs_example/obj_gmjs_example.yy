@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Other/Objects.yy",
+    "name": "Extensions",
+    "path": "folders/Other/Extensions.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_gmjs_example",

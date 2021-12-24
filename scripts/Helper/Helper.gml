@@ -1,4 +1,7 @@
-#macro str string
+//#macro str string
+function str(arg){
+	return string(arg);	
+}
 
 function background_set(bg){
 	 //__background_set( e__BG.Index, 0, bg );	

@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Navigations",
-    "path": "folders/Other/Objects/UI/Navigations.yy",
+    "path": "folders/UI/Navigations.yy",
   },
   "resourceVersion": "1.0",
   "name": "ButtonBackpack",

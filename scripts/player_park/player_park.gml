@@ -78,7 +78,7 @@ function player_jog_start(){
 	scene_start();
 }
 
-function d_player_jog(minutes){
+function player_jog_energy(minutes){
 	var cost = -minutes/2,
 	fraction =  (Player.total_content/Player.total_capacity);
 	energy_charge =fraction*cost + cost;
@@ -91,6 +91,10 @@ function d_player_jog(minutes){
 	
 	global.player_increase_endurance =  -energy_charge/1000;
 	global.player_jog_minutes = minutes;
+}
+
+function d_player_jog(minutes){
+	player_jog_energy(minutes);
 	
 	player_jog_start();
 }

@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Windows",
-    "path": "folders/Other/Objects/UI/Windows.yy",
+    "path": "folders/UI/Windows.yy",
   },
   "resourceVersion": "1.0",
   "name": "BuyWindow",

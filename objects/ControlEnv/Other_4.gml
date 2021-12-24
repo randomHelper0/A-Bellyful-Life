@@ -37,7 +37,7 @@ if (global.load_index != noone){
 	//var new_name = undefined;
 	//while (is_undefined(new_name))	
 //		new_name = get_string("Enter your name:", "Ayume");
-	
+
 	Player.name = str(get_string("Enter your name:", "Ayume"));
 }
 
