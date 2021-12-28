@@ -4,7 +4,7 @@ function msg_Bambi_intro_EN(){
 		"[speaker:noone][ex:ex_surprise]*Stepping off the bus you notice a girl chasing chickens around the area*",
 		"[speaker:noone]*You leave the bus and run after the girl*",
 		"[speaker:Player]Hey, you look like you need some help!",
-		"[speakerBambi?][ex:ex_blush]You don't look like a farm girl but I'll take anything at this point!",
+		"[speakerBambi][ex:ex_blush]You don't look like a farm girl but I'll take anything at this point!",
 		"[speaker:Player][ex:ex_talk]Well Let's get going we're losing time",
 		"[speaker:noone][set_background:sprBambi_Intro2] *You and the girl chased down every last chicken*",
 		"[ex:idle][speaker:Bambi]Thank you so much for all your help!",

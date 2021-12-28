@@ -3,7 +3,7 @@ function d_bathroom_toilet(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	strlan(EN, "Do your business", RUS, "пойти в туалет", JP, "トイレに行く", CN, "去洗手间"),
+	strlan(EN, "Do your business", RUS, "Сходить в туалет", JP, "トイレに行く", CN, "去洗手间"),
 	true,
 	player_expel
 	)
@@ -38,7 +38,7 @@ function d_bathtub(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	strlan(EN, "Take a Shower (45 mins)", RUS, "Примите душ (45 минут)", JP, "シャワーを浴びる（45分）", CN, "淋浴（45 分钟）"),
+	strlan(EN, "Take a Shower (45 mins)", RUS, "Принять душ (45 минут)", JP, "シャワーを浴びる（45分）", CN, "淋浴（45 分钟）"),
 	true,
 	//scene_start
 	d_player_shower
@@ -65,6 +65,14 @@ function d_bathtub(){
 			"Ask Bobbie to unhook shower hose",
 			true,
 			Bobbie_ask_bathtub
+		)
+		
+	if (Remi.following)
+		dialogue_create(
+			"3",
+			"Ask Remi to unhook shower hose",
+			true,
+			Remi_ask_bathtub
 		)
 	
 	dialogue_start(true);

@@ -3,6 +3,10 @@ function player_sleep(){
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;
 	scene_add_actors(Player, noone, noone);
+	if (global.sleep_with != noone){
+		global.sleep_with.likability += 3;
+		scene_add_actors(global.sleep_with, noone, noone);
+	}
 	
 	if (global.last_room == rmBedroom){
 		background_set(sprBedroomCorner);
@@ -14,14 +18,59 @@ function player_sleep(){
 	with (Player) skew_common();
 }
 
-function d_player_sleep(){
-	var has_visitor = check_all_for_var(Character, "visiting", true);
+function d_player_sleep_together(){
+	var follower = noone;
+	with (Character){
+			if (following){
+				follower = id;	
+				following = false;
+				visiting = false;
+			}
+		}
+	
+	var sleep_ani = asset_get_index("spr" + follower.name + "_Sleep_0");
+	if (sleep_ani == -1){
+		ctb_msg("Unfortunately the sleeping animation of " + follower.name + " has not beed added  yet :(");
+		return;
+	}
+		
+	global.sleep_with = follower;
+
+	with (Character){
+			if (visiting || following){
+				character_finish_visit(id);
+			}
+		}
+	/*var has_visitor = check_all_for_var(Character, "visiting", true);
 	if (has_visitor){
 		if (ControlEnv.hours < 23){
 			ctb_msg("You have a visitor, please accompany them until the end of their stay first!");
 			return;
 		}
-	}
+	}*/
+	
+	warn_sleep1 = false;
+	warn_sleep2 = false;
+	
+	global.scene_script = player_sleep
+	scene_start();
+}
+
+function d_player_sleep(){
+	global.sleep_with = noone;
+	
+	with (Character){
+			if (visiting || following){
+				character_finish_visit(id);
+			}
+		}
+	/*var has_visitor = check_all_for_var(Character, "visiting", true);
+	if (has_visitor){
+		if (ControlEnv.hours < 23){
+			ctb_msg("You have a visitor, please accompany them until the end of their stay first!");
+			return;
+		}
+	}*/
 	
 	warn_sleep1 = false;
 	warn_sleep2 = false;
@@ -36,7 +85,7 @@ function d_player_bed(){
 	var sleep = strlan(EN, "Sleep until 6 am",
 		RUS, "Спи до 6 утра", JP, "午前6時まで寝る", CN, "睡到早上六点");
 
-	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6)
+	if !(ControlEnv.hours >= 21 || ControlEnv.hours < 6){
 		dialogue_create(
 		"1",
 		sleep,
@@ -47,13 +96,45 @@ function d_player_bed(){
 					RUS, "Слишком рано. Обычно ты ложишься в кровать около 9 вечера"
 				)
 		)
-	else //if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
+		
+		dialogue_create(
+		"2",
+		"Sleep together until 6 am",
+		false,
+		strlan(EN, "It's still too early. You usually go to bed at around 9pm",
+					CN, "现在太早了。你一般晚上9点才去睡觉。",
+					JP, "（まだ、眠くない。ベッドで寝たい場合は21時以降になる必要がある）",
+					RUS, "Слишком рано. Обычно ты ложишься в кровать около 9 вечера"
+				)
+		)
+	}else {//if (ControlEnv.hours >= 21 || ControlEnv.hours < 6)
 		dialogue_create(
 		"1",
 		sleep,
 		true,
 		d_player_sleep
 		)
+		var no_followers = true;
+		with (Character){
+			if (following) no_followers = false;	
+		}
+		
+		if (no_followers){
+			dialogue_create(
+			"2",
+			"Sleep together until 6 am",
+			false,
+			"There's no one with you! You're not going to ask yourself to sleep with yourself.... are you?"
+			)	
+		}else{
+			dialogue_create(
+			"2",
+			"Sleep together until 6 am",
+			true,
+			d_player_sleep_together
+			)
+		}
+	}
 		
 	/*dialogue_create(
 		"2",

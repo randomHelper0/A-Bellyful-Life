@@ -2,7 +2,7 @@ init_data_excludes("blur", "usize", "location", "room_counter");
 instance_create_depth(0,0,0,obj_console);
 if (global.load_index == noone)
 	alarm[0] = 2;
-	
+
 global.show_follower = false;
 global.values = ds_map_create();
 global.scene_actors = ds_list_create();
@@ -18,7 +18,6 @@ global.clicked_shop_bt = noone;
 
 global.dialogies = noone;
 global.dialogies_icons = noone;
-
 global.debugging = true;
 go_resort = false;
 resort_days = 0;
@@ -50,12 +49,11 @@ fat_essences = 0;
 screen_lock = false;
 //ctb_list(noone, noone, "test", "test2");
 
-
 stat_init();
 abilities_init();
 //show_debug_message("before init")
 //show_debug_message(string(Player)+", "+string(FatbucksCashier))
-item_init(Player, Bambi, Aria, Aya, Yumi,  Amber, Bobbie, 
+item_init(Player, Bambi, Aria, Aya, Yumi,  Amber, Bobbie, Remi,
 	FatbucksCashier, FatdonaldsCashier, FataurantCashier, ResortCashier
 	,  Bartender, Nurse);
 //instance_create(-200,-200, );
@@ -68,7 +66,7 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 	 IPillDiet, IPillDigest, IPillGas, IPillNoise, IPillLaxative,
 		IBottleDiet, IBottleDigest, IBottleGas, IBottleNoise, IBottleLaxative,
 		IBottle, IBottleWater, IUmbrella,
-		IBike, ITripod,
+		IBike, ITripod, ILostWallet, IHouseKeys,
 IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack,
 IButtPlug);
 create_item(instance_find(IBottleWater,0));

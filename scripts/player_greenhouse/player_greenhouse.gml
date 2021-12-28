@@ -17,7 +17,7 @@ function d_greenhouse(){
 	dialogue_init();
 	dialogue_create(
 	"1",
-	strlan(EN, "Use hose", RUS, "Используйте шланг", JP, "ホースを使用する", CN, "使用软管"),
+	strlan(EN, "Use hose", RUS, "Использовать шланг", JP, "ホースを使用する", CN, "使用软管"),
 	true,
 	scene_start
 	)

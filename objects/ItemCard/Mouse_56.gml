@@ -1,5 +1,6 @@
 dragging = false;
-zone = instance_place(x,y,DropZone);
+mouse_down = false;
+/*zone = instance_place(x,y,DropZone);
 if (zone != noone){
     if (!item.is_tool){
         if (!item.in_stomach && !item.in_bowels){
@@ -19,3 +20,4 @@ if (zone != noone){
     }
 }
 
+*/

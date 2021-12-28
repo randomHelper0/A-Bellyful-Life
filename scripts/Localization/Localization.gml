@@ -72,13 +72,13 @@ for (var i=0; i < ds_list_size(item_names); i++){
 
 aa= 0;
 
-#macro str_drink strlan(EN, "Drink", RUS, "Напиток", JP, "飲む", CN, "喝")
-#macro str_throwup strlan(EN, "Throw up", RUS, "Подбрасывать", JP, "吐く", CN, "呕吐")
-#macro str_unhook strlan(EN, "unhook shower head", RUS, "отцепить насадку для душа", JP, "シャワーヘッドのフックを外します", CN, "解开淋浴头")
+#macro str_drink strlan(EN, "Drink", RUS, "Пить", JP, "飲む", CN, "喝")
+#macro str_throwup strlan(EN, "Throw up", RUS, "Блювануть", JP, "吐く", CN, "呕吐")
+#macro str_unhook strlan(EN, "unhook shower head", RUS, "использовать насадку для душа", JP, "シャワーヘッドのフックを外します", CN, "解开淋浴头")
 #macro str_refill strlan(EN, "Refill Bottle", RUS, "Заполнить бутылку", JP, "詰め替えボトル", CN, "补充瓶")
 #macro str_food strlan(EN, "Food", RUS, "Еда", JP, "食べ物", CN, "食物")
 #macro str_water strlan(EN, "Water", RUS, "Воды", JP, "水", CN, "水")
 #macro str_air strlan(EN, "Air", RUS, "Воздух", JP, "エア", CN, "空气")
 #macro str_energy strlan(EN, "energy", RUS, "энергия", JP, "エネルギー", CN, "活力")
-#macro str_mins strlan(EN, "mins", RUS, "минут", JP, "分", CN, "分钟")
+#macro str_mins strlan(EN, "mins", RUS, "мин", JP, "分", CN, "分钟")
 //#macro str_unhook = strlan(EN, "Throw up", RUS, "", JP, "", CN, "");

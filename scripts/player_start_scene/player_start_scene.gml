@@ -9,5 +9,6 @@ function player_start_scene(){
 	coins_reset();
 	//scene_add_actors(Player, noone, noone);
 	background_set(sprSceneStart);
+	create_item(IHouseKeys);
 	exelan("msg_player_start");
 }

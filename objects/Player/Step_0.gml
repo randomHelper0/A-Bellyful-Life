@@ -46,6 +46,8 @@ if (hours_without_eating >=12 && is_location()){
 	show_debug_message("hours_without_eating" + string(hours_without_eating))*/
 	
 	var clinic_room = rmClinic;
+	if (ButtonMap.last_map == rmMapResort)
+		clinic_room = rmBedroomResort;
 	
 	/*if (ControlEnv.resort_days > 0)
 		clinic_room = rmBedroomResort;

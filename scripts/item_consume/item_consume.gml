@@ -3,6 +3,30 @@ function item_consume(item, target){
 		ctb_list(noone, noone, "Item expired");
 		return;	
 	}
+	
+	if (item.high > 0){
+		var found = false;
+		var pipe = noone;
+		with (ISmokingPipe){
+			if (!is_template && !in_fridge){
+				found = true;
+				pipe = id;
+			}
+		}
+		if (!found){
+			item.uses++;
+			item.uses = max(item.uses, 1);
+			//show_message(item.uses);
+			ctb_list(noone, noone, "You need a smoking pipe to use this!");
+			return;
+		}else{
+			effect_create_above(ef_smokeup, mouse_x, mouse_y, 2, c_gray);	
+			pipe.uses --;
+			if (pipe.uses <= 0)
+				with (pipe)instance_destroy();
+		}
+	}
+	
 	change_mood(target, item.volume/10, true);
 	item.bites = 0;
 	
@@ -61,7 +85,7 @@ function item_consume_part(item, target){
 		target.alcohol += item.bite_alcohol;
 	}
 	if (item.high > 0){
-		target.high += item.bite_alcohol;
+		target.high += item.bite_high;
 	}
 	eat_sound(item);
 
@@ -115,6 +139,7 @@ if (global.player_eat_item.uses <= 0)
 	with (global.player_eat_item) instance_destroy();
 else
 	global.player_eat_item.uses --;
+//show_message(global.player_eat_item.use)
 with (ControlBackpack) refresh_backpack();
 }
 
@@ -138,6 +163,7 @@ function item_give_consume(char){
 				return false;
 			}
 			
+			char.likability += random(1);
 			char.desire_stuffing *= 1.05;
 			
 			if (global.language == EN)

@@ -14,3 +14,5 @@ ypre = y;
 
 drag_counter = 0;
 
+mouse_org_y = 0;
+mouse_down = false;

@@ -1,20 +1,36 @@
-Bored when skip time
+More intimate scenes
 
-Remy: schedule at city streets afternoon, also add trigger event (use pump in public place)
-- Pick up and give lost wallets to gain likability
-- Or use lost wallets for
-money
+More opportunities to increase likability
+- Giving food gifts
 
-Use Tube together action: 
-- Beizer curve pipe between 2 characters
 
-Animations:
-- Either have only one or two belly sizes (must fall within x threshold to trigger)
+
+Sleep together: option available (usable) when come over past 9 pm
+- Show only chest up, blanket cover other parts
+- Common interactions:
+	- Hug: base scene to start other interactions from
+	- Kiss forehead: low threshold
+	- Kiss lips
+	- Grope breasts
+	- fingering
+	- Once lust is above threshold, additional option to throw off blanket and...
+- Aya: shy and do not engage in active, player need to engage all actions
+- Amber: will respond back aggressively, once likability is past a threshold Amber will respond first
+
+Aya study actions:
+-  player wrap arms around from behind for a hug
+- kiss back of head
+- kiss front
+- grope breasts
+
+Amber jog actions:
+- Hold hands while jogging
+- When resting:
+	- surprise tackle hug
+- Crazy tube idea (prop)
+
 
 walk around
-- Walk around action in city street
-- Random city street bg
-- Fixed time (30m)
-- spend energy + inc max energy
 - 30% chance of encountering someone who is not busy
-	- Simply state that you saw them, then jump to conversation
+	- Simply state that you saw them, then update vars to appear in room
+	- option to go on date

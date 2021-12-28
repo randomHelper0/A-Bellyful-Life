@@ -34,6 +34,8 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 			watched_inflate = true;	
 		}
 		spr_id  = asset_get_index("spr"+object_get_name(actor_id.object_index) + "_" + global.scene_name + "_" + string(actor_id.fat_level));
+		if (spr_id == -1)
+			spr_id = asset_get_index("spr"+object_get_name(actor_id.object_index) + "_" + global.scene_name + "_" + string(0));
 		/*if (keyboard_check(vk_delete)){
 			show_message(spr_id);
 			show_message(sprite_get_name(spr_id));
@@ -60,7 +62,14 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 					change_mood(actor_id, -30, 1);
 					time_forward_minutes(15);
 					character_expel(actor_id);
-					ctb_list(noone, rmBathroom, actor_id.name + " couldn't hold it in and was forced to run to the toilet!");
+					var bathroom = noone;
+					if (actor_id.object_index == Player){
+						if (ButtonMap.last_map == rmMapResort)
+							bathroom = rmBathroomResort;
+						if (ButtonMap.last_map == rmMapUni)
+							bathroom = rmBathroom;
+					}
+					ctb_list(noone, bathroom, actor_id.name + " couldn't hold it in and was forced to run to the toilet!");
 				}else{
 					change_energy(actor_id, -35, 1);
 					change_mood(actor_id, -30, 1);

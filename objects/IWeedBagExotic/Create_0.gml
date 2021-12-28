@@ -1,5 +1,5 @@
 event_inherited();
 volume = 200;
-calories = 250;
+calories = 150;
 price = 50;
-high = 80;
+high = 40;

@@ -12,3 +12,7 @@ gave_exam_today = false;
 eating_out_init(rmBar, list_create(ICocktail1, ICocktail2));
 
 arrive_msg = "Hm? Are you going to show me something?";
+
+catching = noone;
+catch_success = false;
+catch_dialogue = false;

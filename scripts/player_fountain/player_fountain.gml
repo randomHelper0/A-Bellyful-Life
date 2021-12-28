@@ -8,6 +8,8 @@ function player_fountain(){
 	global.scene_sound_action = list_create(sndFlowWater);
 	global.scene_do_breath = true;
 	with (Player) skew_common();
+	instance_create_depth(0,0, ControlScene.depth - 1, AlertCaught);
+	
 	//repulsed_message();
 }
 

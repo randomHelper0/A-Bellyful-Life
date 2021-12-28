@@ -1,5 +1,11 @@
+function msg_drag_tutorial_EN(){
+	ctb_list(noone,  noone, "Please drag the keys from inside your backpack to the door",
+		"This serves as a short tutorial to show you that you can use items this way",
+		"For example, you can give food and gifts to other characters by dragging the items outside from your backpack");
+}
+
 function msg_player_start_EN(){
-	ctb_list(noone, rmBedroom , "You are "+Player.name+", a bubbly girl with lots of quirky desires.", " You just won a big lottery and is now moving out to rent your own mansion so you can do everything that you want!");
+	ctb_list(noone, rmStartOutside , "You are "+Player.name+", a bubbly girl with lots of quirky desires.", " You just won a big lottery and is now moving out to rent your own mansion so you can do everything that you want!");
 }
 
 function msg_player_start_CN(){

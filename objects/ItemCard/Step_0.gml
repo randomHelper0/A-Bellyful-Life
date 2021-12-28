@@ -32,9 +32,15 @@ if (dragging){
 	}
     
 }else{
+	if (mouse_down){
+		var dif = mouse_y-mouse_org_y;
+		yorg += dif;
+		mouse_org_y = mouse_y;
+	}
+	
 		drag_counter = 0;
     if (!item.in_stomach && !item.in_bowels){
-		if (persistent &&  point_distance(x,y,xstart, ystart) <= 100){
+		if (persistent &&  point_distance(x,y,xorg, yorg) <= 100){
 			persistent = false;
 			custom_goto(rmBackpack);
 		}

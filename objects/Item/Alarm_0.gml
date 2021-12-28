@@ -9,3 +9,6 @@ if (is_pill){// || is_tool){
 	do_expire = false;
 	script_use_on_item = item_on_item;
 }
+
+if (is_tool)
+	do_expire = false;

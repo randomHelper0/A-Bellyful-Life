@@ -7,19 +7,20 @@ function d_player_downtown(){
 	function(){
 		background_set(asset_get_index("sprDowntown"+str(choose(1,2,3,4))))
 		player_jog_energy(25);
+
 		global.scene_script = player_downtown;
 		scene_start();
 	}
 	)
 	
-	dialogue_create(
+	/*dialogue_create(
 	"2",
 	"Go to public fountain (5 mins)",
 	true,
 	function(){
 		room_goto(rmFountain);
 	}
-	)
+	)*/
 	dialogue_start(true);
 }
 
@@ -37,7 +38,26 @@ function player_downtown(){
 				RUS, "Ты начала бегать по парку. Ты можешь почувствовать, как освежающий воздух поднимает твое настроение."
 			);
 			
-	ctb_list(player_jog_finish, noone , 
+	ctb_list(player_downtown_finish, noone , 
 			msg_finish_jog
 		);
+}
+
+function player_downtown_finish(){
+	var found = choose(0, 0, 0.5, 1, 2, 2.5, 3);
+	global.last_room = rmFountain;
+	if (found > 0){
+		var msg_finish_jog = strlan(
+						EN, "Lucky! You picked up "+string(found)+" dollars from the ground",
+						CN, "幸运的！ 你从地上捡到 "+string(found)+" 美元 ",
+						JP, "幸運な！ あなたは地面から"+string(found)+"ドルを拾いました",
+						RUS, "Счастливчик! Вы подняли "+string(found)+" доллара с земли"
+					);
+		ControlEnv.money += found;
+		ctb_list(player_jog_finish, noone , 
+				msg_finish_jog
+			);
+	}else{
+		player_jog_finish();
+	}
 }

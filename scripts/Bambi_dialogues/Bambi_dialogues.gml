@@ -49,3 +49,14 @@ function Bambi_poultry_scene(){
 	Bambi.likability += 5;
 	time_forward_minutes(60);
 }
+
+function Bambi_drink_kitchensink(){
+	global.allow_stream = true;
+	global.scene_name = "Drink";
+	global.scene_inflate_rate = 2;
+	scene_add_actors(Bambi, ORAL, WATER);
+	background_set(sprKitchenZoomed);
+	scene_auto_sound(ORAL, WATER);
+	global.scene_sound_action = list_create(sndFlowWater, sndSwallowWater);
+	//ctb_list(noone, noone , "stufffff");
+}
