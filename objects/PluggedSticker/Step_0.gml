@@ -1,4 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-visible = Player.plugged;//Player.encumbered;
+visible = target.plugged;//Player.encumbered;

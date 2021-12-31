@@ -7,9 +7,11 @@ script_use = d_mpump_player;
 
 target = "";
 batteries = 60*4;
+batteries_cap = batteries;
 
 uses = 100;
 
 consumable = false;
 do_expire = false;
 
+script_tick = tick_battery;

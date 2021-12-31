@@ -64,7 +64,7 @@ function d_text_hangout() {
 	}
 	ControlEnv.hours = hour;
 	//show_message(ControlEnv.hours);
-	if (!busy){
+	if (!busy && char.likability >= 0){
 			if (char.visit_arrival > 0){
 				ctb_list(noone, noone, "I'm coming!");
 			}else if (!char.visited){

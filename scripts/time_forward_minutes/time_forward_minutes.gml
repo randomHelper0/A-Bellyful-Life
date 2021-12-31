@@ -11,6 +11,11 @@ function time_forward_minutes(argument0) {
 	if (ControlEnv.hours > 6) //don't get hungry while sleeping!
 		Player.daily_calories -= Player.min_calories_uptake * minutes;
 	
+	with (Item){
+		if (script_tick != noone)
+			script_tick(minutes);
+	}
+	
 	ControlEnv.raining -= min(ControlEnv.raining,minutes);
 
 	global.temp = minutes;

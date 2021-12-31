@@ -4,3 +4,6 @@ enabled = false;
 
 x = random(room_width-sprite_width);
 y = random(room_height - sprite_height);
+
+tx = random(room_width);
+ty = random(room_height);

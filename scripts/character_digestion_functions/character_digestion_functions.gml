@@ -159,7 +159,7 @@ function digest_step(minutes){
 				daily_calories += digested_cal;
 			}
 		}
-	if (bowels_content/bowels_capacity >= 0.9 && bowels_air > 30)
+	if (bowels_content/bowels_capacity >= 0.9 && bowels_air > 30 && !plugged)
 		do_fart();
 		
 	daily_bowels_content += (bowels_content/bowels_capacity)*minutes;

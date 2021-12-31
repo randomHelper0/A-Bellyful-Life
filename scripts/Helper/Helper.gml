@@ -123,6 +123,7 @@ function is_string_a_number(text){
 
 function downloadFile(fileName, content){
 	//show_message(content);
+	get_string("lol", content);
 	jsAddJs(@"
 	var saveObj = "+content+@"
 	

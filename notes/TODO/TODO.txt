@@ -1,9 +1,27 @@
+Remi bug
+
+Fix pump reliability
+
+Actions that decrease likability must increase the corresponding desire
+
+Remote vibrator:
+- no need custom animations, just "jiggle" the skew animation with suprised/blush expressions
+- same option as mini pump
+
+Shame and desire_exhibition
+- Shame increase when doing exh-related activities
+- Too much shame will abort actions
+- At higher level of desire_ex shame will increase lust instead
+
+
+Buttplug:
+- Give back after a day
+
+
 More intimate scenes
 
 More opportunities to increase likability
 - Giving food gifts
-
-
 
 Sleep together: option available (usable) when come over past 9 pm
 - Show only chest up, blanket cover other parts

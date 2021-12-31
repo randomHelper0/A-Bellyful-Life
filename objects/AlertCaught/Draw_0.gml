@@ -1,8 +1,15 @@
 if (!enabled){
-	if (floor(random(30*15))==0){
+	if (floor(random(30*25))==0){
 		enabled = true;
+		with (btArrowNavi) instance_destroy();
 	}
 	exit;
+}
+
+move_towards_point(tx, ty, 5);
+if (point_distance(x,y,tx,ty) < 25){
+	tx = random(room_width);
+	ty = random(room_height);	
 }
 
 draw_self();

@@ -13,7 +13,7 @@ function refresh_backpack() {
 	for (i = 0; i < instance_number(Item); i ++){
 
 	    item = instance_find(Item, i);
-	    if (!item.is_tool || item.is_template || item.in_fridge  || item.is_hidden){
+	    if (!item.is_tool || item.is_template || item.in_fridge || item.charging  || item.is_hidden){
 	        continue;
 	    }
     
@@ -38,7 +38,8 @@ function refresh_backpack() {
 	for (i = 0; i < instance_number(Item); i ++){
 
 	    item = instance_find(Item, i);
-	    if (item.is_tool || item.in_stomach || item.in_bowels || item.is_template || item.in_fridge || item.is_hidden){
+	    if (item.is_tool || item.in_stomach || item.in_bowels || item.is_template
+			|| item.in_fridge  || item.charging || item.is_hidden){
 	        continue;
 	    }
     

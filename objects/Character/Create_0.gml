@@ -148,3 +148,4 @@ eating_out_script = asset_get_index(name+"_eating_out"); //-1 if not
 
 in_bathroom = 0;
 plugged = false;
+using_vibrator = false;

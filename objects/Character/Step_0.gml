@@ -148,3 +148,8 @@ if (visiting && visit_minutes <= 0 && !in_dialogue() && (is_location() || Contro
 				//following = false;
 				
 	}
+	
+if (using_vibrator){
+	skew_xoffset += random_range(-0.5,0.5)
+	expression = ex_blush;
+}

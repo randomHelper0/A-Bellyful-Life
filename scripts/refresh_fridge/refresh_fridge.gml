@@ -62,7 +62,4 @@ function refresh_fridge() {
 
     
 	}
-
-
-
 }

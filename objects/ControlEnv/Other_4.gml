@@ -1,5 +1,13 @@
 room_counter = 0;
 if (global.upload_content != noone){
+	if (global.upload_content == ""){
+		show_message("Error reading file, got blank!");
+		exit;
+	}
+	//TODO FIX PLS
+	//global.upload_content = string_replace_all(global.upload_content, "true", 1);
+	//global.upload_content = string_replace_all(global.upload_content, "false", 0);
+	
 	load_all_text(global.upload_content);
 	global.upload_content = noone;
 	game_start = false;

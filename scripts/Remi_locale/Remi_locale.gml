@@ -30,7 +30,7 @@ function msg_Remi_catch_success_EN(){
 		"[speaker:Remi][ex:ex_surprise]OK! Stop, put your hand behind your head and drop the air pump",
 		"[speaker:Player][ex:ex_surprise]*You comply immedately*",
 		"[speaker:Remi][ex:idle]I'm going to have you pay a hefty fine for such as lewd public misconduct",
-		"[ex:idle][speaker: Player]I'm sorry officer Remi, it won't happen again! [c:blue] (for now....)",
+		"[ex:idle][speaker:Player]I'm sorry officer Remi, it won't happen again! [c:blue] (for now....)",
 		"[speaker:noone] You paid Remi a fine of $50 and was warned not to do it again."
 	)
 }

@@ -26,6 +26,8 @@ function Bambi_intro_scene(){
 }
 
 function Bambi_help_scene(){
+	Player.energy -= 30;
+	Player.energy_max *= 1.05;
 	global.scene_name = "FeedCows";
 	global.scene_inflate_rate = 0;
 	global.scene_interface = false;

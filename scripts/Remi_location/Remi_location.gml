@@ -1,7 +1,14 @@
 function Remi_location(){
+	//fix bug: when player run to bathroom
+	if (Remi.catching != noone && room == rmBathroom){
+		Remi.catching = noone;	
+	}
+	
 	if (Remi.catching != noone  && is_location() && !is_map()){
-		if (room != Remi.catching)
+		if (room != Remi.catching){
 			Remi.catching = noone;
+			return noone;
+		}
 			
 		if (Remi.catch_dialogue){
 			Remi.catch_dialogue = false;

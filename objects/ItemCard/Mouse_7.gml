@@ -51,6 +51,16 @@ if (!ControlEnv.screen_lock){
 			with (ControlBackpack) refresh_backpack();
 			with (ControlFridge) refresh_fridge();
 		}
+	}else if (room == rmCharger){
+		if (item.charging && x >= ControlBackpack.x){
+			item.charging = false;
+			with (ControlBackpack) refresh_backpack();
+			with (ControlCharger) refresh_charger();
+		}else if (!item.charging && x < ControlCharger.x + 300){
+			item.charging = true;
+			with (ControlBackpack) refresh_backpack();
+			with (ControlCharger) refresh_charger();
+		}
 	//check item on item in backpack
 	}else if (drag_counter > 20){
 		drag_counter = 0;

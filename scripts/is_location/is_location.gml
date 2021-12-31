@@ -1,5 +1,6 @@
 function is_location() {
-	if (room == rmJournal || room == rmBackpack || room == rmInteract || room == rmKitchenFridge
+	if (room == rmJournal || room == rmBackpack || room == rmInteract 
+		|| room == rmKitchenFridge || room == rmCharger
 		|| room == rmStatus || room == rmScene || room == rmShop || room == rmSaveLoad
 	    //|| room == rmMapUni || room == rmMapShopping// || room == rmGeneralStore 
 	    || room == rmStat || room == rmAbilities || room == rmSettings)

@@ -41,6 +41,25 @@ function d_standard() {
 		)
 	}
 	
+	if (char.using_vibrator){
+		dialogue_create(
+		    "pump",
+		    strlan(EN,"Detach vibrator"),
+		    true,
+		    detach_vibrator
+		)
+	}
+	
+	if (char.plugged){
+		global.buttplug_target = char;
+		dialogue_create(
+		    "bp",
+		    strlan(EN,"Detach butt plug"),
+		    true,
+		    function(){ detach_buttplug(global.buttplug_target);}
+		)
+	}
+	
 	if (char.visiting){
 		dialogue_create(
 		        "4",

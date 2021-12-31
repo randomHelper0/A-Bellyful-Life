@@ -5,7 +5,7 @@ init_data_excludes(
 )
 
 price = 0;
-
+charging = false;
 name = object_get_name(object_index);
 name = string_copy(name, 2, string_length(name)-1);
 image_speed = 0;
@@ -32,6 +32,7 @@ high = 0;
 script_use = d_item_consume;
 script_use_on_item = noone;
 script_use_on_char = item_give_consume;
+script_tick = noone;
 
 is_template = true;
 desc = "";

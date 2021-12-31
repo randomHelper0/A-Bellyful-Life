@@ -180,7 +180,7 @@ function item_give_consume(char){
 }
 
 function item_on_item(otherItemCard){
-	if (otherItemCard.item.is_pill || otherItemCard.item.is_tool){
+	if (otherItemCard.item.is_pill || otherItemCard.item.is_tool || otherItemCard.item.is_template){
 		//ctb_list(noone, noone, "
 		return;	
 	}

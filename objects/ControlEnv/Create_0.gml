@@ -68,9 +68,11 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 		IBottle, IBottleWater, IUmbrella,
 		IBike, ITripod, ILostWallet, IHouseKeys,
 IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack,
-IButtPlug);
+IButtPlug, IVibrator);
 create_item(instance_find(IBottleWater,0));
 create_item(instance_find(IMiniPump,0));
+create_item(instance_find(IButtPlug,0));
+create_item(instance_find(IVibrator,0));
 //create_item(instance_find(IPillDiet,0));
 //create_item(instance_find(IBottleDiet,0));
 for (i = 0; i <8; i ++){

@@ -16,7 +16,7 @@ if (room == rmScene &&  global.show_follower){
  
 sprite_index = asset_get_index(spr_name);
 image_index = char.belly_index;
-
+skew_xoffset = Player.skew_xoffset;
 skew_step();
 
 //if (keyboard_check(vk_delete))

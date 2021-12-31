@@ -8,8 +8,8 @@ function d_resort(){
 }
 
 function d_ask_resort(){
-	var days = get_integer("How many days would you like to sign up? ($50 per day per person, 0 to cancel)", 2);
-	if (days == 0 || days == undefined)
+	var days = get_integer("How many days would you like to sign up? ($50 per day per person, 0 to cancel)", 1);
+	if (days == 0 || is_undefined(days) || is_nan(days))
 		return;
 	global.resort_days = days;
 	dialogue_init();
@@ -59,7 +59,8 @@ function resort_register(cost, chars){
 
 ////////
 function msg_Resort_desc_EN(){
-		ctb_list(d_ask_resort, noone, "resort desc");
+		ctb_list(d_ask_resort, noone, "It's never a better time to enjoy your dream vacation at our new super luxurious beach resort!",
+			"To celebrate our opening we have reduced our entry price to only $50 per day! Sign up now while openings last.");
 }
 
 /*function d_player_beach(){

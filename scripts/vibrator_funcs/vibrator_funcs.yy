@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scenes",
-    "path": "folders/Scripts/Scenes.yy",
+    "name": "Items",
+    "path": "folders/Scripts/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "mpump_scenes",
+  "name": "vibrator_funcs",
   "tags": [],
   "resourceType": "GMScript",
 }

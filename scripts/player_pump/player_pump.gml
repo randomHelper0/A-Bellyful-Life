@@ -1,4 +1,15 @@
 function player_pump(){
+	switch(global.last_room){
+		case rmPark:
+		case rmDowntown:
+		case rmPool:
+		case rmFataurant:
+		case rmFatdonalds:
+		case rmFatbucks:
+			instance_create_depth(0,0, ControlScene.depth - 1, AlertCaught);
+			break;
+	}
+	
 	global.scene_name = "Pump";
 	global.scene_inflate_rate = 2;
 	global.allow_stream = true;

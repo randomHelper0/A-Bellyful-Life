@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Scenes",
-    "path": "folders/Characters/Bambi/Sprites/Scenes.yy",
+    "name": "Drink",
+    "path": "folders/Characters/Bambi/Sprites/Scenes/Drink.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprBambi_Drink_0",

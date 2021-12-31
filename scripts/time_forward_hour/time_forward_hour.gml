@@ -13,6 +13,11 @@ function time_forward_hour(argument0) {
 	
 	with (Character)
 		character_tick(global.temp);
+		
+	with (Item){
+		if (script_tick != noone)
+			script_tick(hours*60);
+	}
 	
 	ControlEnv.raining -= min(ControlEnv.raining, hours*60);
 		

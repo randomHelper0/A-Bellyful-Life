@@ -12,7 +12,8 @@ if (mouse_x > x + sprite_width/2){
 }else{
 	if (item.script_use != noone){
 		global.item_window_item = item;
-		item.script_use();
+		var func = item.script_use;
+		func();
 	}
 }
 

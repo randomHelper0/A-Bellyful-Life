@@ -28,7 +28,9 @@ function msg_Bambi_intro2_EN(){
 
 function msg_Bambi_feedcows_EN(){
 	ctb_list(room_restart, noone,
-		"[speaker:noone][set_background:sprFeedCows]..."
+		"[speaker:noone][set_background:sprFeedCows] The first task is to collect fresh grasses to feed the cows.",
+		"You helped Bambi push the grass cart and then gently place each bundle down next to where they can eat.",
+		"It was a very tough job and you wondered how Bambi managed to do this everyday by herself."
 	)
 }
 
@@ -36,6 +38,9 @@ function msg_Bambi_feedcows_EN(){
 
 function msg_Bambi_poultry_EN(){
 	ctb_list(noone, rmBarn,
-		"[speaker:noone][set_background:sprPoultry]..."
+		"[speaker:noone][set_background:sprPoultry] Next is to feed and collect eggs from the hundreds of chickens in the poultry.",
+			"Large beads of sweats rolled down your face as you pour heavy bags of chicken feed on the long feeding trays.",
+			"Last is collecting all the eggs that were laid the previous night. Your clumsy hands dropped a few of them, Bambi didn't notice... right?",
+			"Max energy increased by 5%"
 	)
 }
