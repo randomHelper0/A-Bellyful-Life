@@ -173,7 +173,8 @@ function digest_step(minutes){
 		w_food = bowels_food/bowels_content;
 	
 	    bowels_water -= amount*w_water;
-		bowels_air -= amount*w_air;
+		//disabled air absorbtion for digestion
+		//bowels_air -= amount*w_air;
 		bowels_food -= amount*w_food;
 	}
 

@@ -44,7 +44,7 @@ for (var i=0; i < ds_list_size(global.scene_actors);i+=3){
 		skew_draw_other(actor_id, spr_id, character_belly_index(actor_id, spr_id), 0,0);
 		
 		
-		if (global.scene_interface){
+		if (global.scene_interface && StickerEye.image_index){
 			draw_sprite(sprGaugeBack, 0, x, y);
 		
 		if (global.scene_pressure_match){

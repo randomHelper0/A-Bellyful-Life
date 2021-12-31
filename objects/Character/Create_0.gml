@@ -12,6 +12,7 @@ expression = ex_idle;
 high = 0;
 using_mpump = false;
 libido = 0;
+weight_next = -1;
 
 pop_warning = false;
 popped = 0;

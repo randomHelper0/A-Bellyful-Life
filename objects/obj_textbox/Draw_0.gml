@@ -1,3 +1,6 @@
+if (!StickerEye.image_index)
+	exit;
+
 draw_sprite(sprDialogueBox, 0, 0, 0);
 
 draw_cached();

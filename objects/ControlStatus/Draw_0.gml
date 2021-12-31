@@ -56,7 +56,10 @@ if (select == 1){
 		c_black, c_white, c_white, 0, 0, 0);
 
 	//weight
-	draw_text(base_x, base_y+line_y*8, str_weight+": " + string(char.weight) + "kg (Next weight level: N/A)");
+	var weight_next = string(char.weight_next) + "kg";
+	if (char.weight_next == -1)
+		weight_next = "N/A";
+	draw_text(base_x, base_y+line_y*8, str_weight+": " + string(char.weight) + "kg (Next weight level: " +weight_next+ ")");
 	//statuses
 }else if (select == 0){
 	base_y = 100; line_y = 45; base_x = 250;

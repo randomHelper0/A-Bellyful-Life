@@ -6,6 +6,9 @@ if __b__
 //global.last_room = room;
 global.last_bg =  background_get();
 //show_message(sprite_get_name(global.last_bg));
+if (is_location()){
+	room_persistent = true;	
+}
 room_goto(rmBackpack);
 
 }

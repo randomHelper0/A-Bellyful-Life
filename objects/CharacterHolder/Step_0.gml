@@ -1,4 +1,4 @@
-if (!enabled || room == rmDialogue){
+if (!enabled || room == rmDialogue || !StickerEye.image_index){
     visible = false;
     mask_index = sprBlank;
 }else{

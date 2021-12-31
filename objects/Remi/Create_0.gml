@@ -6,12 +6,11 @@ script_dialogue = Remi_dialogues;
 
 sprite_expression = sprRemiExpressions_0;
 interested = false;
-gave_exam_today = false;
 //has_number = true;
 
-eating_out_init(rmBar, list_create(ICocktail1, ICocktail2));
+eating_out_init(rmFataurant, list_create(IBeer, IHotdog, ISoda, IHotdog));
 
-arrive_msg = "Hm? Are you going to show me something?";
+arrive_msg = "I'm here to keep an eye on you.";
 
 catching = noone;
 catch_success = false;

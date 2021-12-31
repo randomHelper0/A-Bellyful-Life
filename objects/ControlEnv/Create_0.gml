@@ -3,6 +3,7 @@ instance_create_depth(0,0,0,obj_console);
 if (global.load_index == noone)
 	alarm[0] = 2;
 
+global.skip_refresh_location = false;
 global.show_follower = false;
 global.values = ds_map_create();
 global.scene_actors = ds_list_create();

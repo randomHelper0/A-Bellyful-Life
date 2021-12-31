@@ -1,5 +1,5 @@
 if (!enabled){
-	if (floor(random(30*25))==0){
+	if (!Remi.visiting && floor(random(30*25))==0){
 		enabled = true;
 		with (btArrowNavi) instance_destroy();
 	}

@@ -16,7 +16,13 @@ if (global.upload_content != noone){
 }
 
 if (global.save_index != noone){
-	var notes = get_string("Notes:", "");
+	prevNotes = "";
+	if (ds_map_exists(global.metadata, str(global.save_index))){
+		var prevData = global.metadata[? str(global.save_index)];
+		prevNotes = prevData[? "Notes"];
+	}
+	
+	var notes = get_string("Notes:", prevNotes);
 	save_all("save" + str(global.save_index)+ ".json");
 	var save_metadata = ds_map_create();
 	save_metadata[? "Day"] = day;
@@ -50,8 +56,14 @@ if (global.load_index != noone){
 }
 
 
-if (is_location())
-    refresh_location();
+if (is_location()){
+	if (!global.skip_refresh_location)
+		refresh_location();
+	else{
+		global.skip_refresh_location = false;	
+		room_persistent = false;
+	}
+}
 
 if (global.scene_from != noone && room == global.scene_from){
 	global.scene_from = noone;	

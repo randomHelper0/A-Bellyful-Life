@@ -21,7 +21,8 @@ function ctb_update() {
 	if( !visible ) exit;
 
 	var skip = keyboard_check_pressed( CTB_SkipKey );
-	if (mouse_check_button_pressed(mb_left) && !instance_exists(dropdown_dialogue))
+	if (mouse_check_button_pressed(mb_left) && !instance_exists(dropdown_dialogue) 
+		&& !position_meeting(mouse_x, mouse_y, StickerEye))
 	    skip = true;
     
 	if( !pause ) {

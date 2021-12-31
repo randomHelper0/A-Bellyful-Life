@@ -161,6 +161,12 @@ function sleep_finish(){
 	ControlEnv.minutes = 10;
 	
 	with (Character){
+		//hardcoded
+	if (weight_next != -1 && weight >= weight_next){
+		weight_next = -1;
+		fat_level ++;
+	}
+		
 	var mult = 300;
 	if (object_index != Player)
 		mult = 200;

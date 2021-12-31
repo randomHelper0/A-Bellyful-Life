@@ -37,6 +37,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"SDCardSticker","path":"objects/SDCardSticker/SDCardSticker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":90.46372,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":88.0,"y":712.0,"resourceVersion":"1.0","name":"inst_15487266","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"PluggedSticker","path":"objects/PluggedSticker/PluggedSticker.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":968.0,"y":132.0,"resourceVersion":"1.0","name":"inst_3E3E70B7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"VibratorSticker","path":"objects/VibratorSticker/VibratorSticker.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1016.0,"y":132.0,"resourceVersion":"1.0","name":"inst_7A41CA6C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"StickerEye","path":"objects/StickerEye/StickerEye.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.2,"scaleY":1.2,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":672.0,"resourceVersion":"1.0","name":"inst_51CCAE97","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":-102,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":4,"gridY":4,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances_1","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":-2,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Compatibility_Instances_Depth_-2","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
@@ -90,6 +91,7 @@
     {"name":"inst_15487266","path":"rooms/rmBedroom/rmBedroom.yy",},
     {"name":"inst_3E3E70B7","path":"rooms/rmBedroom/rmBedroom.yy",},
     {"name":"inst_7A41CA6C","path":"rooms/rmBedroom/rmBedroom.yy",},
+    {"name":"inst_51CCAE97","path":"rooms/rmBedroom/rmBedroom.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

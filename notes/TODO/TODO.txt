@@ -1,5 +1,7 @@
 Remi bug
 
+enable fat level change
+
 Fix pump reliability
 
 Actions that decrease likability must increase the corresponding desire
