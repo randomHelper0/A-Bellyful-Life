@@ -2,7 +2,7 @@ init_data_excludes("blur", "usize", "location", "room_counter");
 instance_create_depth(0,0,0,obj_console);
 if (global.load_index == noone)
 	alarm[0] = 2;
-
+snowing = true;
 global.skip_refresh_location = false;
 global.show_follower = false;
 global.values = ds_map_create();
@@ -70,10 +70,14 @@ IEspresso, IFrappuccino, IGreenTeaFrap, IOrangeJuice, ISoda, ISundea, IMilk,
 		IBike, ITripod, ILostWallet, IHouseKeys,
 IWeedBag, IWeedBagExotic, ISmokingPipe,ICigarettePack,
 IButtPlug, IVibrator);
-create_item(instance_find(IBottleWater,0));
-create_item(instance_find(IMiniPump,0));
-create_item(instance_find(IButtPlug,0));
-create_item(instance_find(IVibrator,0));
+var bottle = create_item(instance_find(IBottleWater,0));
+bottle.in_fridge = true;
+bottle = create_item(instance_find(IBottleWater,0));
+bottle.in_fridge = true;
+
+//create_item(instance_find(IMiniPump,0));
+//create_item(instance_find(IButtPlug,0));
+//create_item(instance_find(IVibrator,0));
 //create_item(instance_find(IPillDiet,0));
 //create_item(instance_find(IBottleDiet,0));
 for (i = 0; i <8; i ++){

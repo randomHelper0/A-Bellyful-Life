@@ -24,6 +24,26 @@ function d_standard() {
 	            false,
 	            "You can't talk to yourself!"
 	    )
+		
+	if (char.id == Player.id){
+		if (Player.bowels_air >= 200)
+			dialogue_create(
+		            "Fart",
+		            strlan(EN, "Fart"),
+		            true,
+		            //d_talk
+					function(){with (Player) do_fart();}
+		    )
+			
+		if (Player.stomach_air >= 200)
+			dialogue_create(
+		            "Burp",
+		            strlan(EN, "Burp"),
+		            true,
+		            //d_talk
+					function(){with (Player) do_burp();}
+		    )
+	}
 
 	dialogue_create(
 	        "2Status",

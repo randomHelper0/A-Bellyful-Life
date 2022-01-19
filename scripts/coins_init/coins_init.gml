@@ -1,7 +1,7 @@
 global.room_coins = {};
 
 function room_set_coin_random(rm){
-	room_set_coin(rm, choose(0,0,1,1,2), choose(0, 1), random(100000));
+	room_set_coin(rm, choose(0,0,1,1,2), choose(0, 0,0,1), random(100000));
 }
 
 

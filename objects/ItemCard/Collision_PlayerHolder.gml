@@ -5,7 +5,7 @@ with (ItemWindow) instance_destroy();
 if (item.script_use != noone){
 	if (ControlEnv.counter % 60 == 0){
 		if (item.script_use != d_item_consume)
-			script_execute(item.script_use);	
+			item.script_use();
 		else
 			item_consume_part(item, Player);
 		

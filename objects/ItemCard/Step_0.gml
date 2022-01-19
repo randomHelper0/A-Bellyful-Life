@@ -25,7 +25,7 @@ if (dragging){
     y = mouse_y - height/2;
     
 	//move out if in inventory
-	if (item.script_use_on_item == noone && room == rmBackpack && point_distance(x,y,xstart, ystart) > 100){
+	if (item.script_use_on_item == noone && room == rmBackpack && point_distance(x,y,xorg, yorg) > 100){
 		persistent = true;
 		depth = -2;
 		custom_goto(global.last_room);
@@ -41,8 +41,9 @@ if (dragging){
 		drag_counter = 0;
     if (!item.in_stomach && !item.in_bowels){
 		if (persistent &&  point_distance(x,y,xorg, yorg) <= 100){
-			persistent = false;
+			//persistent = false;
 			custom_goto(rmBackpack);
+			instance_destroy();
 		}
 		
         dis = point_distance(x,y,xorg, yorg);

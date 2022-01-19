@@ -13,6 +13,7 @@
 global.settings[? "fart sound"] = false;
 global.settings[? "vomit sound"] = true;
 global.settings[? "Fullscreen"] = false;
-global.version = "0.1.2";
+global.settings[? "Snowing"] = true;
+global.version = "0.3.0";
 
 global.screen_lock = false;

@@ -1,6 +1,12 @@
 //draw_healthbar(x,y,x+100, y + 5, Player.stomach_pressure, c_black, c_blue, c_blue, 0, true, 0);
-if(raining > 0 &&  (room == rmMapShopping || room == rmMapUni || room == rmPark)){
-	draw_sprite_ext(sprRain, counter/4, 0,0, 2,2, 0, c_white, 1);	
+if (room == rmMapShopping || room == rmMapUni 
+	|| room == rmPark || room == rmMapResort || room == rmDowntown
+	|| room == rmFountain || room == rmBarn || room == rmStartOutside
+	|| room ==rmBeach || room == rmRestaurantResort || room == rmPoolResort){
+		if (raining)
+			draw_sprite_ext(sprRain, counter/4, 0,0, 2,2, 0, c_white, 1);	
+		if (global.settings[? "Snowing"])
+			draw_sprite_ext(sprSnow, counter/4, 0,0, 2,2, 0, c_white, 1);	
 }
 
 

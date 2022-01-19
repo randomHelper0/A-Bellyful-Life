@@ -91,12 +91,13 @@ function player_jog_energy(minutes){
 	
 	global.player_increase_endurance =  -energy_charge/1000;
 	global.player_jog_minutes = minutes;
+	player_jog_start();
 }
 
 function d_player_jog(minutes){
 	player_jog_energy(minutes);
 	
-	player_jog_start();
+	
 }
 
 function player_jog_finish(){

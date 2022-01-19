@@ -42,6 +42,11 @@ if (global.save_index != noone){
 if (global.load_index != noone){
 	resort_days = 0;
 	go_resort = false;
+	var checkData = global.metadata[? str(global.load_index)];
+	if (checkData[? "Version"] == "0.1.2"){
+		show_message("Warning! Save File is from previous version, some things may not work as expected.");
+	}
+	
 	load_all("save" + str(global.load_index)+ ".json");
 	global.load_index = noone;
 	game_start = false;
