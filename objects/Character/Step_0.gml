@@ -66,10 +66,13 @@ for (i = 0; i < instance_number(Item); i++){
 //belly_size = (stomach_content/stomach_capacity)*55
  //   + (bowels_content/bowels_capacity)*55;
 
-belly_size = (stomach_content/stomach_capacity)*50
-    + (bowels_content/bowels_capacity)*50;
+var visual_stomach_cap = clamp(stomach_capacity, 0, 4000);
+var visual_bowels_cap = clamp(bowels_capacity, 0, 3000);
+
+belly_size = (stomach_content/visual_stomach_cap)*50
+    + (bowels_content/visual_bowels_cap)*50;
 	
-belly_size *= (stomach_capacity + bowels_capacity)/final_capacity;
+belly_size *= (visual_stomach_cap + visual_bowels_cap)/final_capacity;
 
 //clip to 100%
 belly_size = min(100, belly_size);

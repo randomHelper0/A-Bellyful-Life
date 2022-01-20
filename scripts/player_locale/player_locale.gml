@@ -1,11 +1,17 @@
 function msg_drag_tutorial_EN(){
-	ctb_list(noone,  noone, "Please drag the keys from inside your backpack to the door",
-		"This serves as a short tutorial to show you that you can use items this way",
-		"For example, you can give food and gifts to other characters by dragging the items outside from your backpack");
+	ctb_list(noone,  noone, "(Open the Backpack and hold left click on the Keys, then drag them toward the Front Door to unlock it.)");
+		//"This serves as a short tutorial to show you that you can use items this way",
+		//"For example, you can give food and gifts to other characters by dragging the items outside from your backpack");
 }
 
 function msg_player_start_EN(){
-	ctb_list(noone, rmStartOutside , "You are "+Player.name+", a bubbly girl with lots of quirky desires.", " You just won a big lottery and is now moving out to rent your own mansion so you can do everything that you want!");
+	//ctb_list(noone, rmStartOutside , "You are "+Player.name+", a bubbly girl with lots of quirky desires.", " You just won a big lottery and is now moving out to rent your own mansion so you can do everything that you want!");
+	ctb_list(noone, rmStartOutside , "After a long walk through town, you have finally made it to your new home.",
+		"The size is daunting at first. It’s like a mansion compared to the room you had at your parents’ place.",
+		"You examine the facade, a silly grin stretched across your face as you recall how you won ownership of your new pad.",
+		"On a whim, you picked a lottery ticket up from a shop in your old neighborhood, and the grand prize was a brand-new home nestled between Downtown and the Shopping District.",
+		"What would have cost you hundreds of thousands of dollars is now yours, rent-free.",
+		"You eagerly reach into your bag for the front door key, excited to take your first real look at the place now that all of your stuff has been moved in.");
 }
 
 function msg_player_start_CN(){

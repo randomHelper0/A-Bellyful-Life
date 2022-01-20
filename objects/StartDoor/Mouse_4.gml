@@ -1,1 +1,1 @@
-exelan("msg_drag_tutorial");
+//exelan("msg_drag_tutorial");

@@ -36,7 +36,11 @@ function aya_more_study(){
 	}else{
 		Aya.likability += 5;
 		time_forward_minutes(59);
-		global.scene_script = aya_study;
+		if (Aya.first_visit){
+			Aya.first_visit = false;
+			aya_study_first();
+		}else
+			global.scene_script = aya_study;
 		scene_start_from(rmLivingroom);
 	}
 }
@@ -44,6 +48,12 @@ function aya_more_study(){
 /*function checkAyaEvent(){
 	return (ControlEnv.hours == 7 && ControlEnv.minutes <= 35 && room == rmPool);
 }*/
+
+function aya_study_first(){
+	ctb_list(noone, noone, 
+		speaker(Aya) + "Good to see you, [Player]. Are you going to show me around?"
+	)
+}
 
 function aya_study(){
 	global.scene_name = "Study";

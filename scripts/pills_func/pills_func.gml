@@ -10,6 +10,7 @@ function pill_diet(target){
 		target = global.dialogue_char;
 	character_add_status(target, "pill_diet", 60*24);
 	item_consume(item,target);
+	target.fat_calories -= 300;
 }
 
 function pill_gas(target){

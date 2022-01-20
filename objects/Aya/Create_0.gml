@@ -10,6 +10,7 @@ has_number = true;
 
 first_text = false;
 
+first_visit = true;
 studied_today = false;
 
 likability = 20;
