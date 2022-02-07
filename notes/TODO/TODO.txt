@@ -1,25 +1,33 @@
-Remi bug
+Skip button (skippable set after ctb_list)
 
-enable fat level change
+belly massage: show view of laying down on bed
 
-Fix pump reliability
+- Stethoscope instead of ears
+- Press: release air in stomach/bowels
+- Knead: two hands knead towards center, for high freq spots
+- chopping: two hands chopping, for deep grumbling spots
+- Increase lust
+-When lust reach over 60%, can lick to rapidly increase lust
 
-Actions that decrease likability must increase the corresponding desire
-
-Remote vibrator:
-- no need custom animations, just "jiggle" the skew animation with suprised/blush expressions
-- same option as mini pump
-
-Shame and desire_exhibition
-- Shame increase when doing exh-related activities
-- Too much shame will abort actions
-- At higher level of desire_ex shame will increase lust instead
+Lust reach 100%:
+- run to bathroom and hear moans
+- Peek option, but see only no scene rendered notice
 
 
-Buttplug:
-- Give back after a day
+Xray tab: show x-ray on left side replacing full body
+
+-----------------
+
+Phone text UI
+
+Stethoscope:
+- Use on self
+- Use on others scene: ??
+
+Eat together: side view of sitting face to face (like space eater force). drag food from table
 
 
+--------------------
 More intimate scenes
 
 More opportunities to increase likability
@@ -54,3 +62,5 @@ walk around
 - 30% chance of encountering someone who is not busy
 	- Simply state that you saw them, then update vars to appear in room
 	- option to go on date
+	
+lengthen name tag

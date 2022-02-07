@@ -57,11 +57,17 @@ if (ControlEnv.hours >= 6 && ControlEnv.minutes > 30 && !first_text && is_locati
 
 if (visiting && !studied_today && room == rmLivingroom
 	&& !arrived_notice && !instance_exists(obj_textbox)){  //check if the arrived message is playing (happens when she arrives in the same room the player is in
-	global.scene_script = aya_study;
+	if (first_visit){
+		first_visit = false;
+		studied_today = true;
+		aya_study_first();
+	}else{
+	global.scene_script = aya_study;	
 	studied_today = true;
 	scene_start();
 }
-
+	}
+	
 //reset study flag on new day
 if (!visited)
 	studied_today = false;

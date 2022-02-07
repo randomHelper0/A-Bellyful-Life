@@ -3,6 +3,11 @@
 /// @param  finish room
 /// @param  text
 /// @param  text
+function smart_text_replace(text){
+	text = string_replace_all(text, "$PlayerName", Player.name);
+	return text;
+}
+
 /// @param  text...
 function ctb_list() {
 	//var d = argument[0]
@@ -14,8 +19,8 @@ function ctb_list() {
 	d.char_sprite = sprBlank;
 
 	for (var i = 2; i < argument_count; i ++){
-	    d.temp = argument[i];
-	   with (d) ctb_add_text( temp );
+	    var text = argument[i];
+	   with (d) ctb_add_text(  smart_text_replace(text) );
 	}
 
 	return d;

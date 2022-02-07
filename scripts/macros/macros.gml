@@ -1,4 +1,5 @@
-function macros() {
+//function macros() {
+#macro speaker cmd_speaker
 #macro html5 true
 #macro wp_knife 0
 #macro wp_fork 1
@@ -23,4 +24,4 @@ function macros() {
 #macro  LIQUID 0
 #macro  CRUNCHY 1
 #macro  CHEWY 2
-}
+//}

@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 1179,
-  "bbox_top": 564,
+  "bbox_top": 559,
   "bbox_bottom": 719,
   "HTile": false,
   "VTile": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9bd2a211-dd21-4c56-a3da-9ec3741bef9e","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9bd2a211-dd21-4c56-a3da-9ec3741bef9e","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"LayerId":{"name":"075fabc3-5603-41dd-ab70-d0ed26ef0bd1","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDialogueBox","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","name":"9bd2a211-dd21-4c56-a3da-9ec3741bef9e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c3cd2164-aa54-4ff0-b158-0d3f24beae0a","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c3cd2164-aa54-4ff0-b158-0d3f24beae0a","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"LayerId":{"name":"a575f128-7fdb-4427-9f09-09bd828e6860","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprDialogueBox","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","name":"c3cd2164-aa54-4ff0-b158-0d3f24beae0a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprDialogueBox","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},
@@ -41,8 +41,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d3a47f3d-6c9a-4037-8c14-7253b15a2b6b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bd2a211-dd21-4c56-a3da-9ec3741bef9e","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+            {"id":"c992f6a8-fb7a-451f-b398-93b68236c4b9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3cd2164-aa54-4ff0-b158-0d3f24beae0a","path":"sprites/sprDialogueBox/sprDialogueBox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"075fabc3-5603-41dd-ab70-d0ed26ef0bd1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a575f128-7fdb-4427-9f09-09bd828e6860","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
