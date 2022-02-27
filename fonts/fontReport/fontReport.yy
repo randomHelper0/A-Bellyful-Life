@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
+  "applyKerning": 0,
   "fontName": "Noto Sans JP",
   "styleName": "Regular",
   "size": 24.0,
@@ -20,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":7,"h":46,"character":32,"shift":7,"offset":0,},
     "33": {"x":627,"y":482,"w":5,"h":46,"character":33,"shift":10,"offset":3,},

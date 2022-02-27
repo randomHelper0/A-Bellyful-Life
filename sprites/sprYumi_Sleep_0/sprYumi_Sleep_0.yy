@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprYumi_Sleep_0","path":"sprites/sprYumi_Sleep_0/sprYumi_Sleep_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprYumi_Sleep_0",
     "tags": [],
     "resourceType": "GMSequence",

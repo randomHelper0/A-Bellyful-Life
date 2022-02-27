@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprSmokingJoint","path":"sprites/sprSmokingJoint/sprSmokingJoint.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprSmokingJoint",
     "tags": [],
     "resourceType": "GMSequence",

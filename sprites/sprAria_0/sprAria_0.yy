@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAria_0","path":"sprites/sprAria_0/sprAria_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAria_0",
     "tags": [],
     "resourceType": "GMSequence",

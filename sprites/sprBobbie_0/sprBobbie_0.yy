@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBobbie_0","path":"sprites/sprBobbie_0/sprBobbie_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBobbie_0",
     "tags": [],
     "resourceType": "GMSequence",

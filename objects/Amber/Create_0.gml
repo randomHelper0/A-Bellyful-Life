@@ -11,3 +11,6 @@ jogged_today = false;
 //has_number = true;
 
 eating_out_init(rmFataurant, list_create(IBeer, IHotdog, ICakeSlice));
+
+massage_x = 473;
+massage_y = 196;

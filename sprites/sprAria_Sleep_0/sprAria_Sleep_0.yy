@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAria_Sleep_0","path":"sprites/sprAria_Sleep_0/sprAria_Sleep_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAria_Sleep_0",
     "tags": [],
     "resourceType": "GMSequence",

@@ -13,3 +13,6 @@ arrive_msg = "I like your place. Now that I'm here, I'll gladly help you with an
 
 met_player = false;
 player_helped = false;
+
+massage_x = 508;
+massage_y = 274;

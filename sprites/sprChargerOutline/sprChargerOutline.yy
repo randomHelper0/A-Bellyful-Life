@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprChargerOutline","path":"sprites/sprChargerOutline/sprChargerOutline.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprChargerOutline",
     "tags": [],
     "resourceType": "GMSequence",

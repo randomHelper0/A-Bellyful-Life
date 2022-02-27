@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprVibratorSticker","path":"sprites/sprVibratorSticker/sprVibratorSticker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprVibratorSticker",
     "tags": [],
     "resourceType": "GMSequence",

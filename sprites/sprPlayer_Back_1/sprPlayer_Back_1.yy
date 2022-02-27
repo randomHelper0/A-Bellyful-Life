@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPlayer_Back_1","path":"sprites/sprPlayer_Back_1/sprPlayer_Back_1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPlayer_Back_1",
     "tags": [],
     "resourceType": "GMSequence",

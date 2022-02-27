@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprClinic","path":"sprites/sprClinic/sprClinic.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprClinic",
     "tags": [],
     "resourceType": "GMSequence",

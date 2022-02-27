@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprFatdonalds","path":"sprites/sprFatdonalds/sprFatdonalds.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprFatdonalds",
     "tags": [],
     "resourceType": "GMSequence",

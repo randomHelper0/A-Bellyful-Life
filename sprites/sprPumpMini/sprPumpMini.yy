@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPumpMini","path":"sprites/sprPumpMini/sprPumpMini.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPumpMini",
     "tags": [],
     "resourceType": "GMSequence",

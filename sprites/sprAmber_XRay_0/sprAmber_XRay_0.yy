@@ -95,7 +95,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAmber_XRay_0","path":"sprites/sprAmber_XRay_0/sprAmber_XRay_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAmber_XRay_0",
     "tags": [],
     "resourceType": "GMSequence",

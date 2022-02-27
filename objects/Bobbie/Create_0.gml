@@ -8,3 +8,6 @@ first_stuffing = false;
 //has_number = true;
 
 eating_out_init(rmFatdonalds, list_create(IFries, IHotdog, IHotdog));
+
+massage_x = 511;
+massage_y = 289;

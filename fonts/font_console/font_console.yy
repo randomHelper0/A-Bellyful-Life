@@ -3,6 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
+  "applyKerning": 0,
   "fontName": "Consolas",
   "styleName": "Regular",
   "size": 15.0,
@@ -20,6 +21,7 @@
     "path": "texturegroups/Default",
   },
   "ascenderOffset": 0,
+  "ascender": 0,
   "glyphs": {
     "32": {"x":2,"y":2,"w":11,"h":23,"character":32,"shift":11,"offset":0,},
     "33": {"x":38,"y":102,"w":3,"h":23,"character":33,"shift":11,"offset":4,},

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBuyWindow","path":"sprites/sprBuyWindow/sprBuyWindow.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBuyWindow",
     "tags": [],
     "resourceType": "GMSequence",

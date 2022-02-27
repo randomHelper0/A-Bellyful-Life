@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprBambi_Drink_0","path":"sprites/sprBambi_Drink_0/sprBambi_Drink_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprBambi_Drink_0",
     "tags": [],
     "resourceType": "GMSequence",

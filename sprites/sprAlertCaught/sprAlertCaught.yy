@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprAlertCaught","path":"sprites/sprAlertCaught/sprAlertCaught.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprAlertCaught",
     "tags": [],
     "resourceType": "GMSequence",

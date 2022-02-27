@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprChargeStation","path":"sprites/sprChargeStation/sprChargeStation.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprChargeStation",
     "tags": [],
     "resourceType": "GMSequence",

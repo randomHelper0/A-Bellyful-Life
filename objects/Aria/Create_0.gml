@@ -17,3 +17,5 @@ eating_out_init(rmFatdonalds, list_create(IHamburger, IHotdog, ISoda))
 
 arrive_msg = "Ok, where are we going?";
 
+massage_x = 464;
+massage_y = 128;

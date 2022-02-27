@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprClockHourHand","path":"sprites/sprClockHourHand/sprClockHourHand.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprClockHourHand",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPluggedSticker","path":"sprites/sprPluggedSticker/sprPluggedSticker.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPluggedSticker",
     "tags": [],
     "resourceType": "GMSequence",

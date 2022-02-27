@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPlayer_Greenhouse_0","path":"sprites/sprPlayer_Greenhouse_0/sprPlayer_Greenhouse_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPlayer_Greenhouse_0",
     "tags": [],
     "resourceType": "GMSequence",

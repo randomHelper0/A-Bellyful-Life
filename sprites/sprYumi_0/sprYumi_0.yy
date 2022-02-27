@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprYumi_0","path":"sprites/sprYumi_0/sprYumi_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprYumi_0",
     "tags": [],
     "resourceType": "GMSequence",

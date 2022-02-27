@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprTooltip","path":"sprites/sprTooltip/sprTooltip.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprTooltip",
     "tags": [],
     "resourceType": "GMSequence",

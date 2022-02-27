@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPlayer_ButtPlug_0","path":"sprites/sprPlayer_ButtPlug_0/sprPlayer_ButtPlug_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPlayer_ButtPlug_0",
     "tags": [],
     "resourceType": "GMSequence",

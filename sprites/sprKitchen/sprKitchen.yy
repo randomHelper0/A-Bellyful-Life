@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprKitchen","path":"sprites/sprKitchen/sprKitchen.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprKitchen",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPlayer_Fountain_1","path":"sprites/sprPlayer_Fountain_1/sprPlayer_Fountain_1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPlayer_Fountain_1",
     "tags": [],
     "resourceType": "GMSequence",

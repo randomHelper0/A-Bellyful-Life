@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprPlayer_XRay_0","path":"sprites/sprPlayer_XRay_0/sprPlayer_XRay_0.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprPlayer_XRay_0",
     "tags": [],
     "resourceType": "GMSequence",

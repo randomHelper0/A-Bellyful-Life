@@ -12,3 +12,6 @@ gave_exam_today = false;
 eating_out_init(rmBar, list_create(ICocktail1, ICocktail2));
 
 arrive_msg = "Alright, I'll give your place a thorough inspection!";
+
+massage_x = 469;
+massage_y = 218;

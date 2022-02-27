@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprKitchenFridge","path":"sprites/sprKitchenFridge/sprKitchenFridge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprKitchenFridge",
     "tags": [],
     "resourceType": "GMSequence",

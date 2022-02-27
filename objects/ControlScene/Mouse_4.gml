@@ -1,4 +1,5 @@
-if (!visible)
+//if (!visible)
+if not (global.scene_interface && StickerEye.image_index && !instance_exists(obj_textbox))
 	exit;
 	
 tooltip_start(x,y-350, 

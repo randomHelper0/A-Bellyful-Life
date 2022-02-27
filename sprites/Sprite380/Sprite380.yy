@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"Sprite380","path":"sprites/Sprite380/Sprite380.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "Sprite380",
     "tags": [],
     "resourceType": "GMSequence",

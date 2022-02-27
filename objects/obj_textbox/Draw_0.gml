@@ -1,7 +1,7 @@
 if (!StickerEye.image_index)
 	exit;
 
-draw_sprite(sprDialogueBox, 0, 0, 0);
+draw_sprite(sprDialogueBox, 0, 0, 9);
 
 draw_cached();
 ctb_draw();//

@@ -15,3 +15,6 @@ arrive_msg = "I'm here to keep an eye on you.";
 catching = noone;
 catch_success = false;
 catch_dialogue = false;
+
+massage_x = 460;
+massage_y = 162;

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprMansionOutside","path":"sprites/sprMansionOutside/sprMansionOutside.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprMansionOutside",
     "tags": [],
     "resourceType": "GMSequence",

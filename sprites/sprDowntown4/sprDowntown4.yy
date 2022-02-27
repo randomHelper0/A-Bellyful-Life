@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprDowntown4","path":"sprites/sprDowntown4/sprDowntown4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprDowntown4",
     "tags": [],
     "resourceType": "GMSequence",

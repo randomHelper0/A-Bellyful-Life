@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprFountainNoSpray","path":"sprites/sprFountainNoSpray/sprFountainNoSpray.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sprFountainNoSpray",
     "tags": [],
     "resourceType": "GMSequence",
