@@ -1,0 +1,1 @@
+obj_console.close_on_click = true;

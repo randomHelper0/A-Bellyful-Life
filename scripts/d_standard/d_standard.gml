@@ -80,7 +80,8 @@ function d_standard() {
 		)
 	}
 	
-	if (char.visiting){
+	//if (char.visiting){
+	if (in_house()){
 		dialogue_create(
 		        "4",
 		        strlan(EN, "Ask them to leave", RUS, "Попроси ее уйти", JP, "彼女に去るように頼む", CN, "要求她离开"),

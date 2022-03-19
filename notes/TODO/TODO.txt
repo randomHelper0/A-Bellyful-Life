@@ -1,5 +1,13 @@
-Steth: simply allow the player to use steth in Status xray screen
+mobile console page
 
+Add ability to call anyone to current location
+(new var: called_over)
+
+DEB:
+- write methods for infl scenes
+- render back frames
+
+Steth: simply allow the player to use steth in Status xray screen
 
 belly massage: show view of laying down on bed
 

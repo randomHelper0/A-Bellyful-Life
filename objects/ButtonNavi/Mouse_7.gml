@@ -1,5 +1,6 @@
 if (target_script != noone)
 	target_script();
 	
-custom_goto(target_room);
+if (target_room != noone)
+	custom_goto(target_room);
 

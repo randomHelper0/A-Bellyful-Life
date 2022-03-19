@@ -614,7 +614,8 @@ if (display_frame > 0) { // I'm open
 	if (mouse_check_button_pressed(mb_any)) {
 		if (device_mouse_y_to_gui(0) > max(predict_y2,main_y2)) { // clicking out of the console 
 			show_debug_message("close console")
-			display_direction = -display_close_speed
+			if(close_on_click)
+				display_direction = -display_close_speed
 		} else { // clicking on the console 
 			#region // clicking on the console
 			if (device_mouse_y_to_gui(0) < history_y2) { // Mouse in history 
@@ -690,6 +691,7 @@ if (display_frame > 0) { // I'm open
 		}
 	#endregion
 
-	
+	//FIX
+	if (close_on_click)
 	mouse_clear(mb_any) // DO ALL MOUSE STUFF BEFORE THIS
 }

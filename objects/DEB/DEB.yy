@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprAmber_0",
-    "path": "sprites/sprAmber_0/sprAmber_0.yy",
+    "name": "sprDEB_0",
+    "path": "sprites/sprDEB_0/sprDEB_0.yy",
   },
   "solid": false,
   "visible": true,

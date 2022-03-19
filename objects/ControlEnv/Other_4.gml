@@ -5,8 +5,8 @@ if (global.upload_content != noone){
 		exit;
 	}
 	//TODO FIX PLS
-	//global.upload_content = string_replace_all(global.upload_content, "true", 1);
-	//global.upload_content = string_replace_all(global.upload_content, "false", 0);
+	global.upload_content = string_replace_all(global.upload_content, "true", 1);
+	global.upload_content = string_replace_all(global.upload_content, "false", 0);
 	
 	load_all_text(global.upload_content);
 	global.upload_content = noone;

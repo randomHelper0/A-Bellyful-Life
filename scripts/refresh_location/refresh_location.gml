@@ -20,7 +20,8 @@ function refresh_location() {
 	    if (c == Player.id)
 	        continue;
 		global.dialogue_char = c;
-	    if (script_execute(c.script_location, c) == room){
+		if (c.script_location(c) == room){
+	    //if (script_execute(c.script_location, c) == room){
 	        create_character_holder(c);
 			//if (keyboard_check(vk_delete))
 				//	show_message(room_get_name(room));

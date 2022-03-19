@@ -4,5 +4,5 @@ function in_house(){
 		rm = global.last_room;
 	
 	return (rm == rmBedroom || rm == rmBathroom || rm == rmLivingroom ||
-		rm == rmGreenhouse || rm == rmKitchen);
+		rm == rmGreenhouse || rm == rmKitchen || rm == rmBedroomDEB);
 }

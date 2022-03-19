@@ -54,7 +54,7 @@ stat_init();
 abilities_init();
 //show_debug_message("before init")
 //show_debug_message(string(Player)+", "+string(FatbucksCashier))
-item_init(Player, Bambi, Aria, Aya, Yumi,  Amber, Bobbie, Remi,
+item_init(Player, Bambi, Aria, Aya, Yumi,  Amber, Bobbie, Remi, DEB, 
 	FatbucksCashier, FatdonaldsCashier, FataurantCashier, ResortCashier
 	,  Bartender, Nurse);
 //instance_create(-200,-200, );

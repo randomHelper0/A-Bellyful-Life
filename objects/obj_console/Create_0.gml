@@ -1,5 +1,5 @@
 /// @description Insert description here
-
+close_on_click = true;
 
 #region keyboard buttons						<- You might want to add or remove keys here
 // keys used to display the console
