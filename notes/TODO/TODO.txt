@@ -1,5 +1,3 @@
-mobile console page
-
 Add ability to call anyone to current location
 (new var: called_over)
 

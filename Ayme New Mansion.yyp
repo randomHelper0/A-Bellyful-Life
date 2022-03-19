@@ -1114,8 +1114,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmConsole","path":"rooms/rmConsole/rmConsole.yy",},},
     {"roomId":{"name":"rmMainMenu","path":"rooms/rmMainMenu/rmMainMenu.yy",},},
+    {"roomId":{"name":"rmConsole","path":"rooms/rmConsole/rmConsole.yy",},},
     {"roomId":{"name":"rmMassage","path":"rooms/rmMassage/rmMassage.yy",},},
     {"roomId":{"name":"rmBedroom","path":"rooms/rmBedroom/rmBedroom.yy",},},
     {"roomId":{"name":"rmBathroom","path":"rooms/rmBathroom/rmBathroom.yy",},},
