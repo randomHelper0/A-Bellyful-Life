@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "chewcrunch1.wav",
-  "duration": 0.474819,
+  "duration": 0.469819,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

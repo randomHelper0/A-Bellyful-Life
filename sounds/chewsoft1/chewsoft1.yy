@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "chewsoft1.mp3",
-  "duration": 0.581,
+  "duration": 0.576,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

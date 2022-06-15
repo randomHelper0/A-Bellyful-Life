@@ -1,7 +1,61 @@
+Wrap Stream w portals in module, core objects and tools
+Import package, then create simple room, ENSURE MODULARITY
+
+lust: temporary
+libido: permanent
+
+fishing countryside location:
+- use NVIDIA CANVAS
+- render fishing action for some, start with Yumi
+- play in river (swimsuits) 
+- all characters: lie down interact scene, but on ground + falling leaves
+- Characters without fishing scene will watch, when asked, say they just wanted to enjoy the view
+
+----------------
+Very basic massage, meant to increase lust
+
+------
+Cheat menu with common button options
+Achievements
+
+----
+
+Hug sprite for each character
+- Viewable without scene (anywhere)
+- Each char has different variation (glomp for Aya, breast grab for Amber, ear lick for Remi...)
+- Simple technique: for each character, render set of belly sizes, then go through each frame and erase the other char
+
+
+Import Stream w Portals
+- Can ask anyone to change pose, including Ayume
+- Allow item insertion
+- Xray handheld (remove x-ray fromstatus altogether)
+
+Import Free roam mechanics
+- Apply first to vacation spots (park with Amber)
+- Two for city map, one when leave house and one for shopping district
+	- Place many public drinking, hoses, and other stuff for interaction
+	- for interactions mostly use existing sprites with offset
+
+Doing sexual interactions in public require exhibitionism and Remi's consent (get her likability + exh high)
+
+
+Add surface panes to all maps
+
+PERSISTENT items:
+- Dropped items remember their position and room
+
+Persistent pets:
+- Pets are bugs from SwP
+- Can hang around on person and move around with them
+
+
+--------
 Add ability to call anyone to current location
 (new var: called_over)
 
 DEB:
+- raise initial cap
 - write methods for infl scenes
 - render back frames
 
