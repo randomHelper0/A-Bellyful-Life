@@ -1,3 +1,17 @@
+-----
+Flow Chart
+Each character gets a room
+use icons and objects to place labels and locks
+Separate to Interactions and scenes
+For condition message, copy paste condition check code from lock or leave blank
+
+"New!" sticker
+----
+lactation meds and nipple clamps (jewelry)
+- Req general accessory update
+- add nipple coords
+- when lactating, draw wet patch around breast
+-----
 Wrap Stream w portals in module, core objects and tools
 Import package, then create simple room, ENSURE MODULARITY
 
