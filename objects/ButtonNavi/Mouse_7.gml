@@ -1,3 +1,4 @@
+game_config_save();
 if (target_script != noone)
 	target_script();
 	
